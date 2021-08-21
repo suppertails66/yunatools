@@ -1,0 +1,1 @@
+/usr/bin/cc   -pedantic-errors -Wall -Wextra -ansi -O2 -g -DNDEBUG   CMakeFiles/gen-65816.dir/opcode_table_generator/main.c.o CMakeFiles/gen-65816.dir/opcodes_65816.c.o  -o op_tbl_gen/gen-65816 -rdynamic -lm 

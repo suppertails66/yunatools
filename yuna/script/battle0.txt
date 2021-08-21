@@ -1,0 +1,222 @@
+//==========================================================================
+// battle0: standard battle (yuna vs. somebody else)
+//==========================================================================
+
+//==========================================================================
+// generic messages
+//==========================================================================
+
+#STARTREGION(0)
+
+#STARTSTRING(0, 0x10, 0x7, 0)
+
+#IMPORTSTRING(5299)
+
+#ENDSTRING()
+
+#STARTSTRING(1, 0x17, 0x5, 0)
+
+#IMPORTSTRING(5300)
+
+#ENDSTRING()
+
+#STARTSTRING(2, 0x1C, 0x5, 0)
+
+#IMPORTSTRING(5301)
+
+#ENDSTRING()
+
+#STARTSTRING(3, 0x21, 0xF, 0)
+
+#IMPORTSTRING(5302)
+
+#ENDSTRING()
+
+#STARTSTRING(4, 0x30, 0x5, 0)
+
+#IMPORTSTRING(5303)
+
+#ENDSTRING()
+
+#STARTSTRING(5, 0x35, 0x15, 0)
+
+#IMPORTSTRING(5304)
+
+#ENDSTRING()
+
+#STARTSTRING(6, 0x4A, 0x5, 0)
+
+#IMPORTSTRING(5305)
+
+#ENDSTRING()
+
+#STARTSTRING(7, 0x4F, 0x7, 0)
+
+#IMPORTSTRING(5306)
+
+#ENDSTRING()
+
+#STARTSTRING(8, 0x56, 0x9, 0)
+
+#IMPORTSTRING(5307)
+
+#ENDSTRING()
+
+#STARTSTRING(9, 0x5F, 0xD, 0)
+
+#IMPORTSTRING(5308)
+
+#ENDSTRING()
+
+#STARTSTRING(10, 0x6C, 0xB, 0)
+
+#IMPORTSTRING(5309)
+
+#ENDSTRING()
+
+#STARTSTRING(11, 0x77, 0xD, 0)
+
+#IMPORTSTRING(5310)
+
+#ENDSTRING()
+
+#STARTSTRING(12, 0x84, 0x9, 0)
+
+#IMPORTSTRING(5311)
+
+#ENDSTRING()
+
+#STARTSTRING(13, 0x8D, 0x9, 0)
+
+#IMPORTSTRING(5312)
+
+#ENDSTRING()
+
+#STARTSTRING(14, 0x96, 0x11, 0)
+
+#IMPORTSTRING(5313)
+
+#ENDSTRING()
+
+#STARTSTRING(15, 0xA7, 0x5, 0)
+
+#IMPORTSTRING(5314)
+
+#ENDSTRING()
+
+#STARTSTRING(16, 0xAC, 0x11, 0)
+
+#IMPORTSTRING(5315)
+
+#ENDSTRING()
+
+#STARTSTRING(17, 0xBD, 0x1D, 0)
+
+#IMPORTSTRING(5316)
+
+#ENDSTRING()
+
+#STARTSTRING(18, 0xDA, 0x1B, 0)
+
+#IMPORTSTRING(5317)
+
+#ENDSTRING()
+
+#STARTSTRING(19, 0xF5, 0x15, 0)
+
+#IMPORTSTRING(5318)
+
+#ENDSTRING()
+
+#STARTSTRING(20, 0x10A, 0x7, 0)
+
+#IMPORTSTRING(5319)
+
+#ENDSTRING()
+
+#STARTSTRING(21, 0x111, 0x3, 0)
+
+#IMPORTSTRING(5320)
+
+#ENDSTRING()
+
+#STARTSTRING(22, 0x114, 0x15, 0)
+
+#IMPORTSTRING(5321)
+
+#ENDSTRING()
+
+#STARTSTRING(23, 0x129, 0x3, 0)
+
+#IMPORTSTRING(5322)
+
+#ENDSTRING()
+
+#STARTSTRING(24, 0x12C, 0xD, 0)
+
+#IMPORTSTRING(5323)
+
+#ENDSTRING()
+
+#STARTSTRING(25, 0x139, 0x7, 0)
+
+#IMPORTSTRING(5324)
+
+#ENDSTRING()
+
+#STARTSTRING(26, 0x140, 0x7, 0)
+
+#IMPORTSTRING(5325)
+
+#ENDSTRING()
+
+#STARTSTRING(27, 0x147, 0x1, 0)
+
+#IMPORTSTRING(5326)
+
+#ENDSTRING()
+
+#STARTSTRING(28, 0x148, 0xF, 0)
+
+#IMPORTSTRING(5327)
+
+#ENDSTRING()
+
+#STARTSTRING(29, 0x157, 0xD, 0)
+
+#IMPORTSTRING(5328)
+
+#ENDSTRING()
+
+#STARTSTRING(30, 0x164, 0x1B, 0)
+
+#IMPORTSTRING(5329)
+
+#ENDSTRING()
+
+#STARTSTRING(31, 0x17F, 0x25, 0)
+
+#IMPORTSTRING(5330)
+
+#ENDSTRING()
+
+
+
+
+
+#ENDREGION(0)
+
+//==========================================================================
+// NEW messages
+//==========================================================================
+
+#STARTREGION(1)
+
+// the " defeated " in "yuna defeated [name]",
+// for battle0
+#STARTSTRING(0, 0, 0, 0)
+#IMPORTSTRING(9000)
+#ENDSTRING()
+
+#ENDREGION(1)
+

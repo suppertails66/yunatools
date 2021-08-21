@@ -1,0 +1,23 @@
+#******************************************************************************
+# intro suit patch tilemap generator
+#******************************************************************************
+
+[Properties]
+palette=out/pal/blank.pal
+freepalettes=7
+dest=out/grp/intro_suit_patch.bin
+paldest=out/pal/intro_suit_patch.pal
+loadAddr=0x6A0
+#minTiles=0x185
+maxTiles=0x50
+#blacklist=360-363
+
+#******************************************************************************
+# Main layout
+#******************************************************************************
+
+[Tilemap00]
+source=out/grp/intro_suit_patch.png
+dest=out/maps/intro_suit_patch.bin
+#transparency=0
+

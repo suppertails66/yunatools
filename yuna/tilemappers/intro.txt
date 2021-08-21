@@ -1,0 +1,23 @@
+#******************************************************************************
+# intro tilemap generator
+#******************************************************************************
+
+[Properties]
+palette=out/pal/intro.pal
+#freepalettes=
+dest=out/grp/intro.bin
+paldest=out/pal/intro.pal
+loadAddr=0x90
+#minTiles=0x185
+maxTiles=0x70
+#blacklist=360-363
+
+#******************************************************************************
+# Main layout
+#******************************************************************************
+
+[Tilemap00]
+source=out/grp/intro.png
+dest=out/maps/intro.bin
+transparency=0
+

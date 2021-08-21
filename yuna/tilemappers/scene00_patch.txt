@@ -1,0 +1,23 @@
+#******************************************************************************
+# scene00 patch tilemap generator
+#******************************************************************************
+
+[Properties]
+palette=out/pal/blank.pal
+freepalettes=6 7
+dest=out/grp/scene00_patch.bin
+paldest=out/pal/scene00_patch.pal
+loadAddr=0x90
+#minTiles=0x185
+maxTiles=0xB0
+#blacklist=360-363
+
+#******************************************************************************
+# Main layout
+#******************************************************************************
+
+[Tilemap00]
+source=out/grp/scene00_patch.png
+dest=out/maps/scene00_patch.bin
+transparency=0
+

@@ -1,0 +1,20 @@
+; this file was created with wlalink by ville helin <vhelin@iki.fi>.
+; wla symbolic information for "bootloader7_A981.bin_build".
+
+[labels]
+00:388b font
+00:3bab fontWidthTable
+00:3bfb fontLut
+00:3c9b subtitleScriptData
+00:3fe5 setUpStdBanks
+00:3ff7 restoreOldBanks
+00:3ff7 restoreOldBanks@slot3
+00:3ffb restoreOldBanks@slot4
+
+[definitions]
+00000320 _sizeof_font
+00000050 _sizeof_fontWidthTable
+000000a0 _sizeof_fontLut
+0000034a _sizeof_subtitleScriptData
+00000012 _sizeof_setUpStdBanks
+00000009 _sizeof_restoreOldBanks

@@ -1,0 +1,82 @@
+//==========================================================================
+// strings from scene 19 (swimsuit contest results)
+//==========================================================================
+
+#STARTSTRING(0, 0x7, 0x17, 0)
+
+#IMPORTSTRING(5583)
+
+#ENDSTRING()
+
+#STARTSTRING(1, 0x1E, 0x11, 0)
+
+#IMPORTSTRING(5584)
+
+#ENDSTRING()
+
+#STARTSTRING(2, 0x2F, 0xB, 0)
+
+#IMPORTSTRING(5585)
+
+#ENDSTRING()
+
+#STARTSTRING(3, 0x3A, 0x1D, 0)
+
+#IMPORTSTRING(5586)
+
+#ENDSTRING()
+
+#STARTSTRING(4, 0x57, 0x15, 0)
+
+#IMPORTSTRING(5587)
+
+#ENDSTRING()
+
+#STARTSTRING(5, 0x6C, 0x11, 0)
+
+#IMPORTSTRING(5588)
+
+#ENDSTRING()
+
+#STARTSTRING(6, 0x7D, 0x27, 0)
+
+#IMPORTSTRING(5589)
+
+#ENDSTRING()
+
+#STARTSTRING(7, 0xA4, 0x1D, 0)
+
+#IMPORTSTRING(5590)
+
+#ENDSTRING()
+
+#STARTSTRING(8, 0xC1, 0x17, 0)
+
+#IMPORTSTRING(5591)
+
+#ENDSTRING()
+
+#STARTSTRING(9, 0xD8, 0x19, 0)
+
+#IMPORTSTRING(5592)
+
+#ENDSTRING()
+
+#STARTSTRING(10, 0xF1, 0x13, 0)
+
+#IMPORTSTRING(5593)
+
+#ENDSTRING()
+
+#STARTSTRING(11, 0x104, 0x1D, 0)
+
+#IMPORTSTRING(5594)
+
+#ENDSTRING()
+
+#STARTSTRING(12, 0x121, 0x13, 0)
+
+#IMPORTSTRING(5595)
+
+#ENDSTRING()
+

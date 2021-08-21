@@ -1,0 +1,1 @@
+/usr/bin/cc   -pedantic-errors -Wall -Wextra -ansi -O2 -g -DNDEBUG   CMakeFiles/gen-8080.dir/opcode_table_generator/main.c.o CMakeFiles/gen-8080.dir/opcodes_8080.c.o  -o op_tbl_gen/gen-8080 -rdynamic -lm 

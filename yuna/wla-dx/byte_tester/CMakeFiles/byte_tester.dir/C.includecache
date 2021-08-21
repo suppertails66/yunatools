@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/supper/prog/yuna/yuna/wla-dx/byte_tester/main.c
+ctype.h
+-
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+

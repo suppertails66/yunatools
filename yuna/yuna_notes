@@ -1,0 +1,292 @@
+
+disc layout:
+  - sector 0x2E2 = 0x171000 (0x14 sectors = 0xA000 bytes): boot
+    load to 0x4000
+    no other autoload during boot (i.e. no graphics/adpcm)
+  - 0xA97A+ = subprogram bootloaders
+    - 1 sector per loader.
+      load one of these sectors to $3800, then jump to $3800 to run the
+      selected subprogram.
+    - subprogram IDs:
+      ; - 0 = if i was going to take a wild guess, the main game
+      ; - 1 = battle
+      ;       - 4003 = scene ID
+      ;         - 00 = normal battle
+      ;         - 01 = unused mockup of final battle
+      ;         - 02 = ria vs that one girl
+      ;         - 03 = ria vs final boss
+      ;         - 04 = final boss
+      ;         - 05 and higher are invalid?
+      ;           but some resources seem to be loaded + run...
+      ; - 2 = cutscene
+      ; - 3 = ?
+      ;       expects to be loaded somewhere other than $3800...
+      ; - 4 = load game?
+      ; - 5 = post-battle titillation cutscenes
+      ;       - as with normal cutscenes, 4003 is scene ID
+      ; - 6 = not used -- alternate title screen for demo version
+      ; - 7 = sub-intro
+      ; - 8 = title screen
+  - 0xC23A = cutscene resource packs?
+    - 0x60 sectors = 0x30000 bytes each
+      (i.e. size of the expansion memory)
+    - first pack for intro = +0x1140 sectors
+
+cutscenes:
+  - see boot2_A97C for cutscene bootloader.
+    after loading bootloader, set $3804 to target scene ID,
+    then jump to $3800 as normal.
+  - cutscenes are loaded simply by adding (sceneID * 0x14)
+    to the base sector number, 0xE23A, and loading the resulting target
+    to $4000-$DFFF (0xA000 bytes total, in banks $80-$84).
+    execution starts at $4000.
+  - there seem to be 0x1D (29) scenes total:
+  ; - 00 = first cruiser takeoff
+  ; - 01 = yuna in cockpit after first cruiser takeoff
+  ; - 02 = ria shows up to fight final boss
+  ; - 03 = dark gate before ria shows up to fight final boss
+  ; - 04 = frint (robot planet) intro
+  ; - 05 = mariana (water planet) intro
+  ; - 06 = rurizus (jungle planet) intro
+  ; - 07 = balmud (floating island planet) intro
+  ; - 08 = black hole intro
+  ; - 09 = dark planet or whatever it is intro
+  ; - 0A = frint asteroid field intro
+  ; - 0B = second arrival at dark planet
+  ; - 0C = ria "death"
+  ; - 0D = ultimate gattai
+  ; - 0E = last ojousama arrival
+  ; - 0F = leaving mariana...
+  ; - 10 = arrival in black hole
+  ; - 11 = found marina in jungle
+  ; - 12 = frint mother brain or whatever cutscene
+  ; - 13 = gattai with green robot
+  ; - 14 = gattai with pink robot
+  ; - 15 = gattai with purple robot
+  ; - 16 = ria death
+  ; - 17 = leftovers from trial version/kiosk demo.
+           "on sale october 23rd", then the alternate title screen
+           (program 6)
+  ; - 18 = intro
+  ; - 19 = swimsuit contest results
+  ; - 1A = final boss ultimate attack
+  ; - 1B = ending
+  ; - 1C = credits
+
+post-battle scenes:
+  oh god i don't know any of these names
+  - 00 = ?
+  - 01 = rock princess
+  - 02 = bunnygirl on beach
+  - 03 = bunnygirl in corridor
+  - 04 = cat-looking girl, i think
+  - 05 = green hair, brown suit. the jungle one, maybe?
+  - 06 = blue hair, black suit
+  - 07 = china girl
+  - 08 = the priestess or whatever on the steps
+  - 09 = emily! hey look i remembered this one!!
+  - 0A = android
+  - 0B = lia 1
+  - 0C = not-final-boss girl. sayuka, maybe
+  - 0D = lia beats yuna
+  - 0E = kaede (why is this almost last??)
+  - 0F = mari (flowers)
+  - 10 = lia 2
+
+memory:
+  2001 = main game: current text "group"?
+  201B = text x-pos, in characters
+  201C = text y-pos, as absolute number of patterns from top of screen
+  
+  26A6 = base bank for ? = 0x7B
+         adpcm data?
+  26B8 = ???
+         used to look up stuff from text block0?
+         see (e.g.?) 5BD5/5C4A
+         also 5E6D for a similar but unrelated lookup
+  
+  2730 = flag when ??? changing areas?
+  
+  297D = main game: current text "group"?
+  
+  2981 = array of script bytes?
+         addressed in condition strings as "s*"
+  298B = array of bitpacked boolean flags
+         addressed in scripts as "f*" (e.g. "f118" for flag 118)
+         - unused jungle event:
+           - starting from the airport, set flag 76 and clear flag 111,
+             then move to the jungle
+             - flag 76 ($2994 & 0x08) is set after defeating shiori?
+               and unlocks travel to the jungle when entering
+               jungle planet downtown.
+             - flag 111 ($2998 & 0x80) is set once you have gina?
+               if not set, and you go to the jungle, you get an unused
+               and unfinished event where yuna and elner attempt to explore
+               the jungle on their own, to disastrous results.
+               but of course, you can't get this far without already having
+               gina, so this will never happen.
+         ** other flags which matter for testing **
+           - 0x82 (299B & 0x04) = set if have book of liberation
+           - 0x6E (2998 & 0x40) = set if won swimsuit contest
+  2A31 = base bank for ? = 0x7D
+         includes text?
+  2A32 = base bank for ? = 0x7F?
+  
+  30CB = base bank for ? = 0x86?
+
+2999 & 0x10
+
+adv_87EA = main game
+  ** text **
+    - text banks are 8-sector blocks starting at sector 0x85EA?
+    - see load routine at 5EC3
+  
+  ** routines **
+    5EC3 = load text banks?
+  
+  ** stuff **
+    - A000+ is unused??
+      duplicate of material from later in ISO
+      (0x6528000 = sector 0xCA50. original is 0x43FA000 = 0x87F4)
+  
+  ** memory **
+    $A0-$A0 = pointer into text data block0?
+
+battle0_B1BA = standard battle
+  ** text **
+    - standard messages are static and near start of executable
+    - enemy messages are loaded to $9800 -- see load routine at $546A
+
+- are memory pages 78 through 7A unused?
+  - no, or at least not during battle
+
+- battles apparently consume EVERY FUCKING BYTE OF EXPANSION MEMORY AVAILABLE,
+  while constantly loading new shit off the CD, somehow,
+  so we'll have to be a bit creative.
+  main mem $3800+ is used as a free-ish space for various purposes
+  in different parts of the game; for instance, the loaders for various
+  game modules get executed from there.
+  during battles, $3800-$3900 is used to store yuna's stats + stuff,
+  while $3A00-$3B00 is used for the enemy's.
+  - $3C00-$4000 does not seem to be used or changed during battle, so we can
+    use it to store the new 1bpp font, which is approximately 0x400 bytes.
+  - in battle0, $5647-$57FF appears to be unused space,
+    as does $8EE0-$8FFF.
+    this should provide enough space for the needed printing routines + buffers.
+    needs to be checked for the special battle types too, though
+    - battle1: unused, doesn't matter
+    - battle2+3: $9000-$A000 seems to be unused?
+    - battle4: ~$9100-$A000 seems to be unused?
+
+- example of in-game image format: grp_889A, 0xC942
+  - 2b size, including this header?
+  - 2b dst x in tiles? e.g. 7
+  - 2b dst y in tiles? e.g. 3
+  - 2b tile width
+  - 2b tile height
+  - tile data
+    - stored in a peculiar "circular" order:
+    
+      tile 0 is the tile at the center of the image (w/2,h/2).
+      
+      tiles 1-3 are the three tiles to the UL/U/UR of center.
+      tiles 4-6 are the three tiles to the DL/D/DR of center.
+      tile 7 is the L of center.
+      tile 8 is the R of center.
+      
+      tiles 9-13 are the 5 tiles above tiles 1-3 (UL/U/UR).
+      tiles 14-18 are the 5 tiles below tiles 4-6 (DL/D/DR).
+      tiles 19-21 are the 3 tiles to the left of tile 7 (L).
+      tiles 22-24 are the 3 tiles to the right of tile 8 (R).
+      
+      and presumably so on, adding 2 tiles to each dimension each time,
+      until the image is complete.
+      if a dimension gets exhausted, stop and continue on the others?
+      
+      i'm not sure what the reason for this wacky format is except perhaps
+      to try to make images load in in a slightly more eye-pleasing manner
+      than just going top to bottom...
+  - 2b count of palette lines?
+    load in starting at palette 0?
+  - palette data
+  - ? 0xFF bytes?
+    - this is for a 0x11 by 0xF image, so maybe tilemap-related?
+      but data is all 0x00 and 0x10...
+      palette indices for each tile in image??
+      there's no reason that would be 0x10 instead of 0x01,
+      but it does track...
+
+- there's a fully functional debug mode.
+  change the very first text string in block 0 from "s6 = 255" to "s6 = 0".
+  contains options to start the game from any checkpoint,
+  view cutscenes, listen to music, fight any battle (with any fusion),
+  etc.
+
+; DEBUG CHEAT:
+; enter on title screen.
+; hold the direction, then press the button
+; - R+2
+; - L+1
+; - R+2
+; - L+1
+; - L+2
+; - R+1
+; - L+2
+; - R+1
+
+- to force map block change, set breakpoint on 5F52
+  and set $FA to desired block number
+
+TODO
+
+done:
+  - probably will be easiest to convert script to spreadsheets.
+    use formulas (=A2, etc.) to automate translation of duplicate lines.
+  - will probably need at least a little compression to fit in new script.
+    can probably recycle DTE generator from madou1pce in some form...
+  - battle text
+    - new string insertion
+      (probably will want to just overwrite in-place and add jump commands
+      to go to new content)
+    - linebreak support (original has none and relies on auto-wrapping!!)
+  - add dialogue box break command (original relies on an auto-break every
+    four lines)
+  - flag text redirects with a control character.
+    we can't detect null strings otherwise.
+  - fix battle number printing
+  - shift subtitle centering x-offsets one pixel left
+    (outlining algorithm results in it displaying one pixel to the right
+    of the specified position)
+  - subtitle line load balancing
+  - will credits in left column actually work correctly with all lines?
+    - they didn't, but now they do
+  - apparently i somehow broke the fade effects on the credits text...
+  - is the subtitle display forcing sprites on causing issues with
+    sprite cropping? in e.g. scene 10
+    - yes? probably due to subtitles forcing sprites to ON as default
+      and never turning it back
+    - added extra ops so we can override the override...
+      well, at least it works
+  - i don't think i ever removed the bios backup disc track setup, did i?
+    - now i did! assuming it's only done at boot, anyway
+  - adjust rock princess afterbattle timing
+  - regenerate planet intro captions with final font
+  - if i care enough, it would be ideal to replace all DSPOFF/SPROFF
+    bios calls in cutscenes with the BGOFF/sprite clear patches,
+    even where seemingly unnecessary, in case real hardware/other
+    emulators end up displaying subtitles over them
+    - nah...
+  - sei/cli protections in various places probably need to be
+    changed to $F5 bit set/clears
+    - maybe?
+    - well screw it, let's just hope everything works on real hardware
+  - remove "nnh" from intro
+  - remove gap after "do you sense it?" in scene11?
+  
+
+288, need 256
+so xscale = 0.888888 = 2.666666
+
+6420
+4.475
+printChar = 75B0

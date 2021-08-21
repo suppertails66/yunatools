@@ -1,0 +1,1 @@
+/usr/bin/cc   -pedantic-errors -Wall -Wextra -ansi -O2 -g -DNDEBUG   CMakeFiles/byte_tester.dir/main.c.o  -o byte_tester -rdynamic -lm 

@@ -1,0 +1,19 @@
+; this file was created with wlalink by ville helin <vhelin@iki.fi>.
+; wla symbolic information for "bootloader8_A982.bin_build".
+
+[labels]
+00:388b font
+00:3bab fontWidthTable
+00:3bfb fontLut
+00:3c9b setUpStdBanks
+00:3cb5 restoreOldBanks
+00:3cb5 restoreOldBanks@slot3
+00:3cb9 restoreOldBanks@slot4
+00:3cbd restoreOldBanks@slot5
+
+[definitions]
+00000320 _sizeof_font
+00000050 _sizeof_fontWidthTable
+000000a0 _sizeof_fontLut
+0000001a _sizeof_setUpStdBanks
+0000000d _sizeof_restoreOldBanks

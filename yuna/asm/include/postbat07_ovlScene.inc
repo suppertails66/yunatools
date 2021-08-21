@@ -1,0 +1,15 @@
+.unbackground $3A10 $7FFF
+.define syncVector $471E
+.define syncMakeup1 $45D8
+.define syncMakeup2 $464A
+.define genHighPrioritySpriteObj $4213
+.define genLowPrioritySpriteObj $4142
+.define clearAndSendSpriteTable $78A6
+.define spriteTableClearMakeup1 $26E4
+.define spriteTableClearMakeup2 $26E3
+.define waitForSync $5854
+.define setUpSpritesRaw $6DB6
+.define playAdpcm $66DC
+.define playAdpcmMakeup1 $67A5
+.define playAdpcmSpecial $66A4
+.define playAdpcmAlt $688E

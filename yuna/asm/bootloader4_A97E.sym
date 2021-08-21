@@ -1,0 +1,11 @@
+; this file was created with wlalink by ville helin <vhelin@iki.fi>.
+; wla symbolic information for "bootloader4_A97E.bin_build".
+
+[labels]
+00:3885 ovlText_fontWidthTable
+00:38e1 ovlText_font
+00:3c79 .
+
+[definitions]
+0000005c _sizeof_ovlText_fontWidthTable
+0000071f _sizeof_ovlText_font
