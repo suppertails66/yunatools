@@ -137,10 +137,11 @@
     .incbin "include/scene8/string90006.bin"
     cut_prepAndSendGrp $01DC
     
-      cut_waitForFrameMinSec 0 22.093
-      cut_subsOff
+;      cut_waitForFrameMinSec 0 22.093
+;      cut_subsOff
     
     cut_waitForFrameMinSec 0 22.955
+    cut_subsOff
     cut_swapAndShowBuf
     
     ; "was first observed"

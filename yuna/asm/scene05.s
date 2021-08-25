@@ -162,7 +162,8 @@
     
     SYNC_adpcmTime 3 $0892
     
-    cut_waitForFrameMinSec 0 37.221
+;    cut_waitForFrameMinSec 0 37.221
+    cut_waitForFrameMinSec 0 38.056
 ;    cut_subsOff
     cut_swapAndShowBuf
     

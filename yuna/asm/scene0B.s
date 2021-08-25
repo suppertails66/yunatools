@@ -227,7 +227,7 @@
     .incbin "include/sceneB/string120006.bin"
     SCENE_prepAndSendGrpAuto
     
-    cut_waitForFrameMinSec 0 27.304+0.100+subOffset
+    cut_waitForFrameMinSec 0 27.304-0.050+subOffset
     cut_subsOff
     cut_swapAndShowBuf
     
