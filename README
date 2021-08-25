@@ -1,0 +1,63 @@
+********************************************************************************
+*             Ginga Ojousama Densetsu Yuna (Galaxy Fraulein Yuna)              *
+*                     English Translation Patch Materials                      *
+********************************************************************************
+
+This package contains the source materials (code/art/script) for the English 
+translation project for the PC-Engine CD game Ginga Ojousama Densetsu Yuna.
+
+                    ****************************************
+                    *          Build Instructions          *
+                    ****************************************
+                    
+The build system is only set up for Unix-like systems, though none of the code 
+is fundamentally dependent on this and could be ported with a bit of effort. 
+You'll need GCC, libpng, and ImageMagick (the "convert" utility), as well as any 
+dependencies of wla-dx.
+
+You'll first need a disc image of Ginga Ojousama Densetsu Yuna for the PC-Engine 
+CD. The Redump-verified image of the original release version of the full game 
+is highly suggested, though other images may work if they're a close enough 
+match.
+
+  Redump name: Ginga Ojousama Densetsu Yuna
+               ("Original" edition, serial HCD2031)
+  CRC32:       e3a941bb
+  MD5:         aacda3875c8bb1cbcf8769349f3738c8
+  SHA-1:       a380e89fa45909b6a31790426a7c3bda26d20e58
+
+The disc image must be in ISO+WAV+CUE format. If you need to convert from a 
+different format, try using bchunk.
+
+Once you have an ISO+WAV+CUE image, rename the files such that every track is 
+named as "yuna_01.wav", "yuna_02.iso", and so on up through "yuna_10.iso". Copy 
+these files into the "yuna" directory. Then:
+
+$ cd yuna
+$ ./build.sh
+
+build.sh should then build all the necessary tools and output the translated ISO 
+for track 2 as "yuna_02_build.iso". Use the provided "yuna_build_iso.cue" CUE 
+sheet to run the built disc.
+
+If you want to modify the project, check build.sh to see where the resources 
+that get inserted into the game are coming from.
+
+                    ****************************************
+                    *              Licensing               *
+                    ****************************************
+
+See COPYING. Basically, everything by me (Supper) is GPLv3, and everything else
+is under the terms of whoever wrote it.
+
+                    ****************************************
+                    *               Credits                *
+                    ****************************************
+
+                              Mafoo343 -- Translation
+                                Supper -- Hacking
+           Cargodin, Weedeater, Athena,
+              Momochi, HeirTransparent,
+            SilverLupin, TheMajinZenki -- Translation Support
+            cccmar, Cargodin, Xanathis -- Testing
+
