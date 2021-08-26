@@ -83,6 +83,9 @@ echo "**************************************************************************
 echo "Building prerendered subtitles..."
 echo "*******************************************************************************"
 
+cp -r rsrc_raw/pal out
+cp -r rsrc/grp out
+
 subrender "font/scene/" "font/scene/table.tbl" "asm/include/scene10/string170005.bin" "table/yuna_scenes_en.tbl" "out/grp/scene10-170005.png"
 subrender "font/scene/" "font/scene/table.tbl" "asm/include/scene10/string170006.bin" "table/yuna_scenes_en.tbl" "out/grp/scene10-170006.png"
 subrender "font/scene/" "font/scene/table.tbl" "asm/include/scene10/string170007.bin" "table/yuna_scenes_en.tbl" "out/grp/scene10-170007.png"
@@ -94,9 +97,6 @@ datsnip "out/pal/scene10_pan.pal" $((0x7*0x20)) 0x20 "out/pal/scene10_pan_line.p
 echo "*******************************************************************************"
 echo "Building graphics..."
 echo "*******************************************************************************"
-
-cp -r rsrc_raw/pal out
-cp -r rsrc/grp out
 
 #mkdir -p out/grp
 mkdir -p out/maps
