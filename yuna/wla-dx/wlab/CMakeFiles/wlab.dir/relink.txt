@@ -1,1 +1,0 @@
-/usr/bin/cc   -pedantic-errors -Wall -Wextra -ansi -O2 -g -DNDEBUG   CMakeFiles/wlab.dir/main.c.o  -o CMakeFiles/CMakeRelink.dir/wlab -rdynamic -lm 

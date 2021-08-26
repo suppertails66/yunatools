@@ -1,1 +1,0 @@
-/usr/bin/cc   -pedantic-errors -Wall -Wextra -ansi -O2 -g -DNDEBUG   CMakeFiles/gen-huc6280.dir/opcode_table_generator/main.c.o CMakeFiles/gen-huc6280.dir/opcodes_huc6280.c.o  -o op_tbl_gen/gen-huc6280 -rdynamic -lm 
