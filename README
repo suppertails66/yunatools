@@ -40,6 +40,12 @@ build.sh should then build all the necessary tools and output the translated ISO
 for track 2 as "yuna_02_build.iso". Use the provided "yuna_build_iso.cue" CUE 
 sheet to run the built disc.
 
+Note that translated game text is taken from yuna/script/script.csv, a raw CSV 
+file. While this can be edited directly, it will probably be easier to instead 
+work with yuna/script/script.ods, a formatted ODS spreadsheet version of the 
+same content. Just run "convertscript.sh" before "build.sh" to convert the ODS 
+into the CSV automatically (requires OpenOffice).
+
 If you want to modify the project, check build.sh to see where the resources 
 that get inserted into the game are coming from.
 
