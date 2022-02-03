@@ -2,21 +2,21 @@
 ; wla symbolic information for "subintro_2.bin_build".
 
 [labels]
-00:7f58 incrementSyncVarCounterAndBgOff
-00:7f5d incrementSyncVarCounterAndSprClr
-00:7f62 incrementSyncVarCounter
+00:7f5b incrementSyncVarCounterAndBgOff
+00:7f60 incrementSyncVarCounterAndSprClr
+00:7f65 incrementSyncVarCounter
 00:755d clearAndSendSubtitleExclusionOverwrite
 00:7563 clearOnlySubtitleExclusionOverwrite
-00:7f7d spriteClearExcludeSubtitles
-00:7f7f spriteClearExcludeSubtitles@done
-00:7f82 spriteClearAndSendExcludeSubtitles
-00:7f94 doSpecialSpriteClear
-00:7f99 doSpecialSpriteClear@doStandardClear
-00:7fa0 triggerNonSubtitleSpriteClear
-00:7fa1 lowPrioritySpriteObjGenerationOffset
-00:7fa2 highPrioritySpriteObjGenerationOffset
-00:7fa3 setUpHighPrioritySpriteGen
-00:7fad setUpHighPrioritySpriteGen@vramWriteAddrLoCmd
+00:7f80 spriteClearExcludeSubtitles
+00:7f82 spriteClearExcludeSubtitles@done
+00:7f85 spriteClearAndSendExcludeSubtitles
+00:7f97 doSpecialSpriteClear
+00:7f9c doSpecialSpriteClear@doStandardClear
+00:7fa3 triggerNonSubtitleSpriteClear
+00:7fa4 lowPrioritySpriteObjGenerationOffset
+00:7fa5 highPrioritySpriteObjGenerationOffset
+00:7fa6 setUpHighPrioritySpriteGen
+00:7fb0 setUpHighPrioritySpriteGen@vramWriteAddrLoCmd
 00:7690 syncFrameCounter
 00:7692 globalSyncFrameCounter
 00:7694 syncVar
@@ -123,7 +123,7 @@
 00:7e9e newStringClearAreaEnd
 00:7e9e nextSpriteAttrVramBase
 00:7ea0 currentLineSpriteAttrStartPtr
-00:7fbe fixInitialSync
+00:7fc1 fixInitialSync
 00:7ea2 subtitleScriptData
 
 [definitions]
@@ -219,4 +219,4 @@
 00000002 _sizeof_nextSpriteAttrVramBase
 00000002 _sizeof_currentLineSpriteAttrStartPtr
 00000008 _sizeof_fixInitialSync
-000000b6 _sizeof_subtitleScriptData
+000000b9 _sizeof_subtitleScriptData

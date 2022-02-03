@@ -4,18 +4,18 @@
 [labels]
 00:797b clearAndSendSubtitleExclusionOverwrite
 00:7981 clearOnlySubtitleExclusionOverwrite
-00:953c spriteClearExcludeSubtitles
-00:953e spriteClearExcludeSubtitles@done
-00:9541 spriteClearAndSendExcludeSubtitles
-00:9553 doSpecialSpriteClear
-00:9558 doSpecialSpriteClear@doStandardClear
-00:955f triggerNonSubtitleSpriteClear
-00:9560 lowPrioritySpriteObjGenerationOffset
-00:9561 highPrioritySpriteObjGenerationOffset
-00:9562 setUpHighPrioritySpriteGen
-00:956c setUpHighPrioritySpriteGen@vramWriteAddrLoCmd
-00:957d incrementAdpcmSyncCounter
-00:959a doSetUpSpritesRawFix
+00:9521 spriteClearExcludeSubtitles
+00:9523 spriteClearExcludeSubtitles@done
+00:9526 spriteClearAndSendExcludeSubtitles
+00:9538 doSpecialSpriteClear
+00:953d doSpecialSpriteClear@doStandardClear
+00:9544 triggerNonSubtitleSpriteClear
+00:9545 lowPrioritySpriteObjGenerationOffset
+00:9546 highPrioritySpriteObjGenerationOffset
+00:9547 setUpHighPrioritySpriteGen
+00:9551 setUpHighPrioritySpriteGen@vramWriteAddrLoCmd
+00:9562 incrementAdpcmSyncCounter
+00:957f doSetUpSpritesRawFix
 00:7ae5 syncFrameCounter
 00:7ae7 globalSyncFrameCounter
 00:7ae9 adpcmSyncCounter
@@ -260,4 +260,4 @@
 00000002 _sizeof_queuedSubsOffTime
 00000001 _sizeof_queuedSubsOffIsOn
 00000001 _sizeof_subtitleBaseY
-000004a1 _sizeof_subtitleScriptData
+00000486 _sizeof_subtitleScriptData
