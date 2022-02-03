@@ -31,11 +31,11 @@ $(LIB): $(OBJ)
 	$(AR) rcs $@ $^
 
 blackt:
-	cd ../blackt && $(MAKE) && cd $(CURDIR)
+	$(MAKE) -C${BLACKTDIR}
 
 .PHONY: blackt clean
 
 clean:
 	rm -f $(LIB)
 	rm -rf $(ODIR)
-	cd ../blackt && $(MAKE) clean && cd $(CURDIR)
+	$(MAKE) -C ${BLACKTDIR} clean
