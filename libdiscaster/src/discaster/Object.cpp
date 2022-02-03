@@ -85,6 +85,14 @@ namespace Discaster {
   ObjectMemberMap& Object::members() {
     return members_;
   }
+  
+  void Object::printMembers() const {
+    for (ObjectMemberMap::const_iterator it = members_.cbegin();
+         it != members_.cend();
+         ++it) {
+      std::cout << it->first << std::endl;
+    }
+  }
     
   void Object::fromParseNode(ParseNode& node) {
     if (node.isType("INTEGER")) {

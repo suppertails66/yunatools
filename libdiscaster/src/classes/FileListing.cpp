@@ -317,19 +317,25 @@ namespace Discaster {
     dst.writeu32lebe(self->getMemberInt("dataSize"));
     
     // convert and write time
-    DiscasterInt recordingTime = self->getMemberInt("recordingTime");
-    tm* convTime = localtime(&recordingTime);
-    dst.writeu8(convTime->tm_year);
-    // tm is 0-11, cdrom wants 1-12
-    dst.writeu8(convTime->tm_mon + 1);
-    dst.writeu8(convTime->tm_mday);
-    dst.writeu8(convTime->tm_hour);
-    dst.writeu8(convTime->tm_min);
-    // "tm_sec is generally 0-59. The extra range [0-61] is to accommodate for
-    //  leap seconds in certain systems."
-    dst.writeu8((convTime->tm_sec > 59) ? 59 : convTime->tm_sec);
-    // note: signed
-    dst.writes8(self->getMemberInt("gmtOffset"));
+//    if (config.debugOutput()) {
+//      std::cout << "Writing debug recording timestamp" << std::endl;
+//      for (int i = 0; i < 7; i++) dst.writeu8(0x00);
+//    }
+//    else {
+      DiscasterInt recordingTime = self->getMemberInt("recordingTime");
+      tm* convTime = localtime(&recordingTime);
+      dst.writeu8(convTime->tm_year);
+      // tm is 0-11, cdrom wants 1-12
+      dst.writeu8(convTime->tm_mon + 1);
+      dst.writeu8(convTime->tm_mday);
+      dst.writeu8(convTime->tm_hour);
+      dst.writeu8(convTime->tm_min);
+      // "tm_sec is generally 0-59. The extra range [0-61] is to accommodate for
+      //  leap seconds in certain systems."
+      dst.writeu8((convTime->tm_sec > 59) ? 59 : convTime->tm_sec);
+      // note: signed
+      dst.writes8(self->getMemberInt("gmtOffset"));
+//    }
     
     // generate and write file flags
     TByte fileFlags = 0;

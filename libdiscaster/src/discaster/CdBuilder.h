@@ -224,11 +224,18 @@ namespace Discaster {
     void changeSectorMode(CdModeIds::CdModeId modeId);
     
     /**
-     * Sets whether or not ECC and EDC calculations are disabled.
+     * Sets whether or not ECC calculations are disabled.
      *
-     * @arg disableEccEdcCalculation__ New state.
+     * @arg disableEccCalculation__ New state.
      */
     void setDisableEccCalculation(bool disableEccCalculation__);
+    
+    /**
+     * Sets whether or not EDC calculations are disabled.
+     *
+     * @arg disableEdcCalculation__ New state.
+     */
+    void setDisableEdcCalculation(bool disableEdcCalculation__);
     
     /**
      * Performs final calculations on CD.
@@ -315,9 +322,14 @@ namespace Discaster {
     int initialPregapSectors_;
     
     /**
-     * If set, ECC/EDC calculations are disabled.
+     * If set, ECC calculations are disabled.
      */
     bool disableEccCalculation_;
+    
+    /**
+     * If set, EDC calculations are disabled.
+     */
+    bool disableEdcCalculation_;
 
     /**
      * Array in which each byte position corresponds to that sector number
@@ -590,6 +602,11 @@ namespace Discaster {
                       = XaSubheaderFlagModes::none,
                    XaSubheaderFlagModes::XaSubheaderFlagMode xaEofMode
                       = XaSubheaderFlagModes::none);
+    
+    void outputFileReport(Object* env, Object* iso, Object* directoryListing,
+      std::ostream& ofs);
+    void outputFileReportStep(Object* env, Object* iso, Object* directoryListing,
+      std::string path, std::ostream& ofs);
     
   };
 

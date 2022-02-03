@@ -23,6 +23,22 @@ namespace Discaster {
     warningsOn_ = warningsOn__;
   }
   
+  bool Config::fileReportModeOn() const {
+    return fileReportModeOn_;
+  }
+  
+  void Config::setFileReportModeOn(bool fileReportModeOn__) {
+    fileReportModeOn_ = fileReportModeOn__;
+  }
+  
+  std::string Config::fileReportOutputName() const {
+    return fileReportOutputName_;
+  }
+  
+  void Config::setFileReportOutputName(std::string fileReportOutputName__) {
+    fileReportOutputName_ = fileReportOutputName__;
+  }
+  
   Config config;
 
 

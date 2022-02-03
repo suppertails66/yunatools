@@ -63,6 +63,9 @@ namespace Discaster {
     const ObjectMemberMap& members() const;
     ObjectMemberMap& members();
     
+    // debug
+    void printMembers() const;
+    
     // special shortcuts for the case where we want to set a member to a
     // common type
     // i suppose i could set up a cast but eh

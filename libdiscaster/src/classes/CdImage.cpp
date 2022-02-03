@@ -166,6 +166,27 @@ namespace Discaster {
   }
   
   /**
+   * Adds raw binary sector data from a file to the CD in the current mode.
+   * Data must be preformatted to full sector size (i.e. includes sync and,
+   * if relevant, ECC data).
+   * Sector alignment is enforced.
+   *
+   * arg0 inputFileName Name of the input file.
+   */
+  static ParseNode* addRawPreformattedSectorData(
+      Object* env, Object* self, ObjectArray args) {
+    DiscasterString inputFileName = args.at(0).stringValue();
+    
+    Object obj = BlobObject("addRawPreformattedSectorData");
+    obj.setMember("inputFileName", inputFileName);
+    obj.setMember("skippedInitialSectors", 0);
+    obj.setMember("totalSize", -1);
+    addBuildCommand(self, obj);
+    
+    return NULL;
+  }
+  
+  /**
    * Adds raw binary data from a file to the CD in the current mode,
    * skipping over a specified number of sectors at the start of the data.
    * See addRawData().
@@ -414,6 +435,44 @@ namespace Discaster {
         cd.writeDataFromFileWithSkippedInitialSectors(
           inputFileName, skippedInitialSectors, totalSize);
       }
+      else if (buildCmdName.compare("addRawPreformattedSectorData") == 0) {
+        DiscasterString inputFileName
+          = buildCmdObj.getMember("inputFileName").stringValue();
+        DiscasterInt skippedInitialSectors
+          = buildCmdObj.getMember("skippedInitialSectors").intValue();
+        DiscasterInt totalSize
+          = buildCmdObj.getMember("totalSize").intValue();
+        
+        if (config.debugOutput()) {
+          std::cout << "Sector " << cd.currentSectorNum() << ": "
+                    << "Adding raw preformatted sector data from file \""
+                    << inputFileName << "\""
+                    << " (initial sectors skipped: "
+                    << skippedInitialSectors
+                    << ")"
+                    << std::endl;
+          if (totalSize != -1) {
+            std::cout << "Limiting write size to " << totalSize << " sectors"
+              << std::endl;
+          }
+        }
+        
+        TIfstream ifs;
+        ifs.open(inputFileName.c_str());
+        ifs.seekoff(skippedInitialSectors * CdConsts::physicalSectorSize);
+        
+        cd.padToSectorBoundary();
+        
+        if (totalSize == -1) {
+          cd.writeRawSectorData(ifs);
+        }
+        else {
+          TBufStream subifs;
+          subifs.writeFrom(ifs, totalSize);
+          subifs.seek(0);
+          cd.writeRawSectorData(subifs);
+        }
+      }
       else if (buildCmdName.compare("addWavAudio") == 0) {
         DiscasterString inputFileName
           = buildCmdObj.getMember("inputFileName").stringValue();
@@ -519,7 +578,19 @@ namespace Discaster {
 //    bool disableEccEdcCalc = self->getMemberInt("disableEccEdcCalculation");
     bool disableEccCalc = self->getMemberInt("disableEccCalculation");
 //    cd.setDisableEccEdcCalculation(disableEccEdcCalc);
+    bool disableEdcCalc = self->getMemberInt("disableEdcCalculation");
+    
+    // if in file layout report mode, never do ecc+edc
+/*    if (config.fileReportModeOn()) {
+      disableEccCalc = true;
+      disableEdcCalc = true;
+      
+//      cd.setEnableFileReportMode(true);
+//      cd.setFileReportOutputName(config.fileReportOutputName());
+    } */
+    
     cd.setDisableEccCalculation(disableEccCalc);
+    cd.setDisableEdcCalculation(disableEdcCalc);
     
     cd.finishCd();
   }
@@ -556,6 +627,15 @@ namespace Discaster {
     
     buildCd(env, self, cd);
     
+    if (config.fileReportModeOn()) {
+      if (config.debugOutput()) {
+        std::cout << "Skipping remaining build steps because report is done"
+          << std::endl;
+      }
+      
+      return NULL;
+    }
+    
     // export cue
     cd.exportCueSheet(exportCueName, exportBinName);
 //    {
@@ -582,6 +662,7 @@ namespace Discaster {
     addFunction("addRawData", addRawData);
     addFunction("addRawDataWithSkippedInitialSectors",
                 addRawDataWithSkippedInitialSectors);
+    addFunction("addRawPreformattedSectorData", addRawPreformattedSectorData);
     addFunction("addIsoFilesystem", addIsoFilesystem);
     addFunction("addModeChange", addModeChange);
     addFunction("addWavAudio", addWavAudio);
@@ -599,6 +680,7 @@ namespace Discaster {
     
     // ECC/EDC calculation enable/disable
 //    setMember("disableEccEdcCalculation", IntObject(0));
+    setMember("disableEdcCalculation", IntObject(0));
     setMember("disableEccCalculation", IntObject(0));
   }
 

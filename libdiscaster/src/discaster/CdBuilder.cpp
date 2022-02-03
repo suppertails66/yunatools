@@ -48,6 +48,7 @@ namespace Discaster {
         maxSectorCount_(CdConsts::cdCapacityInSectors),
         initialPregapSectors_(CdConsts::numInitialPregapSectors),
         disableEccCalculation_(false),
+        disableEdcCalculation_(false),
         xaEorFlagMode_(XaSubheaderFlagModes::none),
         xaEofFlagMode_(XaSubheaderFlagModes::none),
         xaFileNumber_(0),
@@ -336,10 +337,13 @@ namespace Discaster {
       }
       
       if (len <= maxTransfer) {
-        if (xaEorFlagMode_ == XaSubheaderFlagModes::lastSector)
+        if (xaEorFlagMode_ == XaSubheaderFlagModes::lastSector) {
+//          std::cerr << "HERE: " << newMode2SectorsAreEor_ << std::endl;
           newMode2SectorsAreEor_ = true;
-        if (xaEofFlagMode_ == XaSubheaderFlagModes::lastSector)
+        }
+        if (xaEofFlagMode_ == XaSubheaderFlagModes::lastSector) {
           newMode2SectorsAreEof_ = true;
+        }
       }
       
       // prep next sector if needed
@@ -783,6 +787,62 @@ namespace Discaster {
       
     }
   }
+    
+  void CdBuilder::outputFileReport(Object* env, Object* iso,
+      Object* directoryListing, std::ostream& ofs) {
+    outputFileReportStep(env, iso, directoryListing, "", ofs);
+  }
+  
+  void CdBuilder::outputFileReportStep(Object* env, Object* iso,
+      Object* directoryListing, std::string path, std::ostream& ofs) {
+    
+    Object* directoryMap
+      = FileListing::getDirectoryMap(env, directoryListing);
+    
+    std::string cdFormatString = iso->getMemberString("format");
+    CdFormatIds::CdFormatId cdFormatId
+      = CdConsts::formatStringToId(cdFormatString);
+    
+    // repeat for subdirectories
+    for (ObjectMemberMap::iterator it = directoryMap->members().begin();
+         it != directoryMap->members().end();
+         ++it) {
+      Object& fileObj = it->second;
+      
+      if (fileObj.getMemberInt("isDirectory") == 0) {
+        // make sure this is an actual file and not a disc pointer
+/*        if ((fileObj.type().compare("FileListing") == 0)
+              && !fileObj.hasMember("build_absSectorNum")) {
+          if (config.warningsOn()) {
+            std::cerr << "WARNING: "
+              << "File \"" << path + "/" + fileObj.getMemberString("name")
+              << "\" present in file listing, but not placed on disc"
+              << std::endl;
+          }
+        } */
+        
+        std::string fileName = fileObj.getMemberString("name");
+        std::string fullName = path + "/" + fileName;
+        int sectorOffset = fileObj.getMemberInt("dataOffset");
+        int byteSize = fileObj.getMemberInt("dataSize");
+        bool isRaw = (fileObj.getMemberInt("usesRawSectors") != 0);
+        
+        ofs << fullName << " " << fileName << " "
+          << sectorOffset << " " << byteSize << " "
+          << (isRaw ? "raw" : "normal") << std::endl;
+      }
+      else {
+//        if ((fileObj.getMemberInt("isDirectory") != 0)
+        if ((fileObj.getMemberInt("isSelfReference") == 0)
+            && (fileObj.getMemberInt("isParentReference") == 0)) {
+          // recursively handle subdirectories
+          outputFileReportStep(env, iso, &fileObj,
+              path + "/" + fileObj.getMemberString("name"), ofs);
+        }
+      }
+      
+    }
+  }
   
   void CdBuilder::addDiscLabel(std::string name) {
     int sectorNum = currentSectorNum();
@@ -846,6 +906,10 @@ namespace Discaster {
     disableEccCalculation_ = disableEccCalculation__;
   }
   
+  void CdBuilder::setDisableEdcCalculation(bool disableEdcCalculation__) {
+    disableEdcCalculation_ = disableEdcCalculation__;
+  }
+  
   void CdBuilder::finishCd(Object* env) {
     // close current sector if active
     if (sectorIsActive()) finishSector();
@@ -890,6 +954,20 @@ namespace Discaster {
       
       rewriteDiscReferencesStep(
           env, &iso, &(iso.getMember("directoryListing")), "");
+      
+      if (config.fileReportModeOn()) {
+        if (config.debugOutput()) {
+          std::cout << "Outputting file report to "
+            << config.fileReportOutputName()
+            << " and stopping build"
+            << std::endl;
+        }
+        
+        std::ofstream ofs(config.fileReportOutputName().c_str());
+        outputFileReport(
+          env, &iso, &(iso.getMember("directoryListing")), ofs);
+        return;
+      }
       
       //======================================
       // update primary volume descriptors
@@ -1011,6 +1089,9 @@ namespace Discaster {
       if (disableEccCalculation_) {
         std::cout << "Note: skipping ECC calculations" << std::endl;
       }
+      if (disableEdcCalculation_) {
+        std::cout << "Note: skipping EDC calculations" << std::endl;
+      }
     }
     
     // create Galois field and generator for CIRC calculations
@@ -1084,26 +1165,28 @@ namespace Discaster {
       // 0x81C-0x92F = ECC
       case CdModeIds::mode1:
       {
-        // compute EDC
-        unsigned int edc = computeEdc(
-          sectorBuffer
-            + CdConsts::mode1EdcCheckedDataStartOffset,
-          CdConsts::mode1EdcCheckedDataEndOffset
-            - CdConsts::mode1EdcCheckedDataStartOffset);
-        
-        // update sector buffer with EDC value
-        ByteConversion::toBytes(edc,
-                                (char*)sectorBuffer
-                                  + CdConsts::mode1EdcStartOffset,
-                                ByteSizes::uint32Size,
-                                EndiannessTypes::little,
-                                SignednessTypes::nosign);
-        
-        // write EDC to sector on disk
-        cdbuf_.seekp((unsigned int)(discStreamBasePos_ + bytePos
-                                    + CdConsts::mode1EdcStartOffset));
-        cdbuf_.write((char*)sectorBuffer + CdConsts::mode1EdcStartOffset,
-                     ByteSizes::uint32Size);
+        if (!disableEdcCalculation_) {
+          // compute EDC
+          unsigned int edc = computeEdc(
+            sectorBuffer
+              + CdConsts::mode1EdcCheckedDataStartOffset,
+            CdConsts::mode1EdcCheckedDataEndOffset
+              - CdConsts::mode1EdcCheckedDataStartOffset);
+          
+          // update sector buffer with EDC value
+          ByteConversion::toBytes(edc,
+                                  (char*)sectorBuffer
+                                    + CdConsts::mode1EdcStartOffset,
+                                  ByteSizes::uint32Size,
+                                  EndiannessTypes::little,
+                                  SignednessTypes::nosign);
+          
+          // write EDC to sector on disk
+          cdbuf_.seekp((unsigned int)(discStreamBasePos_ + bytePos
+                                      + CdConsts::mode1EdcStartOffset));
+          cdbuf_.write((char*)sectorBuffer + CdConsts::mode1EdcStartOffset,
+                       ByteSizes::uint32Size);
+        }
         
         if (disableEccCalculation_) continue;
         
@@ -1126,26 +1209,28 @@ namespace Discaster {
       // 0x81C-0x92F = ECC
       case CdModeIds::mode2form1:
       {
-        // compute EDC
-        unsigned int edc = computeEdc(
-          sectorBuffer
-            + CdConsts::mode2Form1EdcCheckedDataStartOffset,
-          CdConsts::mode2Form1EdcCheckedDataEndOffset
-            - CdConsts::mode2Form1EdcCheckedDataStartOffset);
-        
-        // update sector buffer with EDC value
-        ByteConversion::toBytes(edc,
-                                (char*)sectorBuffer
-                                  + CdConsts::mode2Form1EdcStartOffset,
-                                ByteSizes::uint32Size,
-                                EndiannessTypes::little,
-                                SignednessTypes::nosign);
-        
-        // write EDC to sector on disk
-        cdbuf_.seekp((unsigned int)(discStreamBasePos_ + bytePos
-                                    + CdConsts::mode2Form1EdcStartOffset));
-        cdbuf_.write((char*)sectorBuffer + CdConsts::mode2Form1EdcStartOffset,
-                     ByteSizes::uint32Size);
+        if (!disableEdcCalculation_) {
+          // compute EDC
+          unsigned int edc = computeEdc(
+            sectorBuffer
+              + CdConsts::mode2Form1EdcCheckedDataStartOffset,
+            CdConsts::mode2Form1EdcCheckedDataEndOffset
+              - CdConsts::mode2Form1EdcCheckedDataStartOffset);
+          
+          // update sector buffer with EDC value
+          ByteConversion::toBytes(edc,
+                                  (char*)sectorBuffer
+                                    + CdConsts::mode2Form1EdcStartOffset,
+                                  ByteSizes::uint32Size,
+                                  EndiannessTypes::little,
+                                  SignednessTypes::nosign);
+          
+          // write EDC to sector on disk
+          cdbuf_.seekp((unsigned int)(discStreamBasePos_ + bytePos
+                                      + CdConsts::mode2Form1EdcStartOffset));
+          cdbuf_.write((char*)sectorBuffer + CdConsts::mode2Form1EdcStartOffset,
+                       ByteSizes::uint32Size);
+        }
         
         if (disableEccCalculation_) continue;
         
@@ -1185,31 +1270,31 @@ namespace Discaster {
       // 0x92C-0x92F = EDC over 0x10-0x92B
       case CdModeIds::mode2form2:
       {
-        // TODO: EDC is optional and user should be able to disable it.
-        //       in this case, the EDC should be zero-filled, which we
-        //       have already done and so need not do anything.
-        
-        // compute EDC
-        unsigned int edc = computeEdc(
-          sectorBuffer
-            + CdConsts::mode2Form2EdcCheckedDataStartOffset,
-          CdConsts::mode2Form2EdcCheckedDataEndOffset
-            - CdConsts::mode2Form2EdcCheckedDataStartOffset);
-        
-        // update sector buffer with EDC value
-        ByteConversion::toBytes(edc,
-                                (char*)sectorBuffer
-                                  + CdConsts::mode2Form2EdcStartOffset,
-                                ByteSizes::uint32Size,
-                                EndiannessTypes::little,
-                                SignednessTypes::nosign);
-        
-        // write EDC to sector on disk
-        cdbuf_.seekp((unsigned int)(discStreamBasePos_ + bytePos
-                                    + CdConsts::mode2Form2EdcStartOffset));
-        cdbuf_.write((char*)sectorBuffer + CdConsts::mode2Form2EdcStartOffset,
-                     ByteSizes::uint32Size);
-        
+        // EDC is optional and user should be able to disable it.
+        // in this case, the EDC should be zero-filled, which we
+        // have already done and so need not do anything.
+        if (!disableEdcCalculation_) {
+          // compute EDC
+          unsigned int edc = computeEdc(
+            sectorBuffer
+              + CdConsts::mode2Form2EdcCheckedDataStartOffset,
+            CdConsts::mode2Form2EdcCheckedDataEndOffset
+              - CdConsts::mode2Form2EdcCheckedDataStartOffset);
+          
+          // update sector buffer with EDC value
+          ByteConversion::toBytes(edc,
+                                  (char*)sectorBuffer
+                                    + CdConsts::mode2Form2EdcStartOffset,
+                                  ByteSizes::uint32Size,
+                                  EndiannessTypes::little,
+                                  SignednessTypes::nosign);
+          
+          // write EDC to sector on disk
+          cdbuf_.seekp((unsigned int)(discStreamBasePos_ + bytePos
+                                      + CdConsts::mode2Form2EdcStartOffset));
+          cdbuf_.write((char*)sectorBuffer + CdConsts::mode2Form2EdcStartOffset,
+                       ByteSizes::uint32Size);
+        }
       }  
         break;
       // no additional fields
@@ -1650,6 +1735,28 @@ namespace Discaster {
 //        TBufStream dst;
         writeDirectoryDescriptor(env, iso, path, cdFormatId);
       }
+      else if (buildCmdName.compare("addUnlistedData") == 0) {
+        std::string filename = 
+          buildCmdObj.getMemberString("filename");
+        
+        padToSectorBoundary();
+        
+        if (config.debugOutput()) {
+          std::cout << "Sector " << currentSectorNum() << ": "
+            << "Writing UNLISTED DATA "
+            << "\""
+            << filename
+            << "\""
+            << " to disc"
+            << std::endl;
+        }
+        
+        writeDataFromFileWithXaFlags(filename,
+                                     XaSubheaderFlagModes::lastSector,
+                                     XaSubheaderFlagModes::lastSector);
+        
+        padToSectorBoundary();
+      }
       else if (buildCmdName.compare("addListedFile") == 0) {
         std::string filename = 
           buildCmdObj.getMemberString("filename");
@@ -2009,7 +2116,7 @@ namespace Discaster {
                               Object* targetDirectory,
                               std::string path,
                               CdFormatIds::CdFormatId cdFormatId) {
-    TBufStream dst;
+//    TBufStream dst;
     
     // align to boundary
     padToSectorBoundary();
@@ -2076,6 +2183,7 @@ namespace Discaster {
 //    int totalDescriptorSize = 0;
     
     // write directory record for each file
+    TBufStream dst;
     for (std::vector<Object*>::iterator it = sortVec.begin();
          it != sortVec.end();
          ++it) {
@@ -2105,27 +2213,47 @@ namespace Discaster {
           << std::endl;
       }
       
-      TBufStream dst;
+      TBufStream nextDst;
       FileListing::writeDirectoryRecord(
-        &env, &fileObj, dst, cdFormatId);
-      dst.seek(0);
+        &env, &fileObj, nextDst, cdFormatId);
+      nextDst.seek(0);
       
-      if (sectorIsActive()) {
+/*      if (sectorIsActive()) {
         // easily missed line in the standard:
         // "Each Directory Record shall end in the Logical Sector in which it
         // begins."
         // if the next record won't fit in the sector, we have to pad to the
         // next one.
-        int remainingSpace = remainingBytesInSector();
-        if (dst.size() > remainingSpace) padToSectorBoundary();
+//        int remainingSpace = remainingBytesInSector();
+//        if (dst.size() > remainingSpace) padToSectorBoundary();
+      } */
+      
+      // easily missed line in the standard:
+      // "Each Directory Record shall end in the Logical Sector in which it
+      // begins."
+      // if the next record won't fit in the current sector, we have to pad
+      // to the next one.
+      int curSecSize = CdConsts::sectorDataAreaSize(currentSectorMode_);
+      int remainingInSector = curSecSize - (dst.size() % curSecSize);
+      if (nextDst.size() >= remainingInSector) {
+        for (int i = 0; i < remainingInSector; i++) {
+          dst.put(0x00);
+        }
       }
+      
+      dst.writeFrom(nextDst, nextDst.size());
 
-//      writeData((TByte*)dst.data().data(), dst.size());
-      writeDataWithXaFlags(dst,
-                           XaSubheaderFlagModes::lastSector,
-                           XaSubheaderFlagModes::lastSector);
-//      totalDescriptorSize += dst.size();
+////      writeData((TByte*)dst.data().data(), dst.size());
+//      writeDataWithXaFlags(dst,
+//                           XaSubheaderFlagModes::lastSector,
+//                           XaSubheaderFlagModes::lastSector);
+////      totalDescriptorSize += dst.size();
     }
+    
+    dst.seek(0);
+    writeDataWithXaFlags(dst,
+                         XaSubheaderFlagModes::lastSector,
+                         XaSubheaderFlagModes::lastSector);
     
     padToSectorBoundary();
     

@@ -125,6 +125,93 @@ namespace Discaster {
                              info.name(), newFileListing);
       }
     }
+    
+    // import files
+/*    for (TFileManip::FileInfoCollection::iterator it
+           = fileInfoCollection.begin();
+         it != fileInfoCollection.end();
+         ++it) {
+      TFileInfo& info = *it;
+      
+      if (!info.isDirectory()) {
+        std::string targetFileName =
+          targetFolder
+          + ((targetFolder.size() == 0) ? "/" : "/")
+          + info.name();
+          
+        if (config.debugOutput()) {
+          std::cout << "    Importing file \"" << info.path() << "\" "
+            << "as \"" << targetFileName << "\"" << std::endl;
+        }
+        
+        Object newFileListing = FileListing(info.name(), false);
+        newFileListing.getMember("parentPath").setStringValue(targetFolder);
+        newFileListing.setMember("sourceFilename", info.path());
+        newFileListing.setMember("dataSize", info.size());
+        newFileListing.setMember("recordingTime", info.modifiedTime());
+          
+//          std::cerr << "file: " << targetFolder << ", parent: "
+//            << parentFolder << std::endl;
+        
+        
+//        targetFolderListing->setMember(info.name(), newFileListing);
+        FileListing::addFile(env, targetFolderListing,
+                             info.name(), newFileListing);
+      }
+    }
+    
+    // import subdirectories
+    for (TFileManip::FileInfoCollection::iterator it
+           = fileInfoCollection.begin();
+         it != fileInfoCollection.end();
+         ++it) {
+      TFileInfo& info = *it;
+      
+      if (info.isDirectory()) {
+        std::string inputSubFolderPath = info.path();
+        std::string targetSubFolderPath
+          = targetFolder
+            + ((targetFolder.size() == 0) ? "/" : "/")
+            + info.name();
+//          = targetFolder;
+        // root directory doesn't need slash added
+//        if (targetFolder.size() > 0) targetSubFolderPath += "/";
+//        targetSubFolderPath += info.name();
+        
+        // recursively index all subdirectories
+        
+        if (config.debugOutput()) {
+          std::cout << "  Importing directory: " << info.path() << std::endl;
+        }
+        
+        // create FileListing object for this folder if none exists
+//        if (!targetFolderListing->hasMember(info.name())) {
+        if (!FileListing::hasFile(env, targetFolderListing, info.name())) {
+//          targetFolderListing->setMember(info.name(),
+//            FileListing(info.name(), true));
+          Object obj = FileListing(info.name(), true);
+          obj.getMember("parentPath").setStringValue(targetFolder);
+          FileListing::addFile(env, targetFolderListing, info.name(), obj);
+          
+//          std::cerr << "file: " << targetFolder << ", parent: "
+//            << parentFolder << std::endl;
+        }
+        
+//        Object* targetSubFolderListing
+//          = &(targetFolderListing->getMember(info.name()));
+        Object* targetSubFolderListing
+          = FileListing::getFile(env, targetFolderListing, info.name());
+        
+        // TODO: check this
+        indexDirectory(env, self, targetSubFolderListing,
+                       inputSubFolderPath, targetSubFolderPath,
+                       targetFolder);
+                       
+        if (config.debugOutput()) {
+          std::cout << "  Finished importing directory: " << info.path() << std::endl;
+        }
+      }
+    } */
   }
 
   /**
@@ -609,6 +696,34 @@ namespace Discaster {
     return NULL;
   }
   
+  /**
+   * Adds an unlisted physical file placement to the build list.
+   * The target file is NOT one that has been previously listed on the disc.
+   * It is not included in the filesystem listing; it's just data
+   * that sits on the disc at a given position.
+   *
+   * arg0 filename The target file to place on disc.
+   */
+  static ParseNode* addUnlistedData(
+      Object* env, Object* self, ObjectArray args) {
+    std::string filename = args.at(0).stringValue();
+    
+    if (config.debugOutput()) {
+      std::cout << "Adding unlisted data for placement: "
+        << "\""
+        << filename
+        << "\""
+        << std::endl;
+    }
+    
+    Object command = BlobObject("addUnlistedData");
+    command.setMember("filename", filename);
+
+    addBuildCommand(self, command);
+    
+    return NULL;
+  }
+  
   static ParseNode* addNullSectors(
       Object* env, Object* self, ObjectArray args) {
     int numSectors = args.at(0).intValue();
@@ -751,11 +866,13 @@ namespace Discaster {
        
     } */
     
-    
-    for (std::vector<Object*>::iterator it = sortVec.begin();
+/*    for (std::vector<Object*>::iterator it = sortVec.begin();
          it != sortVec.end();
          ++it) {
       Object& fileObj = *(*it);
+      
+      // ignore disc pointers
+      if (fileObj.type().compare("DiscPointerListing") == 0) continue;
       
       std::string filePath = path + "/" + fileObj.getMemberString("name");
       
@@ -774,6 +891,50 @@ namespace Discaster {
         ObjectArray args;
         args.push_back(StringObject(filePath));
         addListedFile(env, self, args);
+      }
+    } */
+    
+    // files
+    for (std::vector<Object*>::iterator it = sortVec.begin();
+         it != sortVec.end();
+         ++it) {
+      Object& fileObj = *(*it);
+      
+      std::string filePath = path + "/" + fileObj.getMemberString("name");
+      
+      if (fileObj.getMemberInt("isDirectory") == 0) {
+        // ignore disc pointers
+        if (fileObj.type().compare("DiscPointerListing") == 0) continue;
+        
+        // add placement command for file
+        ObjectArray args;
+        args.push_back(StringObject(filePath));
+        addListedFile(env, self, args);
+      }
+    }
+    
+    // subdirectories
+    for (std::vector<Object*>::iterator it = sortVec.begin();
+         it != sortVec.end();
+         ++it) {
+      Object& fileObj = *(*it);
+      
+      std::string filePath = path + "/" + fileObj.getMemberString("name");
+      
+      if ((fileObj.getMemberInt("isDirectory") != 0)
+//          && (fileObj.getMemberInt("isSelfReference") == 0)
+//          && (fileObj.getMemberInt("isParentReference") == 0)
+          ) {
+        
+        // add descriptor command for directory
+        ObjectArray args;
+        args.push_back(StringObject(filePath));
+        // this is done in the recursion step
+//        addDirectoryDescriptor(env, self, args);
+        
+        // recursively handle directory contents
+        addDirectoryContentFullyStep(
+          env, self, filePath);
       }
     }
   }
@@ -829,6 +990,57 @@ namespace Discaster {
     return result;
   }
   
+  /**
+   * Sets a member of the target to a specified value.
+   * If the target is a directory, sets this member for the directory
+   * itself, all contained files, and recursively on all subdirectories.
+   *
+   * arg0 path  Path to an extant file or directory.
+   * arg1 prop  Name of a member to set.
+   * arg2 value Value to set the member to.
+   */
+  static ParseNode* setListedFilePropRecursive(
+      Object* env, Object* self, ObjectArray args) {
+    std::string path = args.at(0).stringValue();
+    std::string prop = args.at(1).stringValue();
+    Object value = args.at(2);
+    
+//    Object& fileObj = *IsoFilesystem::getDirectoryListingObjectFromPath(
+//                          env, self, path);
+    
+//    Object* targetSubFolderListing
+//      = FileListing::getFile(env, targetFolderListing, info.name());
+    
+//    Object* targetFolderListing = &(self->getMember("directoryListing"));
+//    Object* targetSubFolderListing
+//      = FileListing::getFile(env, targetFolderListing, path);
+    
+    Object& fileObj = *IsoFilesystem::getDirectoryListingObjectFromPath(
+                          env, self, path);
+    
+    fileObj.setMember(prop, value);
+    
+    if (fileObj.getMemberInt("isDirectory") != 0) {
+      Object* dirList = FileListing::getDirectoryMap(env, &fileObj);
+      for (ObjectMemberMap::iterator it = dirList->members().begin();
+           it != dirList->members().end();
+           it++) {
+//        std::cout << it->second.getMemberString("name") << std::endl;
+        std::string subfilename = it->second.getMemberString("name");
+        
+        // create new arguments and recur
+        ObjectArray subArgs = args;
+        subArgs.at(0) = StringObject(path + "/" + subfilename);
+        setListedFilePropRecursive(env, self, subArgs);
+      }
+    }
+    
+//    ParseNode* result = new ParseNode("OBJECTP", -1);
+//    result->setVoidp(&fileObj);
+    
+    return NULL;
+  }
+  
   Object* IsoFilesystem::getDirectoryListingObjectFromPath(
       Object* env, Object* self, const std::string& path) {
     Object* base = &(self->getMember("directoryListing"));
@@ -853,6 +1065,10 @@ namespace Discaster {
                                            Object* fileListing) {
     // recursively handle all subdirectories
     Object& directoryMap = *FileListing::getDirectoryMap(env, fileListing);
+    
+//    std::cerr << directoryMap.members().size() << std::endl;
+//    char c;
+//    std::cin >> c;
     for (ObjectMemberMap::iterator it = directoryMap.members().begin();
          it != directoryMap.members().end();
          ++it) {
@@ -860,6 +1076,10 @@ namespace Discaster {
       if ((subFileListing.getMemberInt("isDirectory") != 0)
           && (subFileListing.getMemberInt("isSelfReference") == 0)
           && (subFileListing.getMemberInt("isParentReference") == 0)) {
+//        std::cerr << subFileListing.getMemberString("name") << std::endl;
+//        char c;
+//        std::cin >> c;
+        
         addSelfAndParentPointersStep(env, self, &subFileListing);
       }
     }
@@ -893,7 +1113,7 @@ namespace Discaster {
     std::string actualSelfName = selfName;
     // FIXME: ugly
     if (actualSelfName.compare(std::string("\x00", 1)) == 0) actualSelfName = "";
-
+    
     Object& actualSelfObj = *IsoFilesystem::getDirectoryListingObjectFromPath(
                         env, self, parentName + "/" + actualSelfName);
     Object& actualParentObj = *IsoFilesystem::getDirectoryListingObjectFromPath(
@@ -910,8 +1130,20 @@ namespace Discaster {
     parentIdStr += CdConsts::directoryRecordParentReferenceChar;
 //    Object parentObj = FileListing(parentName, true);
     Object parentObj = actualParentObj;
+    // clear the directory map from the copy of the parent object
+    // that we add here -- otherwise, we end up with exponential
+    // memory consumption as each new file we process gets
+    // its own copy of the entire tree up to this point
+    parentObj.setMember("directoryMap", BlobObject("NameFileListingMap"));
     parentObj.getMember("isParentReference").setIntValue(1);
     FileListing::addFile(env, fileListing, parentIdStr, parentObj);
+    
+    {
+//      std::cerr << selfName << " " << parentName << " " << parentIdStr << std::endl;
+//      actualParentObj.printMembers();
+//      char c;
+//      std::cin >> c;
+    }
   }
   
   void IsoFilesystem::addSelfAndParentPointers(
@@ -936,6 +1168,7 @@ namespace Discaster {
     addFunction("addDescriptorSetTerminator", addDescriptorSetTerminator);
     addFunction("addDirectoryDescriptor", addDirectoryDescriptor);
     addFunction("addListedFile", addListedFile);
+    addFunction("addUnlistedData", addUnlistedData);
     addFunction("addNullSectors", addNullSectors);
     addFunction("addTypeLPathTable", addTypeLPathTable);
     addFunction("addTypeLPathTableCopy", addTypeLPathTableCopy);
@@ -943,6 +1176,7 @@ namespace Discaster {
     addFunction("addTypeMPathTableCopy", addTypeMPathTableCopy);
     addFunction("addDirectoryContentFully", addDirectoryContentFully);
     addFunction("getListedFile", getListedFile);
+    addFunction("setListedFilePropRecursive", setListedFilePropRecursive);
     
     //============================
     // Set up members

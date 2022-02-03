@@ -151,6 +151,11 @@ namespace Discaster {
     dst.writeu32be(self->getMemberInt("typeMPathTableOffset"));
     dst.writeu32be(self->getMemberInt("optionalTypeMPathTableOffset"));
     // fill this in later
+/*    std::string test = self->getMemberString("rootDirectoryRecord");
+    for (int i = 0; i < test.size(); i++) {
+      std::cerr << (unsigned int)test[i] << " ";
+    }
+    std::cerr << std::endl; */
     TStringConversion::writePaddedString(self->getMemberString("rootDirectoryRecord"), dst, 34);
     TStringConversion::writePaddedString(self->getMemberString("volumeSetIdentifier"), dst, 128, ' ');
     TStringConversion::writePaddedString(self->getMemberString("publisherIdentifier"), dst, 128, ' ');

@@ -82,7 +82,8 @@ namespace Discaster {
   
     const static int physicalSectorSize = 0x930;
     const static int logicalSectorSize = 0x800;
-    const static int cdCapacityInSectors = 0x514C8;
+//    const static int cdCapacityInSectors = 0x514C8;
+    const static int cdCapacityInSectors = 360000;
     const static int cdCapacityInBytes
       = cdCapacityInSectors * physicalSectorSize;
       

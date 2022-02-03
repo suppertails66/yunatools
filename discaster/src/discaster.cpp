@@ -31,8 +31,10 @@ int main(int argc, char* argv[]) {
     std::cout << "Usage: "
       << argv[0] << " <scriptfile> [options]" << std::endl;
     std::cout << "Options: " << std::endl;
-    std::cout << "  -w       Suppress warnings" << std::endl;
-    std::cout << "  -d       Enable debug output" << std::endl;
+    std::cout << "  -w        Suppress warnings" << std::endl;
+    std::cout << "  -d        Enable debug output" << std::endl;
+    std::cout << "  -f <file> Output report of file locations on built image"
+      << std::endl;
     
     return 0;
   }
@@ -41,6 +43,11 @@ int main(int argc, char* argv[]) {
   
   if (TOpt::hasFlag(argc, argv, "-w")) config.setWarningsOn(false);
   if (TOpt::hasFlag(argc, argv, "-d")) config.setDebugOutput(true);
+  char* reportFilenameStr = TOpt::getOpt(argc, argv, "-f");
+  if (reportFilenameStr != NULL) {
+    config.setFileReportModeOn(true);
+    config.setFileReportOutputName(std::string(reportFilenameStr));
+  }
 
   double timer = clock();
 
