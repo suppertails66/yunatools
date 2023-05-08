@@ -977,7 +977,7 @@ String,622,[colorB],[more],はい‥‥,Yes...?,,Yes...?,
 String,623,[color3],[more],"「縦横無尽」を「獣王無人」って[br]
 書いてあったけど　プロレスラーの[br]
 キャッチフレーズみたいで[br]
-思わず　笑っちゃったわ","Instead of the kanji for {to do as one pleases,} you accidentally wrote {deserted beast king.} Sounds like a pro wrestler's catchphrase! I couldn't help but laugh.","NOTE: this is actually referenced much much later, in one of emily's attacks","Instead of putting down the Kanji for {to do as one pleases} you accidentally wrote{deserted beast king,}which sounds like it could be the catchphrase of a pro-wrestler. I couldn't help but laugh.",
+思わず　笑っちゃったわ","Instead of the kanji for {every which way,} you accidentally wrote {deserted beast king.} Sounds like a pro wrestler's catchphrase! I couldn't help but laugh.","NOTE: this is actually referenced much much later, in one of emily's attacks","Instead of putting down the Kanji for {to do as one pleases} you accidentally wrote{deserted beast king,}which sounds like it could be the catchphrase of a pro-wrestler. I couldn't help but laugh.",
 String,624,[color7],[more],「獣王無人」って　どんな意味ですか？,What's {deserted beast king} supposed to mean?,,What the heck is {deserted beast king} supposed to mean?,
 String,625,[colorB],[more],‥‥そんなの　知らないわよ,"...Uh, I dunno.",,"...Uh, I dunno.",
 String,626,[color3],[more],"あっ　そういえば　ユナさん[br]
@@ -5670,7 +5670,7 @@ It's sooooo cute! ❤",,It's so small and soft and goes {mew-mew}. It's so cute!
 String,3236,[color3],[more],‥‥‥‥‥‥‥‥,........................,DUPE: 1451,........................,
 String,3237,,[more],ユナは　また一生懸命　お話します,"Once again, Yuna speaks with all her soul.",,"Once again, Yuna talks with all her might.",
 String,3238,[colorB],[more],"うちのパパね　とっても　とっても[br]
-恥ずかしがり屋さんなの","My daddy, he's soooooooo shy.",,My Daddy's a very very shy person.,
+恥ずかしがり屋さんなの","My papa, he's soooooooo shy.",,My Daddy's a very very shy person.,
 String,3239,[colorB],[more],"プロポーズの時も　なかなか言えなくって[br]
 逆に　ママがプロポーズしたんだって！[br]
 フフフフッ❤","When he went to propose, he couldn't bring himself to say anything, so Mama proposed instead! Tee-hee-hee-hee... ❤",,"Even when the time came for him to propose, he couldn't bring himself to say anything, so my Mama proposed instead! Tee-hee-hee-hee...❤",
@@ -8220,7 +8220,7 @@ String,4646,,,リューディア,Ryudia,DUPE: 110,,
 // Enemy battle message block 11 (sector 0xB405)
 //=====================================",,,,
 String,4648,,,バトル　＜ユナＶＳエミリー＞,Battle <Yuna VS Emily>,,Battle <Yuna VS Emily>,
-String,4649,,,縦横無尽,{To do as one pleases}!,"NOTE: referencing yuna's failed kanji test from a billion years earlier in the game.
+String,4649,,,縦横無尽,{Every which way}!,"NOTE: referencing yuna's failed kanji test from a billion years earlier in the game.
 not much we can really do with this one",Do as you please.,
 String,4650,,,んーっ！,Ngggh―!,,Nnnnn-!,
 String,4651,,,,,DUPE: 133,,
