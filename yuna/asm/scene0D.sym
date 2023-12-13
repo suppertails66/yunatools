@@ -4,19 +4,23 @@
 [labels]
 00:7d14 clearAndSendSubtitleExclusionOverwrite
 00:7d1a clearOnlySubtitleExclusionOverwrite
-00:9463 spriteClearExcludeSubtitles
-00:9465 spriteClearExcludeSubtitles@done
-00:9468 spriteClearAndSendExcludeSubtitles
-00:947a doSpecialSpriteClear
-00:947f doSpecialSpriteClear@doStandardClear
-00:9486 triggerNonSubtitleSpriteClear
-00:94a9 lowPrioritySpriteObjGenerationOffset
-00:94aa highPrioritySpriteObjGenerationOffset
-00:94ab setUpHighPrioritySpriteGen
-00:94b5 setUpHighPrioritySpriteGen@vramWriteAddrLoCmd
-00:9434 incrementAdpcmSyncCounter
-00:9448 incrementAdpcmSyncCounter_sub
-00:94c6 doSetUpSpritesRawFix
+00:9434 spriteClearExcludeSubtitles
+00:9436 spriteClearExcludeSubtitles@done
+00:9439 spriteClearAndSendExcludeSubtitles
+00:944b doSpecialSpriteClear
+00:9450 doSpecialSpriteClear@doStandardClear
+00:9457 triggerNonSubtitleSpriteClear
+00:949b lowPrioritySpriteObjGenerationOffset
+00:949c highPrioritySpriteObjGenerationOffset
+00:949d setUpHighPrioritySpriteGen
+00:94a7 setUpHighPrioritySpriteGen@vramWriteAddrLoCmd
+00:6b56 setUpHighPrioritySpriteGen@done
+00:6b56 adpcmPlayExtraParamCmd
+00:94cd doAdpcmSyncDirectLoad
+00:947a incrementAdpcmSyncCounter
+00:9480 incrementAdpcmSyncCounter_sub
+00:94d8 doAdpcmSyncStreamed
+00:94b8 doSetUpSpritesRawFix
 00:7e7e syncFrameCounter
 00:7e80 globalSyncFrameCounter
 00:7e82 adpcmSyncCounter
@@ -160,8 +164,8 @@
 00:9430 queuedSubsOffTime
 00:9432 queuedSubsOffIsOn
 00:9433 subtitleBaseY
-00:94db doCdSync
-00:9487 subtitleScriptData
+00:94e2 doCdSync
+00:9458 subtitleScriptData
 
 [definitions]
 00000006 _sizeof_clearAndSendSubtitleExclusionOverwrite
@@ -173,8 +177,11 @@
 00000001 _sizeof_lowPrioritySpriteObjGenerationOffset
 00000001 _sizeof_highPrioritySpriteObjGenerationOffset
 0000001b _sizeof_setUpHighPrioritySpriteGen
-00000014 _sizeof_incrementAdpcmSyncCounter
+00000002 _sizeof_adpcmPlayExtraParamCmd
+0000000b _sizeof_doAdpcmSyncDirectLoad
+00000006 _sizeof_incrementAdpcmSyncCounter
 0000001b _sizeof_incrementAdpcmSyncCounter_sub
+0000000a _sizeof_doAdpcmSyncStreamed
 00000015 _sizeof_doSetUpSpritesRawFix
 00000002 _sizeof_syncFrameCounter
 00000002 _sizeof_globalSyncFrameCounter

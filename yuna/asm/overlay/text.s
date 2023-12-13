@@ -530,10 +530,16 @@
       ; otherwise, leave at original value so we write back
       ; to this same target next time (instead of generating
       ; a new tile based on the old contents, wasting space)
-      ldx nextTransferIsPatternChange.w
-      beq +
-        jsr incrementPredefinedTransferPatternDst
-      +:
+      @tileUpdateLoop:
+        ldx nextTransferIsPatternChange.w
+        beq +
+          jsr incrementPredefinedTransferPatternDst
+          ; increment by whatever number of patterns is needed
+          ; (since e.g. the ellipsis character is 9 pixels,
+          ; it may be necessary to advance by more than one pattern)
+          dec nextTransferIsPatternChange.w
+          bra @tileUpdateLoop
+        +:
       
       rts
   .ends
@@ -745,10 +751,13 @@
             
             clc
             adc ovlText_textBaseX_offset
-            cmp $19
+/*            cmp $19
             beq @notPatternChange
               inc nextTransferIsPatternChange.w
-            @notPatternChange:
+            @notPatternChange:*/
+            sec
+            sbc $19.b
+            sta nextTransferIsPatternChange.w
           pla
       .endif
       

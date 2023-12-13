@@ -72,23 +72,69 @@
   ;===================================
   
   setUpStdBanks:
-    tma #$08
-    sta restoreOldBanks@slot3+1.w
-    tma #$10
-    sta restoreOldBanks@slot4+1.w
-    tma #$20
-    sta restoreOldBanks@slot5+1.w
-    
-    lda #ovlBoot_extraPagesBase
-    tam #$08
-    ina
-    tam #$10
-    ina
-    tam #$20
-    
+    ; to accommodate situations where one routine needs to load
+    ; the standard banks, but may get interrupted by another one
+    ; that needs to do the same thing, we provide one layer of
+    ; recursion
+    ; (this started happening in scene10 after timing modifications)
+    lda stdBanksSetUp.w
+    bne setUpStdBanks_sublevel
+      tma #$08
+      sta restoreOldBanks@slot3+1.w
+      tma #$10
+      sta restoreOldBanks@slot4+1.w
+      tma #$20
+      sta restoreOldBanks@slot5+1.w
+      
+      @finish:
+      lda #ovlBoot_extraPagesBase
+      tam #$08
+      ina
+      tam #$10
+      ina
+      tam #$20
+      
+      inc stdBanksSetUp.w
+    @done:
     rts
   
+  setUpStdBanks_sublevel:
+    tma #$08
+    sta restoreOldBanks_sublevel@slot3+1.w
+    tma #$10
+    sta restoreOldBanks_sublevel@slot4+1.w
+    tma #$20
+    sta restoreOldBanks_sublevel@slot5+1.w
+    bra setUpStdBanks@finish
+  
   restoreOldBanks:
+    lda stdBanksSetUp.w
+    ; if we try to restore from an empty "stack", do nothing.
+    ; this previously occurred in e.g. scene0D (there's a call to
+    ; incrementAdpcmSyncCounter, which calls ovlScene_jumpTable_restoreOldBanks --
+    ; but the banks were never loaded to begin with.)
+    ; we got away with this before the recursion handling was added, but adding the
+    ; recursion support means that no longer works.
+    ; i've fixed the issue in scene0D, but kept this safeguard in case
+    ; the problem occurrs anywhere else.
+    beq @done
+    cmp #2
+    beq restoreOldBanks_sublevel
+      @slot3:
+      lda #$00
+      tam #$08
+      @slot4:
+      lda #$00
+      tam #$10
+      @slot5:
+      lda #$00
+      tam #$20
+      
+      dec stdBanksSetUp.w
+    @done:
+    rts
+  
+  restoreOldBanks_sublevel:
     @slot3:
     lda #$00
     tam #$08
@@ -99,7 +145,11 @@
     lda #$00
     tam #$20
     
+    dec stdBanksSetUp.w
     rts
+  
+  stdBanksSetUp:
+    .db $00
 ;.endb
 .ends
 

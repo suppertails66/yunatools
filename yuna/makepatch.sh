@@ -1,4 +1,4 @@
-versionnum="v1.2"
+versionnum="v1.3"
 
 filename_orig="patch/auto_patch/Ginga Ojousama Densetsu Yuna EN [${versionnum}-original].xdelta"
 filename_rerelease="patch/auto_patch/Ginga Ojousama Densetsu Yuna EN [${versionnum}-rerelease].xdelta"

@@ -169,7 +169,7 @@ String,152,[colorB],[more],"どうしよう‥‥[br]
 ご近所に　なんて謝ったらいいんだろう","What should I do...?[br]
 How can I possibly apologize to the neighbors for something like this?",,What should I do...  How can I possibly apologize to my neighbors for something like this?,
 String,153,[color7],[more],"光と闇が正面から　ぶつかったら[br]
-この程度の被害では　済みませんよ","If the light and darkness clash head-on, collateral damage on this scale will be unacceptable.",,"I’m sorry, when light and darkness confront each other, this is the sort of damage that results.",
+この程度の被害では　済みませんよ","If the light and darkness clash head-on, it will make this level of damage seem like a trifle.",,"I’m sorry, when light and darkness confront each other, this is the sort of damage that results.",
 String,154,,[more],"ユナの頭の中で[br]
 怖い想像が　うずまきます",Terrifying images whirl about in Yuna's head.,,Yuna’s head begins to spin at the thought of that terrifying image.,
 String,155,[colorB],[more],"ああ　きっと　みんなに[br]
@@ -239,7 +239,7 @@ String,192,[color3],[more],"い　いや　なに　なんだその　ユナ[br]
 仕事なのかも　しれないけれどね[br]
 やっぱり　年頃の女の子なんだから‥‥","Uh, i-it's nothing, Yuna...[br]
 Just stuff from work, I guess.[br]
-You, ah, you sure have grown...",,"Uh, it’s nothing Yuna, might just be stuff from work I guess.  Anyways, you sure do seem to have grown...",
+You, ah, you sure have grown...","NOTE: for the record, what ouji hiroi actually says here is い　いや　なに　ユナ　そのなんだその","Uh, it’s nothing Yuna, might just be stuff from work I guess.  Anyways, you sure do seem to have grown...",
 String,193,[color3],[more],"あのね　パパは[br]
 ユナのかっこうに　照れてるのよ","Oh, you. Papa's just embarrassed because you look so grown up.",,"Oh you, Papa’s just embarrassed because you look so grown up.",
 String,194,[colorB],[more],や〜だ　パパったら,"Aw, Papa...",,Aw Daddy...,
@@ -275,7 +275,7 @@ Oh, the cruiser's arrived!","NOTE: apparently ""direct mail"" is a term for mail
 String,208,[color7],[more],どうしたんですか　ユナ？,"What's going on, Yuna?",,What’s going on Yuna?,
 String,209,[colorB],[more],"ほら　アタシ　こないだ[br]
 お嬢様コンテストで　優勝したでしょ[br]
-その副賞の　クルーザーが届いたのよ","Well, I won the Fraulein Contest the other day, right? So as a bonus prize, I'm getting a cruiser.",,"You see, the other day I won the Fraulein Contest and because of that, I was given a cruiser as a bonus prize.",
+その副賞の　クルーザーが届いたのよ","Well, I won the Fraulein Contest the other day, right? The cruiser I got as a bonus prize is here.",,"You see, the other day I won the Fraulein Contest and because of that, I was given a cruiser as a bonus prize.",
 String,210,[color7],[more],"それがあれば　宇宙に行けますね？[br]
 ユナ　空港に行きましょう[br]
 宇宙が闇の勢力に　支配される前に！","We can use that to travel into space, can't we? Yuna, let's get to the airport―[br]
@@ -523,7 +523,7 @@ String,346,[colorB],[more],"あたし　神楽坂ユナっていいますけど[
 手紙が　来たんですが‥‥","My name is Yuna Kagurazaka.[br]
 I got a letter saying my cruiser had arrived...",,My name is Yuna Kagurazaka.  I got a letter saying that my cruiser arrived…,
 String,347,[color3],[more],"神楽坂様ですね[br]
-少々　お待ちください","So you are Miss Kagurazaka?[br]
+少々　お待ちください","Miss Kagurazaka, was it?[br]
 One moment, please.",,So you’re Miss Kagurazaka.  Please wait a moment.,
 String,348,[color3],[more],‥‥あ　はい　届いてますよ,"...Ah, yes, it has arrived.",,"…Ah, yes, it has arrived.",
 String,349,[colorB],[more],わー　ありがとう！,"Wow, thanks!",,"Wow, thanks!",
@@ -536,7 +536,7 @@ String,352,[colorB],[more],"あーーーっ　ないっ！[br]
 My license is gone! Where'd it go?",,Ohhhh no!  I don’t have my license!  Where’d it go?,
 String,353,[color3],[more],"申し訳ありませんが　免許証がないと[br]
 お引き渡しできかねますが‥‥","My apologies, but if you don't have your license, I'm afraid we won't be able to turn this over to you...",,"I’m sorry, but if you don’t have your license, we can’t hand it over to you…",
-String,354,[colorB],[more],どうしても？,Why not?,,Why not?,
+String,354,[colorB],[more],どうしても？,There's really no way?,,Why not?,
 String,355,[color3],[more],ごめんなさい　規則なの,"I'm sorry, but those are the rules.",,"I’m sorry, but those are the rules.",
 String,356,[colorB],[more],"どーしよう　確かに[br]
 持ってたはずなんだけどなー[br]
@@ -595,7 +595,7 @@ String,383,[color7],[more],"英語だけじゃなくて　国語と数学と[br]
 地理と物理と化学と生物と‥‥","It's not just English you don't understand, but also Japanese, mathematics, geography, physics, chemistry, biology...",,"Not only English, but also Japanese, mathematics, geography, physics, chemistry, biology as well as uh...",
 String,384,[color7],[more],"えーと　とりあえず[br]
 学校関係は　全部苦手ですよね","Well, actually, you're not much good at anything relating to school, are you?",,"Well, at the moment, you're pretty much not good at anything relating to school are you?",
-String,385,[colorB],[more],こんなときに　冷たくいわないで〜,How could you say something so cruel at a time like this?,,Now really isn't the time to be saying something so cold~,
+String,385,[colorB],[more],こんなときに　冷たくいわないで〜,Don't be so cruel when things are like THIS!,,Now really isn't the time to be saying something so cold~,
 String,386,,[more],お姉さんは　困っているようです,The woman appears to be troubled.,,This young lady appears to be troubled.,
 String,387,[color3],[more],ＰＬＥＡＳＥ　ＨＥＬＰ　ＭＥ,{Please help me.},,{Please help me.},
 String,388,[colorB],[more],あ〜ん　どうしよう〜,Aaaah! What do I do!?,,"Ah~, what to do~",
@@ -626,14 +626,13 @@ I'll be sure to do that...",,"O-Okay, I'll be sure to do that.",
 String,401,[color3],[more],"まあ　あなたとは[br]
 また　会えそうな気がするけど‥‥","Well, somehow, I have a feeling I'll be meeting you again...",,"Somehow, I have a feeling I'll be meeting you again...",
 String,402,,[more],そして　女の子も行ってしまいました,And so the girl leaves as well.,,"And so, the young woman finally left as well.",
-String,403,[colorB],[more],なにがなんだか　よくわかんない,"What in the heck was all that about?[br]
-I'm so confused.",,"What in the heck was all that about, I'm so confused.",
+String,403,[colorB],[more],なにがなんだか　よくわかんない,What in the heck was all THAT about?,,"What in the heck was all that about, I'm so confused.",
 String,404,,[more],"いろいろありましたが　ようやくユナは[br]
 自分のクルーザーのある[br]
 ２３３番ゲートに　たどりつきました","All sorts of things happened along the way, but at long last, Yuna arrives at Gate 233:[br]
 the site of her very own cruiser.",,"All sorts of things have happened along the way, but at long last, Yuna has her own cruiser, she's arrived at gate 233.",
 String,405,[color7],[more],"ユナ　いよいよ　戦いが始まります[br]
-気をひきしめてくださいね","Yuna, from here on, you're going to face more and more battles. Please prepare yourself for this, okay?",,"Yuna, from this moment on there are going to be more and more battles ahead of you. Please ready your heart for this, alright?",
+気をひきしめてくださいね","Yuna, the battle is finally beginning. Please prepare yourself for this, okay?",,"Yuna, from this moment on there are going to be more and more battles ahead of you. Please ready your heart for this, alright?",
 String,406,[colorB],[more],は〜〜い,Okey-dokey!,,Okey~dokey,
 String,407,[color7],[more],その明るい返事が　心配なんですよ‥‥,That cheerful response worries me...,,That cheerful response really has me worried...,
 String,408,,,セーブしますか？,Do you want to save?,DUPE: 316,Do you want to save?,
@@ -715,7 +714,7 @@ String,462,[colorB],[more],"えっと‥‥今は‥‥[br]
 Which class are we having right now?",,Well now...let's see...Which class am I supposed to be going to?,
 String,463,[color7],[more],時間割り　おぼえてないんですか？,You haven't memorized your schedule?,,You haven't memorized your schedule?,
 String,464,[colorB],[more],"あたし　いつも　教科書[br]
-机の中に　いれっぱなしだし‥‥",It's in my textbook that I always keep in my desk...,,It's in my textbook that I always keep in my desk...,
+机の中に　いれっぱなしだし‥‥","I always leave my textbooks behind inside my desk, so...",,It's in my textbook that I always keep in my desk...,
 String,465,[color7],[more],"‥‥ＣＯ２が　どうしたっていってるから[br]
 化学の時間でしょうね","...She's saying something about CO[subscript_2], so it's probably time for chemistry.",,"...I'd say it looks like they're doing something with CO2, so it must be time for chemistry don't you think?",
 String,466,[colorB],[more],"ゲゲッ　あの声は　化学の村上先生！[br]
@@ -816,7 +815,7 @@ String,523,[color3],[more],ユナさん　勝負はついたようね‥‥,"It 
 String,524,[colorB],[more],えっ　そんなぁ‥‥,Huh? No way...,,Huh? No way...,
 String,525,[color7],[more],"銀河一の　お嬢様アイドルが[br]
 カラオケ自慢の高校教師に[br]
-負けてしまったんですねぇ‥‥",The galaxy's top fraulein idol was defeated in a karaoke contest by a high school teacher...?,,"The young lady who's the number one idol in the galaxy, lost to a high school teacher, boasting about her karaoke skills, isn't that just terrific...?",
+負けてしまったんですねぇ‥‥",So the galaxy's top fraulein idol lost to a karaoke-obsessed high school teacher...,,"The young lady who's the number one idol in the galaxy, lost to a high school teacher, boasting about her karaoke skills, isn't that just terrific...?",
 String,526,[color3],[more],"ねぇ　ユナちゃん[br]
 これは　何かの間違いよ[br]
 もう一回　うたってよ〜","C'mon, Yuna, this has to be some kind of mistake! Sing one more time!",,"Come on Yuna, this has to be some kind of a mistake, sing one more time~",
@@ -933,7 +932,7 @@ String,594,[colorB],[more],岡部先生　見つからないねぇ〜,I don't se
 String,595,[color7],[more],ちゃんと　探してくださいよ,Please try looking a little harder.,,Please try searching a little harder.,
 String,596,[colorB],[more],"体育館の裏？[br]
 誰か　いるのかなぁ‥‥","Behind the gym, huh?[br]
-I wonder who could be there...",,Behind the gym huh? I wonder who could be there...,
+I wonder if someone's there...",,Behind the gym huh? I wonder who could be there...,
 String,597,,[more],職員室の中です,This is the inside of the staff room.,,Inside the staff room.,
 String,598,,[more],"先生たちは　どういうわけか[br]
 ユナのことを　にらんでいます","For some reason, the teachers are glaring at Yuna.",,For some reason the teachers are glaring at Yuna.,
@@ -1115,10 +1114,11 @@ String,704,[colorB],[more],あははは‥‥いい天気ですね,"Ah-ha-ha-ha.
 String,705,[color3],[more],あんたの頭の中もな,Just like your brain.,,In your mind maybe.,
 String,706,[colorB],[more],"あのね　あたしの友達にも[br]
 そーゆー　カッコした人がいるの[br]
-バンド　やってるんだけど‥‥","Hey, listen, I've got some friends that are all cool like you. They play in a band together, but the thing is...",,"Hey listen, I have some friends just like you that have an unshakeable bond with each other that play in a band together, but the thing is...",
+バンド　やってるんだけど‥‥","Hey, listen, I've got a friend that looks kind of like you guys. She plays in a band, see...",,"Hey listen, I have some friends just like you that have an unshakeable bond with each other that play in a band together, but the thing is...",
 String,707,[colorB],[more],"不良っぽくて　人気があるの[br]
 でも　ホントは　やさしくって[br]
-いい人なんだ","Even though they act like delinquents in order to be popular, they're actually really nice people.",,"Even though they act like delinquents in order to be popular, the truth is they're actually really good and kind people.",
+いい人なんだ","She's really popular for her punk-girl style.[br]
+But actually, she's a super nice and gentle person.",,"Even though they act like delinquents in order to be popular, the truth is they're actually really good and kind people.",
 String,708,[color3],[more],それが　どないしてん？,You implyin' something?,,What makes you think that?,
 String,709,[colorB],[more],べ　別に‥‥,"Um, no, not really...",,"Um, nothing really...",
 String,710,[colorB],[more],"あの〜　スカート　そんなに長いのって[br]
@@ -1153,7 +1153,7 @@ String,725,[color3],[more],"お前　そんなかっこうして[br]
 恥ずかしくねぇのか？",Ain'tcha embarrassed goin' around lookin' like that?,,Aren't you embarrassed going around looking like that?,
 String,726,[colorB],[more],ええ〜　だってぇ〜,Huh? But...,,Yeah~ but~,
 String,727,[color3],[more],"こんな水着　着てても　着てへんかっても[br]
-変わらへんやんか　ぬがしたれ","Instead of that swimsuit, I think you oughta wear something else. Why don't we get you changed up? Girls―strip her.",,"Instead of wearing that swimsuit, I think you should wear something else. Why don't we get you changed up? Girls, strip her.",
+変わらへんやんか　ぬがしたれ","If yer gonna wear a swimsuit like THIS, you might as well not wear anything at all, yeah? Strip 'er.","NOTE: oh boy, kansai-ben! i'll do the best i can here...","Instead of wearing that swimsuit, I think you should wear something else. Why don't we get you changed up? Girls, strip her.",
 String,728,[colorB],[more],やだー　はだかになっちゃうー,Wait...Don't take off my clothes!,,Wait...Don't take off my clothes...,
 String,729,[color3],[more],"アイドルを　泣かしちゃうってのも[br]
 いいかもな",I guess makin' an idol cry's as good as anything.,,"It looks like the idol's gonna cry. Man, talk about easy prey.",
@@ -1324,7 +1324,7 @@ String,820,[color7],[more],"ユナ‥‥なにをしにきたのか[br]
 おぼえてますよね？",Yuna...Do you even remember what we came here to do?,,Yuna...do you even remember what we came here to do?,
 String,821,[colorB],[more],失礼ねぇ　免許証　探しにきたのよ,Excuse me!? We CAME HERE to look for my license.,,Well excuse me!? We came here to look for my license.,
 String,822,[color7],[more],おぼえているとは　思いませんでした,I didn't think you remembered.,,I didn't think you remembered.,
-String,823,[colorB],[more],あっ　あのディレクター　知ってる,"Oh, that director―I do know him.",,"Oh, this director, I do know him.",
+String,823,[colorB],[more],あっ　あのディレクター　知ってる,"Oh, that director―I know him.",,"Oh, this director, I do know him.",
 String,824,[colorB],[more],マネージャー　どこにいるんだろう,I wonder where my manager could be.,,I wonder where my manager could be.,
 String,825,[color7],[more],ここは　危険だから　他を捜しましょう,"This place is dangerous, so we should look somewhere else.",,"This place is dangerous, so we should look someplace else.",
 String,826,[colorB],[more],そうね,Right.,,Right.,
@@ -1335,7 +1335,7 @@ String,828,[color3],[more],"は〜い　ユナちゃん[br]
 出てくれる気になったんだ","Well, if it isn't Yuna![br]
 So you've finally decided to appear in my drama.",,"Hiiiii Yuna, so you've finally decided to appear in my TV drama.",
 String,829,[color3],[more],"ユナちゃんが　ドラマに出てくれれば[br]
-視聴率６００パーセントは　かたいね","With YOU in it, Yuna, our ratings will shoot up by 600%.",,"With you appearing in the drama, audience ratings will skyrocket 600 percent.",
+視聴率６００パーセントは　かたいね","With YOU in it, Yuna, we'll have a 600% audience share, guaranteed.",,"With you appearing in the drama, audience ratings will skyrocket 600 percent.",
 String,830,[colorB],[more],"あのぉ　あたし[br]
 マネージャー　捜してるんですけど[br]
 ‥‥見ませんでしたよね？","Um, I'm looking for my manager...[br]
@@ -1577,7 +1577,7 @@ String,936,,[more],"ユナは　中でも　いちばん[br]
 String,937,[colorB],[more],あ　痛っ！,"Hey, ow!",NOTE: not used (this is instead part of the audio for わー　とっても　きれいなバラ！),"Hey, ow!",
 String,938,,[more],バラの枝には　トゲがいっぱいです,The roses' stems are covered in thorns.,,The stem of the rose is covered in thorns.,
 String,939,,[more],"よく見ると　バラの後ろに[br]
-意地悪な花が　隠れています","Upon closer examination, hidden behind the roses are truly malicious flowers.",,"Upon closer examination, hidden behind the rose is a truly malicious flower.",
+意地悪な花が　隠れています","Upon closer examination, hidden behind the roses are truly nasty flowers.",,"Upon closer examination, hidden behind the rose is a truly malicious flower.",
 String,940,[color7],[more],"うるしとか　ウツボカズラとか[br]
 ハエトリ草とか‥‥","Poison ivy, pitcher plants, and Venus flytraps...",,"Poison ivy, pitcher plants and Venus flytraps...",
 String,941,[color7],[more],"花とは思えないような花も[br]
@@ -1593,7 +1593,7 @@ Yuna hears somebody laughing.",,Just then! You began to hear someone's laughter.
 String,944,[color3],[more],"ホホホホホ[br]
 ユナさん　お花の美しさ[br]
 満足していただけました？","Oh-ho-ho-ho-ho...[br]
-Yuna, is the beauty of these flowers insufficient for you?",,"Ho-ho-ho-ho-ho, Yuna, are you satisfied with the beauty of these flowers?",
+Yuna, are you satisfied with the beauty of these flowers?",,"Ho-ho-ho-ho-ho, Yuna, are you satisfied with the beauty of these flowers?",
 String,945,[color3],[more],"まぁ　あなたには[br]
 ちょっと　この美しさは[br]
 理解できないかも　しれませんけど","Ah, but perhaps you are unable to comprehend such loveliness.",,"Then again, for now I suppose you may not be able to understand such beauty, how could you understand?",
@@ -1634,17 +1634,17 @@ String,960,[color7],[more],"ひとりで　恒星系のひとつやふたつ[br]
 強いんですよ",Just one of them alone has enough power to totally annihilate a star system or two in the blink of an eye.,,"Alone, just one of them has the ability to totally annihilate one or two star systems in an instant due to their power.",
 String,961,[colorB],[more],よく　わかんない‥‥,"Uh, I don't really get it...",,"Yeah, I don't get it...",
 String,962,[color7],[more],"簡単にいうと　すっごく悪くて[br]
-すっごく強い人のことです","Simply put, it means they're REALLY bad, REALLY strong people.",,"Simply put, they're really bad, really strong people.",
+すっごく強い人のことです","Simply put, it means she's a REALLY bad, REALLY strong person.",,"Simply put, they're really bad, really strong people.",
 String,963,[colorB],[more],"なんですって？[br]
 じゃあ　あたしが　やっつけちゃうわ","What did you say!?[br]
-Okay then, I guess I'll just have to beat them!",,"What's that? Okay then, I guess I'll just have to beat them.",
+Okay then, I'm gonna beat her!",,"What's that? Okay then, I guess I'll just have to beat them.",
 String,964,,[more],"お花のマリが　迫ってきます！[br]
 戦いますか？","Mari of Flowers is approaching![br]
 Fight her?",,Mari of Flowers is approaching! Do you want to fight her?,
 String,965,[colorB],[more],"戦うわっ！　別にお花をいけるのが[br]
-うまいからって　偉くないじゃない！","You're on! And hey, just being good at arranging flowers doesn't mean YOU'RE no good, you know!",,"Let's fight! Besides, your flower arrangement skills are just plain awful!",
-String,966,[color7],[more],ユナ　偉いですよ！,Yuna...You mean it doesn't mean she IS good!,,"Yuna, you're the greatest!",
-String,967,[colorB],[more],へへ〜ん　わかってるわよ,"Eh-heh...Right, that.",,"Hehe, I know.",
+うまいからって　偉くないじゃない！","You're on! Just being good at arranging flowers doesn't make you a good guy, y'know!",,"Let's fight! Besides, your flower arrangement skills are just plain awful!",
+String,966,[color7],[more],ユナ　偉いですよ！,"Oh, Yuna, you're so virtuous!","NOTE: I became convinced this dialogue didn't mean what it said and tried to turn it into some kind of weird grammar joke, but no, it really is just elner randomly jumping in to praise yuna for fighting mari. ugh.","Yuna, you're the greatest!",
+String,967,[colorB],[more],へへ〜ん　わかってるわよ,Eh-heh...You got that right!,,"Hehe, I know.",
 String,968,[color3],[more],あっ　ユナさん　気をつけて！,"Oh, Yuna, look out!",,"Ah, Yuna, look out!",
 String,969,[colorB],[more],えっ　どうしたの？　何かあったの？,Huh? What is it? What's going on?,,"Huh, what is it? What do you see?",
 String,970,[colorB],[more],あ　あの〜　ケンカは　やめませんか？,"Um, uh...Could we not fight?",,"Um, uh~ Could we not fight?",
@@ -1738,7 +1738,8 @@ String,1010,[color7],[more],"もう　ユナの好きなところへ[br]
 行けるように　なりましたよ",Now it will take you wherever you like.,,"Now, you can head wherever you like Yuna.",
 String,1011,[colorB],[more],やったねっ！,Alright!,,Alright!,
 String,1012,[color7],[more],"言われてみれば　その通りですね[br]
-私がうかつでした","Now that you mention it, you're quite right. What a foolish idea that was.",NOTE: continuing on the conversation from the end of scene 00,"Now that you mention it, you're absolutely right.  I was careless.",
+私がうかつでした","Now that you mention it, you're quite right. What a foolish idea that was.","NOTE: continuing on the conversation from the end of scene 00.
+if this scene feels a bit awkwardly inserted, it's because that's exactly what happened. the game was originally developed with a less linear structure, where after leaving earth, yuna could freely move between the first three planets and the black hole. most likely, rather than this scene, there was supposed to be a planet select menu here. but late in production, the plot was largely linearized in order to simplify gameplay. it was too late to modify the cutscenes, so this unvoiced scene was tacked on to explain why yuna goes to the black hole next.","Now that you mention it, you're absolutely right.  I was careless.",
 String,1013,[colorB],[more],"ひっどーい！[br]
 そこまで言わなくたってー‥‥","You meanie![br]
 You don't have to say it like that...",,That's terrible!  You should have said something sooner...,
@@ -1762,7 +1763,7 @@ then? ❤",,"Alrighty then, I'll just take a detour.  Okay?❤",
 String,1023,[color7],[more],"‥‥いえ　せっかくですから[br]
 ちょっと　様子を見ていきましょう","...No, it's a good opportunity, so let's head over there and have a look at things.",,"...No, we need to head over that way for a moment so that we can check it out.",
 String,1024,[colorB],[more],"え〜〜〜〜〜〜〜〜！！　どうして[br]
-わざわざ危ないところにいくのよぉ！",WHAAAAAAAAAT!? Why do we have to go somewhere so dangerous!?,,"EHHHHHHHHH!!  But, why would we go out of our way to head to a place that's so dangerous!?",
+わざわざ危ないところにいくのよぉ！",WHAAAAAAAAAT!? Why are we going somewhere dangerous on PURPOSE!?,,"EHHHHHHHHH!!  But, why would we go out of our way to head to a place that's so dangerous!?",
 String,1025,[color7],[more],"ブラックホールは　闇の勢力の一部です[br]
 もしかしたら　闇の勢力を押しとどめる[br]
 手掛かりがつかめるかも　しれません",Black holes are a part of the forces of darkness. It's possible we'll be able to uncover a clue to holding them back.,,"Black holes are one part of the forces of darkness.  Perhaps we can hold the forces of darkness at bay.  Who knows, we may even discover a clue.",
@@ -1814,7 +1815,7 @@ String,1056,,[more],ユナは空港のロビーにやってきました,Yuna arr
 String,1057,[colorB],[more],わ〜い　こんな星に来るの　初めて〜,Wooow! This is the first time I've ever been to a planet like this!,,"Wow~, this is the first time I've ever been on a planet like this~",
 String,1058,[colorB],[more],"中学の修学旅行なんて　他の学校が[br]
 シリウスまで　行ってるっていうのに[br]
-ウチの学校は　九州だったのよ","When we were taking our middle school field trips, everyone at the other schools said they got to go to Sirius, but MY school just went to Kyushu.",,"This reminds me of that field trip I took in junior high to this other school over in Sirius, back when I was still attending school in Kyushu.",
+ウチの学校は　九州だったのよ","When we were taking our middle school field trips, everyone at the other schools said they got to go to Sirius, but OUR school just went to Kyushu.",,"This reminds me of that field trip I took in junior high to this other school over in Sirius, back when I was still attending school in Kyushu.",
 String,1059,[color7],[more],旅行じゃないんですってば‥‥,"This isn't a field trip, you know...",,This isn't a field trip...,
 String,1060,[colorB],[more],"あ　なんか　すご〜い[br]
 みんな機械で　できてるよ","Ahh, it's so incredible...[br]
@@ -1927,7 +1928,7 @@ String,1118,[colorB],[more],"や〜ん　どっかに[br]
 雨宿りできるとこ　ないのかしら！",AHH...! Isn't there anywhere I can take shelter from the rain!?,,AHH- Isn't there anywhere I can take shelter from the rain!?,
 String,1119,,[more],"雨宿りできそうな　物かげには[br]
 頭が半分機械の　おにいちゃんとかが[br]
-ウンコ座りしていて　入れません","A man with a face that's half machine is squatting in the area that's sheltered from the rain, preventing Yuna from approaching.",,"A man with a face that's half-machine appears to be squatting in the shadows, taking shelter from the rain.",
+ウンコ座りしていて　入れません","The places that are sheltered from the rain have guys with half-machine faces squatting in them, preventing Yuna from approaching.",,"A man with a face that's half-machine appears to be squatting in the shadows, taking shelter from the rain.",
 String,1120,[color7],[more],おや？　あそこに　変な人がいますよ,Hm? There's a strange person over there.,,What's this?  There's a strange person over there.,
 String,1121,[colorB],[more],えっどこどこ,"Huh? Where, where?",,"Huh, where, where?",
 String,1122,[colorB],[more],"早く　雨宿りするとこ　見つけなきゃ[br]
@@ -1945,7 +1946,7 @@ String,1128,[colorB],[more],やっぱり　似合わない‥‥,This looks so w
 String,1129,[color7],[more],ユナ　あれは　何ですか？,"Yuna, what's she doing?",,"Yuna, what's that?",
 String,1130,[colorB],[more],"あれは　『お茶』といって[br]
 それはもう　高級なことなの","That's called {tea ceremony.}[br]
-It's supposed to be pretty classy.",,"That's called a {tea ceremony}, however, it's supposed to be pretty high-class.",
+It's pretty classy stuff.",,"That's called a {tea ceremony}, however, it's supposed to be pretty high-class.",
 String,1131,[color7],[more],どんなこと　するんですか？,What does it involve?,,What does it involve?,
 String,1132,[colorB],[more],"えっとね‥‥[br]
 お茶飲んで　お菓子食べるの","Let's see...[br]
@@ -1980,9 +1981,9 @@ String,1148,,[more],"ユナは　目の前のお茶を[br]
 ググっと　飲み干しました",Yuna gulps down the cup of tea sitting before her.,,Yuna gulps down the cup of tea in front of her.,
 String,1149,[colorB],[more],ウッ　ま　まずい‥‥,"(blech)[br]
 This is...just awful...",,(Blech)...this is...just awful...,
-String,1150,[color3],[more],どうかなさいました？,"Well, how was it?",,How was it?,
+String,1150,[color3],[more],どうかなさいました？,Is something the matter?,,How was it?,
 String,1151,[colorB],[more],"い　いえ‥‥　あの‥‥[br]
-ウッ‥‥　結構なお手前で‥‥","W-Well...Uh...(blech)...[br]
+ウッ‥‥　結構なお手前で‥‥","N-No...Uh...(blech)...[br]
 You must have done...quite something...to make this...",,W-Well...Uh...(Blech)...the tea ceremony was splendid...,
 String,1152,[color3],[more],"あら　ごめんなさい[br]
 それ　お茶じゃなくって[br]
@@ -2042,7 +2043,7 @@ String,1183,[colorB],[more],"やっぱり！[br]
 I thought so from the very beginning!",,I knew it!  I thought so from the very beginning!,
 String,1184,[color7],[more],"じゃあ‥‥‥‥[br]
 なんとかすれば　いいじゃないですか",Then...shouldn't you have done something about it?,,Then......She's not a good guy?,
-String,1185,[colorB],[more],いいじゃない　別に,I was just getting to that!,,She's anything BUT a good guy.,
+String,1185,[colorB],[more],いいじゃない　別に,"C'mon, don't worry about that!",,She's anything BUT a good guy.,
 String,1186,[color3],[more],"私は　『暗黒お嬢様１３人衆』のひとり[br]
 『お茶の佳華』よ！","I am one of the Thirteen Frauleins of Darkness.[br]
 I am {Yoshika of Tea}!",,"I am one of the {Thirteen Frauleins of Darkness}, I am {Yoshika of Tea}!",
@@ -2336,7 +2337,7 @@ String,1359,[colorB],[more],"プンプン　私　怒ってるんですよ[br]
 String,1360,[color3],[more],バッカみたい！,What an idiot!,,What an idiot!,
 String,1361,[colorB],[more],いいかげんに　しなさいっ！,You need to get your act together!,,You need to get your act together!,
 String,1362,,[more],"ユナは　とつぜん[br]
-お姉さん口調で　怒り始めました",The girl's tone suddenly sparks Yuna to anger.,,Yuna suddenly started to get angry at the girl's tone.,
+お姉さん口調で　怒り始めました",Yuna suddenly rounds on the girl in a rather prim tone.,"NOTE: this is actually remarking that Yuna is using ""onee-san speech"", the feminine speech style marked by 〜だわ and the like",Yuna suddenly started to get angry at the girl's tone.,
 String,1363,[colorB],[more],"だいたい　なんですか[br]
 そのだらしない　カッコウは！[br]
 女の子は　いつも見られてるんだから[br]
@@ -2384,8 +2385,8 @@ String,1380,[colorB],[more],"あ〜ん　ごめんなさ〜い！[br]
 Now look, okay, I didn't say that because I hate you or anything...",,"Ah―I'm sorry―! Now look, hold on, I didn't say that because I hate you or anything...",
 String,1381,[colorB],[more],"ただ　そーゆーだらしないカッコウや[br]
 言葉使いしちゃ　いけないと思ったからね[br]
-いってみただけなの　ごめんね","It's just that I thought you shouldn't look so sloppy or talk like that.[br]
-I'm sorry about what I just said, okay?",,It's just that your appearance was sloppy and I wasn't able to find the right words. I'm sorry about what I just said.,
+いってみただけなの　ごめんね","I just said it because I thought you shouldn't look so sloppy or talk that way.[br]
+I'm sorry, okay?",,It's just that your appearance was sloppy and I wasn't able to find the right words. I'm sorry about what I just said.,
 String,1382,[colorB],[more],"ふんっ　こわい顔したって[br]
 ちっとも　怖くないもんね‥‥[br]
 ‥‥ホントは　怖いけど","Hmph! That face of yours doesn't scare me one bit...[br]
@@ -2460,15 +2461,15 @@ String,1415,[color3],[more],"あっ　まさか　キスの経験もないとか
 まさか　まさか　男の子と[br]
 手を　つないだこともないとか！","Oh, but it can't be...You've never experienced a kiss!? Like, no WAY...You've never even held hands with a guy!?",,"Ah, it can't be...you haven't experienced a kiss!? There's just no way, you're kidding...you've never even held hands with a guy!?",
 String,1416,,,,,DUPE: 133,,
-String,1417,[colorB],[more],‥‥フォークダンスで　‥‥ある,...I've...folk danced...,,...Well...I have folk danced.,
+String,1417,[colorB],[more],‥‥フォークダンスで　‥‥ある,...I've held hands...at a folk dance.,,...Well...I have folk danced.,
 String,1418,[color3],[more],"‥‥フォークダンスですってぇ！[br]
-ああ　もう信じられない！","...FOLK DANCED!?[br]
+ああ　もう信じられない！","...FOLK DANCE!?[br]
 Oh man, you're un-buh-LEE-vuh-ble!",,"...Folk danced you say!? AH, you're unbelievable!",
 String,1419,,,,,DUPE: 133,,
 String,1420,[color3],[more],"あなたって　もしかして[br]
 『友達としてはいいけど　決して[br]
 恋人にしようとは　思わないタイプ』[br]
-なんじゃないの！","Lemme guess: you're the type that thinks {we can be good friends, but there's no way we can be lovers,} right!?",,"Let me guess, you're the type that thinks {we can be good friends, but not lovers} is that it!?",
+なんじゃないの！","Lemme guess: you're the {we can be friends, but I'd never think about you THAT way} type, right!?",,"Let me guess, you're the type that thinks {we can be good friends, but not lovers} is that it!?",
 String,1421,[color7],[more],ユナって　そーゆータイプなんですか？,"Yuna, are you that type?",,"Yuna, are you that type?",
 String,1422,[colorB],[more],う　う　うらやましくなんかないもん！,I-I-I'm definitely NOT jealous!,,I-I-I'm not jealous!,
 String,1423,[color3],[more],"ホホホ　顔が　青くなってるし[br]
@@ -2490,7 +2491,7 @@ String,1430,[colorB],[more],"雑誌の占いには　そーゆー風に[br]
 書いてあったけど‥‥",A magazine fortune-teller did say I was that type...,,It did say I was that type in a fortune telling magazine...,
 String,1431,[color3],[more],"ほ〜ら　見なさい！　あなたには[br]
 『女』としての魅力が　これっぽっちも[br]
-ないってことなのよ　ホホホホホ","Oh-HO! Look at yourself! You don't have even the slimmest sliver of charm as a {woman,} do you? Ho-ho-ho-ho-ho!",,Now I see―! You don't even have the tiniest bit of charm as a {woman} do you? Ho-ho-ho-ho-ho!,
+ないってことなのよ　ホホホホホ","Oh-HO! Look at yourself! You don't have even the slimmest sliver of charm as a woman, do you? Ho-ho-ho-ho-ho!",,Now I see―! You don't even have the tiniest bit of charm as a {woman} do you? Ho-ho-ho-ho-ho!,
 String,1432,[colorB],[more],えっ　そんなことないもん！,"Huh!? No, it's not like that!",,"Huh? No, it's not like that!",
 String,1433,[colorB],[more],"中学の時　クラスの男の子に[br]
 『お友達になってください』って[br]
@@ -2503,7 +2504,7 @@ String,1436,[color3],[more],"それで　そのお友達とは　どうだった
 日曜日に　映画に行った？[br]
 それとも‥‥","So, what happened with this {friend} of yours? Did you go to the movies on Sundays?[br]
 Or maybe...",,"So, how was this {friend} of yours? You go to the movies on Sunday? Or maybe...",
-String,1437,[color3],[more],単なる　グループ交際だったりして？,You were just part of a friend group?,,You were only part of a friend group?,
+String,1437,[color3],[more],単なる　グループ交際だったりして？,You just went on group dates for singles?,"NOTE: グループ交際 = group date, or more specifically when a group of single men and women go on a shared date in the hopes of hooking up",You were only part of a friend group?,
 String,1438,[colorB],[more],え！　‥‥そ　そうだけど,"Huh!?...W-Well, yeah...",,Huh!? ...W-Well yeah but...,
 String,1439,[color3],[more],"ホ〜ホッホッホッ[br]
 それで　学年がかわって　クラス違って[br]
@@ -2735,7 +2736,7 @@ And it's not like it's even all that great either...",,I like showed it to all m
 String,1566,[color7],[more],な　なんですか　この人は‥‥,W-What is her problem...?,,W-What is with this person...,
 String,1567,[color3],[more],"ねえねえ　そういえばさぁ　このごろ[br]
 面白いところって　知らない？","Hey hey, by the way...[br]
-Yannow if anything, like, interesting's happened lately?",,"Hey hey, come to think of it...You know something interesting that happened recently?",
+Yannow anywhere that's been, like, interesting lately?",,"Hey hey, come to think of it...You know something interesting that happened recently?",
 String,1568,,,知っていますか？,Does she know?,,Do you know?,
 String,1569,[colorB],[more],"うん　この前　みんなで学校帰りにね[br]
 駅の商店街の喫茶店　入ったら[br]
@@ -2758,7 +2759,7 @@ String,1574,[color3],[more],"まだ　みんなは　知らないんだけど[br
 ちょっとしたバーがあってさぁ","I, like, still didn't know anyone, but we went to this SWEET bar, right...",,"Still, even though I didn't like know any of them, we all got together at quite the bar...",
 String,1575,[color3],[more],"ここが　古代ギリシア風バーとかいって[br]
 ピラミッドなんかがあってさぁ[br]
-すごかったんだから","This bar was all ancient Greek, and they had all these pyramids and stuff...[br]
+すごかったんだから","They said this place was like, an ancient Greek style bar, and it had all these pyramids and stuff...[br]
 It was TOTES awesome.","NOTE: i figured this was just mai being an idiot, but it occurs to me that the ""fraulein training school"" seen in Alephtina's scenario does, in fact, have both ancient Greek-style ruins and a pyramid...
 also, i'm not sure if this is meant to reference a real location or not in the vein of the many references to juliana's in the sequel. there apparently was an egypt-themed club called ""pyramid"" around the time of this game, but that was in okinawa, not roppongi...","This bar was all ancient Greek, and we gathered around this pyramid or something...It was simply amazing.",
 String,1576,[color3],[more],"もー　あたし　ギョーカイの人だねって[br]
@@ -2775,7 +2776,7 @@ String,1581,[colorB],[more],"え〜　別にィ　期末テストがあるから
 String,1582,[color3],[more],"あったしなんか　教授に[br]
 かわいがられてたから　何もしないで[br]
 卒業しちゃったわよ","Well like, ME, my professors loved me so much, I didn't even do anything and graduated just like THAT.","NOTE: i'm a little uncertain what mai's educational status is actually supposed to be at this point. she's 18 in this game, but explicitly states here that she's ""graduated"" (and the reference to 教授, ""professors"", as well as yuna's next question being in past tense, seem to confirm that mai is referring to a university and not high school). despite this, contemporary sources such as pc engine fan's december 1992 coverage, which includes profiles of all the characters, identify her as a college student. and then starting in the sequel, she's a ""student teacher"" at yuna's school. probably not worth worrying about too much, but that's how it is.","As for me, my professor loved me so much, so I didn't even have to take any tests, I ended up graduating just like that.",
-String,1583,[colorB],[more],へぇ〜　大学　どこだったんですか？,Really? And what university was that?,,Really? And what university was that?,
+String,1583,[colorB],[more],へぇ〜　大学　どこだったんですか？,Really? Where'd you go to college?,,Really? And what university was that?,
 String,1584,[color3],[more],"あたしの学校？　もっちろん[br]
 マゼラン土木工業大学家政科よ","My school? Well DUH! The Magellan Technical Institute of Civil Engineering's home ec program, of course!",,"My school? Why it was the Magellan Civil Engineering Technical Institute of Home Economics, of course!",
 String,1585,[colorB],[more],？？？？？,?????,,?????,
@@ -2786,7 +2787,7 @@ Isn't that the university with entry standards so low that 99.5% of applicants a
 String,1588,[color7],[more],"‥‥あの大学なら　ユナでも[br]
 らくらく　入れますよ",...Even Yuna could get into that place without breaking a sweat.,,"...If that's the university, then even Yuna would be allowed in easily.",
 String,1589,[color3],[more],"ちょっとぉ　なんか　あたしに[br]
-文句でもあんの？","Hey YOU―are you, like, whining about me or something?",,HEY YOU―  Are you complaining to me about something?,
+文句でもあんの？","Hey YOU―you like, got a problem with me or something?",,HEY YOU―  Are you complaining to me about something?,
 String,1590,,[more],"お姉さんは　怖い顔で[br]
 ユナを　じっと見ています","The woman glares at Yuna, a frightening expression on her face.",,"The lady has an angry look on her face, she glares at Yuna.",
 String,1591,[color3],[more],イモっぽい子なんて　大っ嫌い！,I can't STAND lame-o brats like you!,,I absolutely hate unattractive girls like you!,
@@ -2868,7 +2869,7 @@ String,1633,[colorB],[more],"あ〜ん　お財布もってくるの[br]
 忘れたよぉ〜",AHH! I forgot to bring my purse...,,AH- I forgot to bring my purse~,
 String,1634,[colorB],[more],エルナー　なんとかならないの？,"Elner, what am I gonna do?",,What am I gonna do Elner?,
 String,1635,[color7],[more],私にいわれても‥‥,You're asking me...?,,You're asking me...?,
-String,1636,[color7],[more],ユナ　買い物してる暇なんてないですよ,"Yuna, we don't have time to go shopping.",CHECK: context?,,
+String,1636,[color7],[more],ユナ　買い物してる暇なんてないですよ,"Yuna, we don't have time to go shopping.","NOTE: not used. in earlier versions of the game, this played before the next line, but was removed, probably because it isn't voice acted while the other lines are. (this removal is probably what caused the issue with elner's portrait not appearing for that line.)",,
 String,1637,[color7],[more],"やっぱり　水着コンテストに[br]
 出ちゃうんですね","You're entering the swimsuit contest after all, aren't you.","NOTE: game doesn't display a portrait, but the voice/tone/text color are elner's
 (they probably missed this during testing because you have to specifically use ""speak"" again in front of the store after getting the voucher, which most people wouldn't think to do)",(Maybe I should enter the swimsuit contest after all...),
@@ -2887,7 +2888,7 @@ but for some reason, we just have to do it!",We really don't have the time for t
 String,1643,,[more],"お店の中には　色とりどりの[br]
 水着が　たくさん置いてあります",Inside the shop is a diverse display of colorful swimsuits.,,Inside the shop is a diverse collection of colorful swimsuits.,
 String,1644,,[more],"水着を着た　マヌカンのお姉さんが[br]
-こちらを見て　微笑んでいます",A female mannequin clad in a swimsuit gazes this way with a smile.,,You see a female mannequin wearing a swimsuit smiling at you.,
+こちらを見て　微笑んでいます",A woman modeling a swimsuit gazes this way with a smile.,,You see a female mannequin wearing a swimsuit smiling at you.,
 String,1645,[colorB],[more],"いいなあ〜[br]
 かわいい水着が　たくさんあるぅ〜","It's so nice.[br]
 There's so many cute swimsuits...",,How nice~  There's so many cute swimsuits~,
@@ -3340,7 +3341,7 @@ String,1895,[colorB],[more],もう　イヤになってきちゃった‥‥,Gee
 String,1896,,[more],ユナは　暑さと汗で　もうメロメロです,The heat and sweat have Yuna on the verge of collapse.,,,
 String,1897,[color7],[more],ユナ　ユナ　大丈夫ですか？,Yuna! YUNA! Are you alright!?,NOTE: originally dupe of 1883,,
 String,1898,,[more],"すっかり力のなくなったユナは[br]
-何も言わずに　首を横にふるだけです","Totally exhausted, Yuna simply falls flat on the road without a word.",,,
+何も言わずに　首を横にふるだけです","Totally exhausted, Yuna just shakes her head without saying anything.",,,
 String,1899,,[more],"エルナーは　あわてて[br]
 道を　ひきかえしました",Elner panics and takes them back the way they came.,"after this, you're kicked back downtown",,
 String,1900,[colorB],[more],"どうして　あたしがこんな所にいるの？[br]
@@ -3479,9 +3480,9 @@ String,1980,[color3],[more],"こんな方に　ヴァイオリンを[br]
 私自身が　情けなくなってしまうわ！",I'm quite ashamed to have let one such as you listen to the violin!,,I feel ashamed to have let someone like you listen to the violin!,
 String,1981,[color3],[more],"でも　ユナさんは　本当の[br]
 お嬢様ではないって　聞かされていたけど[br]
-本当だったなんて　がっかりだわ","While I'd heard you were no true fraulein, Yuna, I'm disappointed to see it was the truth.",NOTE: not used?,"While I'd heard you weren't a true fraulein, Yuna, I'm disappointed to see it was the truth.",
+本当だったなんて　がっかりだわ","While I'd heard you were no true fraulein, Yuna, I'm disappointed to see it was the truth.",NOTE: not used,"While I'd heard you weren't a true fraulein, Yuna, I'm disappointed to see it was the truth.",
 String,1982,[color3],[more],"芸術を　鑑賞する美しい心を[br]
-持ってすら　いなかったのね‥‥",It seems you lack the beautiful heart to appreciate art...,,You don't even have a beautiful heart capable of appreciating art...,
+持ってすら　いなかったのね‥‥","You don't even have so much as a beautiful, art-loving heart...","NOTE: pretty sure this line was intended to continue the unused one immediately above, but since that was removed, it has to stand on its own",You don't even have a beautiful heart capable of appreciating art...,
 String,1983,,,どうしましょうか　ユナ？,"What are you going to do, Yuna?",,"What are you going to do, Yuna?",
 String,1984,[colorB],[more],"ひ　ひど〜い[br]
 そんな風に　いわなくてもいいのに！","T-That's terrible![br]
@@ -3495,7 +3496,7 @@ String,1987,[color3],[more],そうだったの‥‥,Is that so...?,,Is that so.
 String,1988,[color3],[more],"泣かないで　今から　あなたに[br]
 ぴったりな曲を　弾いてあげますからね",Don't cry. I've just the right melody to play for you.,,"You don't have to cry anymore, I've got just the right melody to play for you.",
 String,1989,,[more],"心をうたれた　彼女は[br]
-ヴァイオリンを　構えて‥‥",The girl raises her violin and strikes it with all her soul...,,She raised her violin and struck it will all her soul...,
+ヴァイオリンを　構えて‥‥","Touched, the girl readies her violin...",,She raised her violin and struck it will all her soul...,
 String,1990,,[more],盆踊りの曲を　弾き出しました,She plays a Lantern Festival dance tune.,"NOTE: in the draft version of this scenario found elsewhere in the game data, the song she plays here is identified as the ホラえもん音頭, an obvious parody of doraemon. removing the reference sort of makes the whole thing feel pointless, but oh well",She played the tune of a Lantern Festival dance.,
 String,1991,,[more],"泣いていたユナの[br]
 手足が　自然に動きだします","Yuna, still crying, finds her hands and feet beginning to move of their own accord.",,"Crying, Yuna's hands and feet naturally begin to move on their own.",
@@ -3558,7 +3559,7 @@ String,2019,[colorB],[more],"『初めて　会った時から〜[br]
 ドキドキしたわ〜』","{My heart was racing...[br]
 from the moment we met...}","NOTE: this is the opening line to ""Show Me"", the ending theme",{I've been thrilled ever since- the moment I first saw you-},
 String,2020,[color3],[more],"負けたわ‥‥[br]
-そんな　ものすごい音を出すなんて","I've lost...[br]
+そんな　ものすごい音を出すなんて","I give up...[br]
 That sound you made was absolutely astounding.",,I've lost...The sound you made was absolutely astounding.,
 String,2021,,[more],"ユナは　雑音が止まっても　何だか[br]
 複雑な気分で　うれしくありません","Even though the screeching noise has stopped, Yuna has rather mixed feelings about this outcome.",,"Even though the screeching sound has stopped, Yuna still feels unhappy from the somewhat complicated mood.",
@@ -3828,8 +3829,8 @@ String,2167,,[more],"なんと　ブラックホールの中に[br]
 String,2168,[colorB],[more],"アレ　なーに？[br]
 あんなところに　人がいるよ！[br]
 怖くないのかなぁ‥‥","What's that? There's someone HERE!?[br]
-Should we be afraid...?",,What's that-? There's someone in this place! Should I be afraid...?,
-String,2169,[color7],[more],怖くないのかなって‥‥ユナ,{Should we be afraid?} Yuna asks...,,Don't be afraid...Yuna.,
+Maybe they won't be scary...?",,What's that-? There's someone in this place! Should I be afraid...?,
+String,2169,[color7],[more],怖くないのかなって‥‥ユナ,{Maybe they won't be scary...?} ...Yuna.,,Don't be afraid...Yuna.,
 String,2170,[color7],[more],"今は　そういう問題じゃないと[br]
 思うけどなぁ",I don't think that's the issue right now.,,I don't think that's the issue right now.,
 String,2171,[color7],[more],"どうやら　そう簡単には[br]
@@ -4683,7 +4684,8 @@ String,2671,[colorB],[more],うん,Alright.,NOTE: originally dupe of 1601,Right.
 String,2672,,[more],ここはＣＤ屋さんの前です,This is the front of the CD shop.,,This is the front of the CD shop.,
 String,2673,,[more],"店頭には　ユナのポスターが[br]
 ベタベタと貼り出されています",Posters of Yuna are plastered all over the storefront.,,Yuna's poster is set up next to the shop entrance.,
-String,2674,[colorB],[more],わーい　あたしのポスター貼ってあるー,Wow! They set up a cutout of me!,"NOTE: though the previous sentence appears to indicate the presence of many (literal) posters, this sentence and the next seem to instead be referring specifically to the cardboard cutout visible in the CG","Wow, they set up a poster of me-",
+String,2674,[colorB],[more],わーい　あたしのポスター貼ってあるー,Wow! They set up a cutout of me!,"NOTE: though the previous sentence appears to indicate the presence of many (literal) posters, this sentence and the next seem to instead be referring specifically to the cardboard cutout visible in the CG.
+...or looking at this again, it's entirely possible this really is referring to the posters, which we can't see, instead of the giant cutout which we can. in the end, it doesn't particularly matter.","Wow, they set up a poster of me-",
 String,2675,[color7],[more],"こうやって見ると　実物の方が[br]
 脚　太いね","Between the two of you, I'd say the real McCoy's got fatter legs.",,"Comparing the look of this to the real thing, your legs are fatter, aren't they?",
 String,2676,[colorB],[more],失礼ねぇー　プリプリ,"Why, you little...! Hmph...",,"Well, EXCUSE me! Hmph...",
@@ -4747,10 +4749,10 @@ String,2708,,[more],"お兄さんは　やっと[br]
 ユナの手を　離してくれました",The man finally unhands Yuna.,,The young man finally lets go of Yuna's hands.,
 String,2709,[color3],[more],"ありがとう　このごろは[br]
 お嬢様とかいいながら　ニセモノみたいな[br]
-ヤツとか　増えてきたから感激だなぁ","Thank you. Lately, we've had more and more girls claiming to be {frauleins} that turned out to be some kind of fakers, so this is really moving for me.","NOTE: yuna is supposed to be an ""ojou-sama/fraulein idol"" (though i don't think this is actually reflected in the translation at present because it sounds awkward in english). i assume that's where this line is coming from – i.e. the frauleins of darkness are not the idols this guy is expecting to see when he hears ""fraulein""","Thank you. Nowadays, frauleins and whatnot have been going around saying stuff like how you're a fake. I'm impressed by just how many of those guys have been cropping up lately.",
+ヤツとか　増えてきたから感激だなぁ","Thank you. Lately, we've had more and more girls claiming to be {frauleins} that turned out to be some kind of fakers, so this is really moving for me.","NOTE: yuna is supposed to be an ""ojou-sama/fraulein idol"". i assume that's where this line is coming from – i.e. the frauleins of darkness are not the idols this guy is expecting to see when he hears ""fraulein""","Thank you. Nowadays, frauleins and whatnot have been going around saying stuff like how you're a fake. I'm impressed by just how many of those guys have been cropping up lately.",
 String,2710,[color3],[more],"そういや　図書館のお姉ちゃんなんかも[br]
 お嬢様って　感じだったけど[br]
-いつの間にか　いなくなっちゃったしさ","Speaking of which, that girl from the library kinda gave me {fraulein} vibes too, but before I knew it, she'd up and left.",,"Come to think of it, that young lady at the library was also like that. I get the feeling that she's a fraulein, but before I knew it, she disappeared.",
+いつの間にか　いなくなっちゃったしさ","Speaking of which, that girl from the library kinda gave me {fraulein} vibes too, but before I knew it, she'd up and disappeared.","NOTE: i initially assumed he's talking about emily, who we know was in town earlier per the conversation with the hot dog vendor. this sentence is so vaguely phrased that he might actually be referring to the library worker found in the park, though.","Come to think of it, that young lady at the library was also like that. I get the feeling that she's a fraulein, but before I knew it, she disappeared.",
 String,2711,[color7],[more],"ユナ　とりあえず　ここはひとまず[br]
 離れたほうが　よさそうですね","It looks like it would be a good idea to leave this place for now, Yuna.",,"Yuna, for now it looks like a good idea to stay away from here for the time being.",
 String,2712,[colorB],[more],そ　そうね,O-Okay.,,R-Right.,
@@ -4764,7 +4766,8 @@ String,2717,[colorB],[more],"あ〜ん　サングラスくらい[br]
 String,2718,,[more],"そんなこと言いつつ　ユナは　つくづく[br]
 芸能人の幸せを　実感してしまいました","Despite her words, Yuna is actually deeply feeling the joy of being a celebrity.",,"While saying this, Yuna realized the happiness of being an entertainer.",
 String,2719,[color3],[more],"ちぇっ！　なにさまだと思ってんだよ！[br]
-たかがアイドルじゃねぇか！","Tch! I thought you were special, but you're really just another idol, huh!?",,"Tch! You think you're oh-so-special! But you're just another idol, aren't you!?",
+たかがアイドルじゃねぇか！","Tch! Think you're hot stuff, huh!?[br]
+Well, you're just another idol!",,"Tch! You think you're oh-so-special! But you're just another idol, aren't you!?",
 String,2720,[colorB],[more],ズキーーーン！！,(STAAAAB)!,,(STAAAAB)!,
 String,2721,,[more],ユナは　傷ついてしまいました,Yuna's feelings are hurt.,,Yuna's feelings were hurt.,
 String,2722,[color7],[more],"気まずくならないうちに[br]
@@ -4814,7 +4817,7 @@ String,2744,[color3],[more],"なにさ！　あんな女に[br]
 You were fawning all over that girl!",,What was that!? You were fawning all over that girl!,
 String,2745,[color7],[more],悪いこと　しちゃったみたいですね,It looks like you did something you shouldn't have.,,It looks like you messed up.,
 String,2746,[colorB],[more],に〜げちゃおっと,Whoopsie...Better split.,,"Whoops, run away-",
-String,2747,,[more],女の子が　ユナの方をにらんでいます,The girl is staring at Yuna.,,The girl is staring at Yuna.,
+String,2747,,[more],女の子が　ユナの方をにらんでいます,The girl is glaring at Yuna.,,The girl is staring at Yuna.,
 String,2748,[color7],[more],"もう　カップルと話をするのは[br]
 やめたほうが　いいんじゃないですか",We really shouldn't talk to that couple anymore.,,We shouldn't talk to this couple anymore.,
 String,2749,[colorB],[more],そ　そうね,Y-Yeah.,NOTE: originally dupe of 2712,R-Right.,
@@ -5056,7 +5059,7 @@ Can you answer this question?",,"How about it Yuna, can you answer this question
 String,2893,,,『毒を食らわば皿まで』はどんな意味？,Define the phrase {the die is cast.},"NOTE: we have only one line for each question and answer, so some compromise is necessary","What does the expression {If you're going to eat poison, then you might as well lick the plate.}",
 String,2894,[color3],[more],"あら　思ったよりは賢いのね[br]
 ネコくらいかしら","My, you're smarter than I expected.[br]
-Perhaps there's more to you than meets the eye.",,"Oh, you're smarter than I expected. Perhaps there's more to you than meets the eye.",
+You might even be on the level of a cat.","NOTE: this is possibly playing on the alternate meaning of 賢い (smart) as ""docile/obedient"". i think it works fine here even without that implication, though.","Oh, you're smarter than I expected. Perhaps there's more to you than meets the eye.",
 String,2895,[colorB],[more],えっへん,Eh-heh!,,Eh-heh.,
 String,2896,[color7],[more],"あの〜[br]
 大きなお世話かも　しれないですけど[br]
@@ -5321,7 +5324,7 @@ String,3042,[colorB],[more],いったい　どうやって開けるんだろ？,
 String,3043,[colorB],[more],ねえ　この後　どうすればいいの？,"Hey, what should we do now?",,"Hey, what should we do now?",
 String,3044,[color7],[more],えっ‥‥,Uh...,,Well...,
 String,3045,[colorB],[more],"なーんだ　エルナーも[br]
-考えてなかったんだ","What, you can't think of anything either, Elner?",,What? You can't think of anything either Elner?,
+考えてなかったんだ","Geez, even Elner didn't plan for this.",,What? You can't think of anything either Elner?,
 String,3046,[color3],[more],"へぇーーっ　なかなかやるわね　ユナ[br]
 お見事だったじゃない‥‥","Well, well, well! You're pretty good, Yuna.[br]
 Magnificent work, I dare say...",,"Heh―  You're pretty good Yuna. That was magnificent, wasn't it...?",
@@ -5597,7 +5600,7 @@ String,3200,[color3],[more],"ユナ！　あたしをバカにするの！？[br
 The battle between light and darkness is fated!",,Yuna! Are you mocking me!? The battle between {light} and {darkness} is fate!,
 String,3201,[color3],[more],"口先だけの勝負は　まっぴらよ[br]
 今から　アンタを倒して　私が銀河一の[br]
-お嬢様だってこと　証明してあげるわ","A contest of words means nothing.[br]
+お嬢様だってこと　証明してあげるわ","Enough fighting with empty words.[br]
 Now, I'm going to defeat you and prove that I'm the greatest fraulein in the galaxy!",,A contest of words means nothing. Now I'm going to defeat you and prove that I'm the top fraulein in the galaxy.,
 String,3202,[colorB],[more],え〜っ　なんで　そうなるのォ〜！,What!? Why does it have to be like this!?,,What!? Why does it have to be this way!?,
 String,3203,[color3],[more],いくわよ！　ユナ！！,"HERE I COME, YUNA!",,HERE I COME! YUNA!,
@@ -5738,8 +5741,8 @@ String,3268,[colorB],[more],"だって　こんなの関係ないもん[br]
 C'mon, now! We're better off being friends.",,"Because it doesn't matter. Come on, look, it's better to have friends.",
 String,3269,[color3],[more],"だって‥‥そんなにやさしくされたら[br]
 ‥‥あたし　アンタを倒して　銀河で[br]
-１番のお嬢様になろうって‥‥","Even if...you're this kind...[br]
-I WILL defeat you and become the galaxy's number one fraulein...",,Even if...you're this kind...I will defeat you and become the galaxy's #1 fraulein...,
+１番のお嬢様になろうって‥‥","But...if you're that kind to me...[br]
+Then beating you and becoming the galaxy's number one fraulein is...",,Even if...you're this kind...I will defeat you and become the galaxy's #1 fraulein...,
 String,3270,,[more],リアは　だまって泣いています,Lia silently weeps.,,Lia cries silently.,
 String,3271,[color7],[more],ユナ！　危ない！！,Yuna! Look out!,,Yuna! Look out!,
 String,3272,,,セーブしますか？,Do you want to save?,DUPE: 316,Do you want to save?,
@@ -5792,7 +5795,7 @@ I am called {Sayuka the Noble.}",,I am the last member of the {Thirteen Fraulein
 String,3304,[color3],[more],"「家柄」「育ち」からくる[br]
 『高貴さ』こそが　お嬢様の[br]
 条件という事を　あなたに[br]
-説明いたしたいと思っております","I hope I shall be able to elucidate for you the fact that it is {nobility}―born of {lineage} and {upbringing}―which is, alone, the prerequisite of being a fraulein.",,I would like to explain to you that my {nobility} comes from my {lineage} and {upbringing} which are prerequisites for a fraulein.,
+説明いたしたいと思っております",I hope I shall be able to elucidate for you the fact that it is {nobility}―born of {lineage} and {upbringing}―which is the prerequisite of being a fraulein.,,I would like to explain to you that my {nobility} comes from my {lineage} and {upbringing} which are prerequisites for a fraulein.,
 String,3305,,[more],"沙雪華は　ていねいに[br]
 ごあいさつしてきました",Sayuka offers a polite greeting.,,Sayuka politely greets you.,
 String,3306,,,どうする？,What should Yuna do?,DUPE: 2311,What will you do?,
@@ -5854,12 +5857,12 @@ String,3334,[colorB],[more],"あっ　ごめんなさい　泣かないで[br]
 I'm sorry, I'm sorry...",,"Oh, I'm so sorry, don't cry, I'm sorry, I'm sorry.",
 String,3335,[colorB],[more],"あなたのこと　嫌いで[br]
 言ったんじゃないの‥‥ただね[br]
-なんとなく　つい言っちゃって‥‥","I know I said something mean about you, but...those words just came out on their own somehow...",,I didn't say that I hate you...it's just...those words came out on their own for some reason...,
+なんとなく　つい言っちゃって‥‥","I didn't say that because I hate you, just...those words came out on their own somehow...",,I didn't say that I hate you...it's just...those words came out on their own for some reason...,
 String,3336,,[more],すると　沙雪華は泣きやみました,Sayuka's tears stop.,,"At that, Sayuka stopped crying.",
 String,3337,[colorB],[more],"何いってるのよ！[br]
 あなただって　わかるでしょ？[br]
 悪いことしちゃいけないって！","What are you saying!?[br]
-Even YOU should know that you can't just do bad things!",,What are you saying!? Do you even realize it? You shouldn't do bad things!,
+You know full well you can't just do bad things, don't you!?",,What are you saying!? Do you even realize it? You shouldn't do bad things!,
 String,3338,[color3],[more],そうでしょうか？,Is that how you feel?,,You don't think so?,
 String,3339,[color3],[more],"お嬢様は　ただお嬢様なだけで[br]
 善悪の判断など　してはいけないものだと[br]
@@ -6337,7 +6340,7 @@ String,3605,[colorB],[more],エルナー　こっちよ！,"This way, Elner!",,"
 String,3606,[colorB],[more],えっと　迷うのよね　こーゆーのって,Uh...I'm lost. I'll just head this way.,NOTE: not used,,
 String,3607,[color7],[more],急ぎましょう　ユナ！,"Let's hurry, Yuna!",,"Let's hurry, Yuna!",
 String,3608,[colorB],[more],どこに　出口があるのかしら‥‥,Where could the exit be...?,NOTE: not used,,
-String,3609,,[more],どうやら　入口に戻っちゃったようです,"Somehow, they seem to have wound up back at the entrance.",,"Apparently, it looks like it returns to the enterance.",
+String,3609,,[more],どうやら　入口に戻っちゃったようです,It seems they've wound up back at the entrance.,,"Apparently, it looks like it returns to the enterance.",
 String,3610,[colorB],[more],あれ〜　変だなァ？？？,Huh? That's strange...?,,Huh? That's strange...,
 String,3611,[color7],[more],ユナは　まったく方向オンチですねぇ,"You really have no sense of direction, do you, Yuna?",,"Yuna really does have no sense of direction, does she...",
 String,3612,,[more],"ユナは　エレベーターのある[br]
@@ -6459,7 +6462,7 @@ String,3677,[colorB],[more],"プンプン　私　怒ってるんですよ[br]
 String,3678,[color3],[more],バッカみたい！,What an idiot!,DUPE: 1360,What an idiot!,
 String,3679,[colorB],[more],いいかげんに　しなさいっ！,You need to get your act together!,DUPE: 1361,You need to get your act together!,
 String,3680,,[more],"ユナは　とつぜん[br]
-お姉さん口調で　怒り始めました",The girl's tone suddenly sparks Yuna to anger.,DUPE: 1362,Yuna suddenly started to get angry at the girl's tone.,
+お姉さん口調で　怒り始めました",Yuna suddenly rounds on the girl in a rather prim tone.,DUPE: 1362,Yuna suddenly started to get angry at the girl's tone.,
 String,3681,[colorB],[more],"だいたい　なんですか[br]
 そのだらしない　カッコウは！[br]
 女の子は　いつも見られてるんだから[br]
@@ -6507,8 +6510,8 @@ String,3698,[colorB],[more],"あ〜ん　ごめんなさ〜い！[br]
 Now look, okay, I didn't say that because I hate you or anything...",DUPE: 1380,"Ah―I'm sorry―! Now look, hold on, I didn't say that because I hate you or anything...",
 String,3699,[colorB],[more],"ただ　そーゆーだらしないカッコウや[br]
 言葉使いしちゃ　いけないと思ったからね[br]
-いってみただけなの　ごめんね","It's just that I thought you shouldn't look so sloppy or talk like that.[br]
-I'm sorry about what I just said, okay?",DUPE: 1381,It's just that your appearance was sloppy and I wasn't able to find the right words. I'm sorry about what I just said.,
+いってみただけなの　ごめんね","I just said it because I thought you shouldn't look so sloppy or talk that way.[br]
+I'm sorry, okay?",DUPE: 1381,It's just that your appearance was sloppy and I wasn't able to find the right words. I'm sorry about what I just said.,
 String,3700,[colorB],[more],"ふんっ　こわい顔したって[br]
 ちっとも　怖くないもんね‥‥[br]
 ‥‥ホントは　怖いけど","Hmph! That face of yours doesn't scare me one bit...[br]
@@ -7987,8 +7990,7 @@ String,4443,,,この、ちんちくりんがー,"How's the view down there, shor
 String,4444,,,ほーら、けむしよー,"Hey, look, a caterpillar!",,"Hey look, a caterpillar...",
 String,4445,,,あたくしとしたことが、オホホ,"Oh, how could I do such a thing? Oh-ho-ho!","NOTE: several of the enemies have variations on this same line, which puzzled me for a long time. since it's the message for recovering FP, i think the idea is that they're supposed to be saying this after using one of their insult attacks, with this line a (sarcastic) reaction to the un-fraulein-like insult they prevously uttered.
 ...or at least, that's the best theory i've got. i'm pretty sure the ai can recover even without having ever used a special attack, so if that IS the intended idea, it gets obscured easily.","Of all people it should have been me, Oh-ho-ho.",
-String,4446,,,ご自分の実力が解ったかしら？,"Now do you understand my true strength?[br]
-Resistance is futile, so render your lowly life unto me. OH-ho-ho!","NOTE: the original game does not support linebreaks for battle text, and instead relies on automatic wrapping or, in cases like this, manually splitting the lines as needed. this is inconvenient for us, so i've added a linebreak command and marked all of the yuna/enemy battle strings for precomputed automatic wrapping.
+String,4446,,,ご自分の実力が解ったかしら？,Now do you understand the limit of your strength? Live your plebian life as you will. OH-ho-ho!,"NOTE: the original game does not support linebreaks for battle text, and instead relies on automatic wrapping or, in cases like this, manually splitting the lines as needed. this is inconvenient for us, so i've added a linebreak command and marked all of the yuna/enemy battle strings for precomputed automatic wrapping.
 long story short: we don't have to split these up manually anymore, so i'm just putting everything in one string.",Now do you understand my true strength?,
 String,4447,,,駄目は駄目なりに、控えめな人生を送りな,,,"Your way of doing things is just no good, you should have lived your life more humbly.",
 String,4448,,,さい。ホホホ,,,Ho-ho-ho.,
@@ -8010,7 +8012,7 @@ String,4461,,,,,DUPE: 133,,
 String,4462,,,おつむのぐあいはよろしくて？,Are you perhaps a bit touched in the head?,,Are you alright in the head?,
 String,4463,,,すてきなおめしものですこと,Such a lovely outfit you're wearing.,,That’s a nice outfit you’re wearing.,
 String,4464,,,あら、ごめんあそばせ,"Oh, pardon me.",,"Oh, my apologies.",
-String,4465,,,花を愛でる美しい心がない者に、私が倒さ,"I cannot possibly be defeated by one without a beautiful, flower-loving heart. Try again if you like, though. Oh-ho-ho...!",,"There’s no way I can be defeated by someone that doesn’t have a beautiful heart capable of loving the flowers.  Though you’re welcome to try again if you like, ho-ho-ho...",
+String,4465,,,花を愛でる美しい心がない者に、私が倒さ,"I cannot possibly be defeated by one without a beautiful, flower-loving heart. Do give it another try! Oh-ho-ho...!",,"There’s no way I can be defeated by someone that doesn’t have a beautiful heart capable of loving the flowers.  Though you’re welcome to try again if you like, ho-ho-ho...",
 String,4466,,,れるわけがないわ。,,,,
 String,4467,,,出直していらっしゃい、ホホホ,,,,
 String,4468,,,キャー,Eeek...!,,Kyaa...,
@@ -8019,7 +8021,7 @@ String,4470,,,,,DUPE: 133,,
 String,4471,,,そ　そうかしら・・・・・,I-Is that so...?,,I-Is that true...,
 String,4472,,,,,DUPE: 133,,
 String,4473,,,ガーン！！,Gah!,,Gah!!,
-String,4474,,,このセンスが　わからないなんて・・・,You couldn't possibly understand my tastes...,,You couldn’t possibly understand my tastes...,
+String,4474,,,このセンスが　わからないなんて・・・,How could you not understand these sensibilities...?,,You couldn’t possibly understand my tastes...,
 String,4475,,,マリ,Mari,,Mari,
 ,,,,"//=====================================
 // Enemy battle message block 2 (sector 0xB3FC)
@@ -8075,7 +8077,7 @@ String,4518,,,,,DUPE: 133,,
 String,4519,,,ちんちくりんちんちくりんちんちくりん,"Shor-ty, shor-ty, shor-ty!","NOTE: for reference, mai is 171 cm tall, yuna is 158. makes a lot more sense here than when kaede was saying it.","Shorty, shorty, shorty!",
 String,4520,,,彼氏いないくせにー！,You don't even have a boyfriend!,,You don't even have a boyfriend!,
 String,4521,,,ふっかーつ,Re...STOOORE!,,I'm back!,
-String,4522,,,やっぱりあたしのほうが業界なのよ,"Only natural since I'm in the industry.[br]
+String,4522,,,やっぱりあたしのほうが業界なのよ,"That's right, I'M the one in the industry here.[br]
 Stupid girl! Ho-ho-ho...!",,"I am a member of the film industry after all...Stupid girl, ho-ho-ho...",
 String,4523,,,ばかな娘ね、ホホホ,,,,
 String,4524,,,,,DUPE: 133,,
@@ -8097,7 +8099,7 @@ String,4537,,,,,DUPE: 133,,
 String,4538,,,ちんちくりんちんちくりんちんちくりん,"Shor-ty, shor-ty, shor-ty!",DUPE: 4519,"Shorty, shorty, shorty!",
 String,4539,,,彼氏いないくせにー！,You don't even have a boyfriend!,DUPE: 4520,You don't even have a boyfriend!,
 String,4540,,,ふっかーつ,Re...STOOORE!,DUPE: 4521,I'm back!,
-String,4541,,,やっぱりあたしのほうが業界なのよ,"Only natural since I'm in the industry.[br]
+String,4541,,,やっぱりあたしのほうが業界なのよ,"That's right, I'M the one in the industry here.[br]
 Stupid girl! Ho-ho-ho...!",DUPE: 4522,"I am a member of the film industry after all...Stupid girl, ho-ho-ho...",
 String,4542,,,ばかな娘ね、ホホホ,,DUPE: 4523,,
 String,4543,,,,,DUPE: 133,,
@@ -8160,7 +8162,7 @@ String,4592,,,イヤァー！,Iyaaah!,,Iyaaah!,
 String,4593,,,タァ,Tah!,,Tah!,
 String,4594,,,,,DUPE: 133,,
 String,4595,,,私の足をおなめっ！,Kiss my foot!,,,
-String,4596,,,この美貌の前に膝まずきなさい！,Kneel before my beauty!,,Kneel before my beauty!,
+String,4596,,,この美貌の前に膝まずきなさい！,Kneel before my beauty!,NOTE: 膝まずき seems to be a kanji mistake. it would normally be 跪き.,Kneel before my beauty!,
 String,4597,,,ハッ！わたくしとしたことが,Ha! How could I do such a thing?,,Oh! How could I do such a thing?,
 String,4598,,,ホーホホホ、女王様とお呼びっ！,"HOH-ho-ho-ho! Grovel before your queen, slave! A commoner will always just be a commoner, living a servile life. Ho-ho-ho...",,"Ho-ho-ho-ho, call me queen!  It seems that ordinary people are just ordinary people, it's your destiny to lead a menial existence. Ho-ho-ho.",
 String,4599,,,庶民は庶民らしく、卑屈に生きるのが,,,,
@@ -8289,7 +8291,7 @@ String,4707,,,,,DUPE: 133,,
 String,4708,,,全然しつけがなっていませんですわね,You lack the slightest iota of discipline.,,You're completely lacking in discipline.,
 String,4709,,,ユナさんのお相手は疲れますわ,"Your opponent grows weary, Yuna.",,Your companion's grown exhausted Yuna.,
 String,4710,,,失礼ですが、回復させていただきますわ,"Pardon, but please allow me to recover.",,"Pardon me, but allow me to recover.",
-String,4711,,,ご自分の実力がお解りになりまして？,Do you understand my true strength?,,Do you understand my true strength?,
+String,4711,,,ご自分の実力がお解りになりまして？,Do you now comprehend the limits of your strength?,,Do you understand my true strength?,
 String,4712,,,,,DUPE: 133,,
 String,4713,,,,,DUPE: 133,,
 String,4714,,,くっ,Kh...!,,...!,
@@ -8451,7 +8453,7 @@ String,4847,,,あいたたたー,Ouchie...,DUPE: 4749,Ouchie...,
 String,4848,,,へっへーん,Heh-heh!,DUPE: 4750,Heh-heh.,
 String,4849,,,ふえぇぇぇぇん,W-WAAAAAH!,,Grrrrr!,
 String,4850,,,,,DUPE: 133,,
-String,4851,,,はかにしないでよぉ〜,Don't make fun of meeee!,,Don't look down on me-!,
+String,4851,,,はかにしないでよぉ〜,Don't make fun of meeee!,NOTE: typo of ばか?,Don't look down on me-!,
 String,4852,,,,,DUPE: 133,,
 ,,,,"//=====================================
 // Yuna battle message block 8 (sector 0xB3C2)
@@ -8564,7 +8566,7 @@ String,4945,,,あいたたたー,Ouchie...,DUPE: 4749,Ouchie...,
 String,4946,,,へっへーん,Heh-heh!,DUPE: 4750,Heh-heh.,
 String,4947,,,しょぼ〜〜ん・・・・,Oohhhh...,,Despair...,
 String,4948,,,,,DUPE: 133,,
-String,4949,,,そんなぁ〜,"Oh, come on...",,No way...,
+String,4949,,,そんなぁ〜,No way...,,No way...,
 String,4950,,,,,DUPE: 133,,
 ,,,,"//=====================================
 // Yuna battle message block 15 (sector 0xB3C9)
@@ -8580,7 +8582,7 @@ String,4959,,,あいたたたー,Ouchie...,DUPE: 4749,Ouchie...,
 String,4960,,,へっへーん,Heh-heh!,DUPE: 4750,Heh-heh.,
 String,4961,,,しょぼ〜〜ん・・・・,Oohhhh...,DUPE: 4947,Despair...,
 String,4962,,,,,DUPE: 133,,
-String,4963,,,そんなぁ〜,"Oh, come on...",DUPE: 4949,No way...,
+String,4963,,,そんなぁ〜,No way...,DUPE: 4949,No way...,
 String,4964,,,,,DUPE: 133,,
 ,,,,"//=====================================
 // Yuna battle message block 16 (sector 0xB3CA)
@@ -8596,7 +8598,7 @@ String,4973,,,あいたたたー,Ouchie...,DUPE: 4749,Ouchie...,
 String,4974,,,へっへーん,Heh-heh!,DUPE: 4750,Heh-heh.,
 String,4975,,,しょぼ〜〜ん・・・・,Oohhhh...,DUPE: 4947,Despair...,
 String,4976,,,,,DUPE: 133,,
-String,4977,,,そんなぁ〜,"Oh, come on...",DUPE: 4949,No way...,
+String,4977,,,そんなぁ〜,No way...,DUPE: 4949,No way...,
 String,4978,,,,,DUPE: 133,,
 ,,,,"//=====================================
 // Yuna battle message block 17 (sector 0xB3CB)
@@ -8612,7 +8614,7 @@ String,4987,,,あいたたたー,Ouchie...,DUPE: 4749,Ouchie...,
 String,4988,,,へっへーん,Heh-heh!,DUPE: 4750,Heh-heh.,
 String,4989,,,しょぼ〜〜ん・・・・,Oohhhh...,DUPE: 4947,Despair...,
 String,4990,,,,,DUPE: 133,,
-String,4991,,,そんなぁ〜,"Oh, come on...",DUPE: 4949,No way...,
+String,4991,,,そんなぁ〜,No way...,DUPE: 4949,No way...,
 String,4992,,,,,DUPE: 133,,
 ,,,,"//=====================================
 // Yuna battle message block 18 (sector 0xB3CC)
@@ -8628,7 +8630,7 @@ String,5001,,,あいたたたー,Ouchie...,DUPE: 4749,Ouchie...,
 String,5002,,,へっへーん,Heh-heh!,DUPE: 4750,Heh-heh.,
 String,5003,,,しょぼ〜〜ん・・・・,Oohhhh...,DUPE: 4947,Despair...,
 String,5004,,,,,DUPE: 133,,
-String,5005,,,そんなぁ〜,"Oh, come on...",DUPE: 4949,No way...,
+String,5005,,,そんなぁ〜,No way...,DUPE: 4949,No way...,
 String,5006,,,,,DUPE: 133,,
 ,,,,"//=====================================
 // Yuna battle message block 19 (sector 0xB3CD)
@@ -8644,14 +8646,14 @@ String,5015,,,あいたたたー,Ouchie...,DUPE: 4749,Ouchie...,
 String,5016,,,へっへーん,Heh-heh!,DUPE: 4750,Heh-heh.,
 String,5017,,,しょぼ〜〜ん・・・・,Oohhhh...,DUPE: 4947,Despair...,
 String,5018,,,,,DUPE: 133,,
-String,5019,,,そんなぁ〜,"Oh, come on...",DUPE: 4949,No way...,
+String,5019,,,そんなぁ〜,No way...,DUPE: 4949,No way...,
 String,5020,,,,,DUPE: 133,,
 ,,,,"//=====================================
 // Yuna battle message block 20 (sector 0xB3CE)
 //=====================================",,,,
 String,5022,,,あったれー,Take this!,DUPE: 4742,Take this...,
 String,5023,,,たあーっ！,Taaah!,DUPE: 4743,Tah...!,
-String,5024,,,いやあー！,,,,
+String,5024,,,いやあー！,Iyaaah!,"NOTE: wait, is this used? it apparently never got translated in any of the older releases due to not being a perfect duplicate like in other blocks...",,
 String,5025,,,,,DUPE: 133,,
 String,5026,,,,,DUPE: 133,,
 String,5027,,,おちつけ、おちつけ,Let's all just calm down here...,DUPE: 4761,"Take it easy, take it easy.",
@@ -8676,7 +8678,7 @@ String,5043,,,あいたたたー,Ouchie...,DUPE: 4749,Ouchie...,
 String,5044,,,へっへーん,Heh-heh!,DUPE: 4750,Heh-heh.,
 String,5045,,,ふえぇぇぇぇん,W-WAAAAAH!,DUPE: 4849,Grrrrr!,
 String,5046,,,,,DUPE: 133,,
-String,5047,,,ばかにしないでよぉ〜,,,,
+String,5047,,,ばかにしないでよぉ〜,Don't make fun of meeee!,,,
 String,5048,,,,,DUPE: 133,,
 ,,,,"//=====================================
 // Yuna battle message block 22 (sector 0xB3D0)
@@ -8715,7 +8717,7 @@ String,5076,,,,,DUPE: 133,,
 //=====================================",,,,
 String,5078,,,あったれー,Take this!,DUPE: 4742,Take this...,
 String,5079,,,たあーっ！,Taaah!,DUPE: 4743,Tah...!,
-String,5080,,,いやあー！,,DUPE: 5024,,
+String,5080,,,いやあー！,Iyaaah!,DUPE: 5024,,
 String,5081,,,,,DUPE: 133,,
 String,5082,,,,,DUPE: 133,,
 String,5083,,,,,DUPE: 133,,
@@ -8756,7 +8758,7 @@ String,5113,,,あいたたたー,Ouchie...,DUPE: 4749,Ouchie...,
 String,5114,,,へっへーん,Heh-heh!,DUPE: 4750,Heh-heh.,
 String,5115,,,しょぼ〜〜ん・・・・,Oohhhh...,DUPE: 4947,Despair...,
 String,5116,,,,,DUPE: 133,,
-String,5117,,,そんなぁ〜,"Oh, come on...",DUPE: 4949,No way...,
+String,5117,,,そんなぁ〜,No way...,DUPE: 4949,No way...,
 String,5118,,,,,DUPE: 133,,
 ,,,,"//=====================================
 // Yuna battle message block 27 (sector 0xB3D5)
@@ -8772,7 +8774,7 @@ String,5127,,,あいたたたー,Ouchie...,DUPE: 4749,Ouchie...,
 String,5128,,,へっへーん,Heh-heh!,DUPE: 4750,Heh-heh.,
 String,5129,,,しょぼ〜〜ん・・・・,Oohhhh...,DUPE: 4947,Despair...,
 String,5130,,,,,DUPE: 133,,
-String,5131,,,そんなぁ〜,"Oh, come on...",DUPE: 4949,No way...,
+String,5131,,,そんなぁ〜,No way...,DUPE: 4949,No way...,
 String,5132,,,,,DUPE: 133,,
 ,,,,"//=====================================
 // Yuna battle message block 28 (sector 0xB3D6)
@@ -8852,7 +8854,7 @@ String,5197,,,あいたたたー,Ouchie...,DUPE: 4749,Ouchie...,
 String,5198,,,へっへーん,Heh-heh!,DUPE: 4750,Heh-heh.,
 String,5199,,,しょぼ〜〜ん・・・・,Oohhhh...,DUPE: 4947,Despair...,
 String,5200,,,,,DUPE: 133,,
-String,5201,,,そんなぁ〜,"Oh, come on...",DUPE: 4949,No way...,
+String,5201,,,そんなぁ〜,No way...,DUPE: 4949,No way...,
 String,5202,,,,,DUPE: 133,,
 ,,,,"//=====================================
 // Yuna battle message block 33 (sector 0xB3DB)
@@ -8868,7 +8870,7 @@ String,5211,,,あいたたたー,Ouchie...,DUPE: 4749,Ouchie...,
 String,5212,,,へっへーん,Heh-heh!,DUPE: 4750,Heh-heh.,
 String,5213,,,しょぼ〜〜ん・・・・,Oohhhh...,DUPE: 4947,Despair...,
 String,5214,,,,,DUPE: 133,,
-String,5215,,,そんなぁ〜,"Oh, come on...",DUPE: 4949,No way...,
+String,5215,,,そんなぁ〜,No way...,DUPE: 4949,No way...,
 String,5216,,,,,DUPE: 133,,
 ,,,,"//=====================================
 // Yuna battle message block 34 (sector 0xB3DC)
@@ -8928,7 +8930,7 @@ String,5263,,,あいたたたー,Ouchie...,DUPE: 4749,Ouchie...,
 String,5264,,,へっへーん,Heh-heh!,DUPE: 4750,Heh-heh.,
 String,5265,,,しょぼ〜〜ん・・・・,Oohhhh...,DUPE: 4947,Despair...,
 String,5266,,,,,DUPE: 133,,
-String,5267,,,そんなぁ〜,"Oh, come on...",DUPE: 4949,No way...,
+String,5267,,,そんなぁ〜,No way...,DUPE: 4949,No way...,
 String,5268,,,,,DUPE: 133,,
 ,,,,"//=====================================
 // Yuna battle message block 38 (sector 0xB3E0)
@@ -8944,7 +8946,7 @@ String,5277,,,あいたたたー,Ouchie...,DUPE: 4749,Ouchie...,
 String,5278,,,へっへーん,Heh-heh!,DUPE: 4750,Heh-heh.,
 String,5279,,,しょぼ〜〜ん・・・・,Oohhhh...,DUPE: 4947,Despair...,
 String,5280,,,,,DUPE: 133,,
-String,5281,,,そんなぁ〜,"Oh, come on...",DUPE: 4949,No way...,
+String,5281,,,そんなぁ〜,No way...,DUPE: 4949,No way...,
 String,5282,,,,,DUPE: 133,,
 ,,,,"//=====================================
 // Yuna battle message block 39 (sector 0xB3E1)
@@ -8960,7 +8962,7 @@ String,5291,,,あいたたたー,Ouchie...,DUPE: 4749,Ouchie...,
 String,5292,,,へっへーん,Heh-heh!,DUPE: 4750,Heh-heh.,
 String,5293,,,しょぼ〜〜ん・・・・,Oohhhh...,DUPE: 4947,Despair...,
 String,5294,,,,,DUPE: 133,,
-String,5295,,,そんなぁ〜,"Oh, come on...",DUPE: 4949,No way...,
+String,5295,,,そんなぁ〜,No way...,DUPE: 4949,No way...,
 String,5296,,,,,DUPE: 133,,
 ,,,,"//=====================================
 // battle0: standard battle (yuna vs. somebody else)
@@ -9785,12 +9787,13 @@ That's gonna get us lost for a real long time...",,"I'm telling you, before long
 String,20000,,,了解,Roger!,TIMESTAMP: 6F,"Understood.  Let's see, now all I gotta do is hit this switch.",了解
 String,20001,,,えーと、この数字を打ち込めばいいのね,"Okay then...[br]
 All I gotta do now is input the numbers.",,,えーと、このスイッチを打ち込めばいいのね
-String,20002,,,間違えないで下さいよ大変なことになるんですから,"Please do get it right. If you don't, the consequences could be disastrou―",,"Please be sure to get it right, otherwise, the results will be disastrous.",間違えないで下さいよ大変なことになるんですから
+String,20002,,,"間違えないで下さいよ
+大変なことになるんですから","Please do get it right. If you don't, the consequences could be disastrou―",,"Please be sure to get it right, otherwise, the results will be disastrous.",間違えないで下さいよ大変なことになるんですから
 String,20003,,,ううん安心してよ,"Yeah, yeah, relax.",,"Alright, relax... Let's see, the coordinates were X2554, Y...uh...what was it again?",ううん安心してよ
 String,20004,,,えーとＸ２５５４で,Let's see...,,,えーとＸ２５５４で
 String,20005,,,,X...2554...Y...,,,あっ‥‥
 String,20006,,,あっ‥‥,...Uh...,,,何だけ
-String,20007,,,何だけ,What was it again?,,Y6891.,Ｙ６８９１です
+String,20007,,,何だっけ,What was it again?,,Y6891.,Ｙ６８９１です
 String,20008,,,Ｙ６８９１です,Y6891.,,"That's right, 6891!  Okay, initiating jump!",そうそう、６８９１！
 String,20009,,,そうそう、６８９１！,"That's right, 6891!",,,さあ、ジャンプします！
 String,20010,,,さあ、ワープしまーす！,"Okay, initiating warp!",TIMESTAMP: 65B,,
@@ -9835,7 +9838,7 @@ String,30019,,,"ごめんなさい
 I left you all alone.",,I'm sorry. I left you all on your own Yuna.,"ごめんなさい
 ユナを一人っきりにしてしまって"
 String,30020,,,"いいの
-だってエルナーが無事だったんですもん","It's fine![br]
+だってエルナーが無事だったん[ですもん?]","It's fine![br]
 After all, you're safe and sound.",,"That's alright. After all, you're safe.","いいの
 だってエルナーが無事だったんですもん"
 String,30021,,,でも大丈夫だったの？,But what happened?,"NOTE: i mean, it's literally ""were you okay,"" but when the immediately preceding sentence is ""you're safe"" that sounds really dumb...","So, are you okay?",でも大丈夫だったの
@@ -9887,8 +9890,8 @@ String,50002,,,"しかしレアメタルの豊富な鉱床が数多く発見さ�
 星間企業体による開発が急速に進められ","However, after large quantities of rare metals were discovered to be in abundance,",,"However, after rare metals were discovered in abundance, numerous negotiations ensued, and now, development by an interstellar conglomerate is progressing rapidly.","しかしレアメタルの豊富な交渉が数多く発見されてからは
 星間企業体による開発が急速に進められ"
 String,50003,,,,it was rapidly exploited in an interstellar joint venture.,,,
-String,50004,,,人工惑星フリントを中心に人類文化圏への鉱物供給基地としての役割を担っている,"It now plays the role of a mineral supply base to a human cultural sphere,",,"The human cultural sphere, centered over on the artificial planet Flint, serves the role of a mineral supply base.",人工惑星フリントを中心に人類文化圏への鉱物供給基地としての役割を担っている
-String,50005,,,,which is centered on the artificial planet Flint.,,,
+String,50004,,,人工惑星フリントを中心に人類文化圏への鉱物供給基地としての役割を担っている,"It now plays the role of a mineral supply base, centered on the artificial planet Flint,",,"The human cultural sphere, centered over on the artificial planet Flint, serves the role of a mineral supply base.",人工惑星フリントを中心に人類文化圏への鉱物供給基地としての役割を担っている
+String,50005,,,,to the human cultural sphere.,,,
 String,50006,,,ついたようですねユナ,"It seems we've arrived, Yuna.",TIMESTAMP: 3 / 69A,It looks like we've arrived Yuna.,ついたようですねユナ
 String,50007,,,あっ、そう‥‥,"Ah, is that ri―",,"Ah, is that ri...(Bleh)",あっ、そう‥‥
 String,50008,,,どうしました、言葉を忘れたんですか,"What's wrong?[br]
@@ -9909,7 +9912,7 @@ String,50020,,,,,,,
 // Scene 05 – arrival at mariana
 //=====================================",,,,
 String,60000,,,惑星マリアーナ,Planet Mariana.,TIMESTAMP: 1 / 79,Planet Mariana,惑星マリアーナ
-String,60001,,,プランター星系の惑星マリアーナは惑星のほぼすべての表面を海で覆っている,Mariana of the Planter system is a world almost entirely covered by water.,,The planet Mariana of the Planter system is a world that is almost completely covered by water.,プランター星系の惑星マリアーナは惑星のほぼすべての表面を海でを覆っている
+String,60001,,,プランター星系の惑星マリアーナは惑星のほぼすべての表面を海で覆っている,Mariana of the Planter system is a world almost entirely covered by water.,"NOTE for what it's worth, the narrator clearly reads this as プリンター星系 (the Printer system); japanese wikipedia even notes this",The planet Mariana of the Planter system is a world that is almost completely covered by water.,プランター星系の惑星マリアーナは惑星のほぼすべての表面を海でを覆っている
 String,60002,,,気候は温暖で過ごしやすくわずかな陸地が保養地として開発され現在では最大のレジャー惑星として知られている,"The climate there is temperate and comfortable,",,"The climate there warm and comfortable. A small amount of land was developed as a resort, and now, it has become known as the largest leisure planet.",気候は温暖で過ごしやすくわずかな陸地が保養地として開発され現在では最大のレジャー惑星として知られている
 String,60003,,,,and its paltry landmass has been developed into a resort.,,,
 String,60004,,,,"Now, it's known as the single largest leisure planet.",,,
@@ -9925,7 +9928,7 @@ String,60009,,,,Wooow! I'm so happy!,,,
 String,60010,,,地球にだって海はあるでしょ,"But the Earth has oceans too, right?",,"But even the Earth has an ocean, right?",地球にだって海はあるでしょ
 String,60011,,,そんなに大騒ぎするほどでもないと思うんですけど,I really don't see how it's such a big deal.,,I really don't think it's that big of a deal.,そんなに大騒ぎするほどでもないと思うんですけど
 String,60012,,,"あらやだエルナーなったら
-海は女の子な憧れなのよ","C'mon...Don't be like that, Elner.",,"Come on, don't be like that Elner. The ocean is just what a girl longs for.","あらやだエルナーなったら
+海は女の子なら憧れなのよ","C'mon...Don't be like that, Elner.",,"Come on, don't be like that Elner. The ocean is just what a girl longs for.","あらやだエルナーなったら
 海は女の子な憧れなのよ"
 String,60013,,,,The ocean is just what a girl longs for.,,,
 String,60014,,,,,,,
@@ -9943,11 +9946,11 @@ String,70001,,,カペ恒星系の惑星ルーリーズスは地球型の惑星�
 String,70002,,,地軸は黄道面に対しほぼ垂直なため気候の変化が少なく,"Since the planet's axis is almost perpendicular to its ecliptic plane,","NOTE: i'm no astronomer, but some quick checks of Wikipedia suggest that what is referred to here as an ""ecliptic plane"" is properly called an ""orbital plane"" (as ""ecliptic"" refers specifically to the Earth's orbital plane). but afaic, that's the original writers' problem.","Since the planet's axis is almost perpendicular to its ecliptic plane, there is little change in climate.",
 String,70003,,,,there is little variation in its climate.,,,
 String,70004,,,地球の熱帯地域と似た環境を有してい,The environment there is similar to the tropical regions of Earth.,,The environment there is similar to the tropical regions of Earth.,
-String,70005,,,惑星のほぼ全域にわたってちな類型の植物が進化発展した密林に覆われており生物も豊富である,"Almost the entire planet is covered in an ever-evolving jungle of diverse vegetation,",,Almost the entire planet is covered in an ever evolving jungle of diverse vegetation and it is abundant with life.,
-String,70006,,,,and it is host to abundant life.,,,
+String,70005,,,惑星のほぼ全域にわたって羊歯類型の植物が進化発展した密林に覆われており生物も豊富である,"Almost the entire planet is covered by a jungle comprised of fern-derived plants,",,Almost the entire planet is covered in an ever evolving jungle of diverse vegetation and it is abundant with life.,
+String,70006,,,,and it is also host to abundant fauna.,,,
 String,70007,,,生物学者たちは数億年後この惑星から高度な知性を持った生物が生まれるだろうとも予測している,"Biologists predict that in hundreds of millions of years,",,"Biologists also predict that hundreds of millions of years later, highly intelligent creatures will emerge from this planet.",
 String,70008,,,,highly intelligent creatures will emerge on this planet.,,,
-String,70009,,,あっ、すごい、緑惑星わよ‥‥,"Amazing...[br]
+String,70009,,,あっ、すごい、緑の惑星だよ‥‥,"Amazing...[br]
 It's a green planet...",TIMESTAMP: 3 / 91C,"Ah, amazing, it's a green planet...",
 String,70010,,,ええ、そうですねー,"Indeed, it is, isn't it?",,"Yeah, it is, isn't it?",
 String,70011,,,綺麗だねー,"- It's so beautiful...[br]
@@ -9989,7 +9992,8 @@ String,80006,,,,"Isn't this good enough?[br]
 I mean, we got here just fine.",,,ちゃんと付いたって言ったってもう少して衝突してバラバラだったんですよ！
 String,80007,,,"ちゃんと着いたって言ったって
 もう少しで衝突してバラバラだったんですよ！",{Got here just fine}!? Any closer to THAT and we would have been smashed to atoms!,,"Even though you say you got them right, we nearly collided and scattered to pieces!",わーい、わーい、大きな星だね‥‥
-String,80008,,,わーい、わーい、大きな星だね‥‥,"Ooh, wow, what a BIIIG planet...!",,"Wow, wow, that's a big star...","ティアン星域の巨大惑星バルムードは
+String,80008,,,わーい、わーい、大きなお星様！,"Ooh, wow, what a BIIIG planet...!","NOTE: the line fades out at the end, but the disc also contains a version of this audio without the effect applied, revealing an additional line from elner:
+お星様じゃないですよ！","Wow, wow, that's a big star...","ティアン星域の巨大惑星バルムードは
 木星タイプの対応になり損ねたガス惑星である"
 String,80009,,,"ティアン星域の巨大惑星バルムードは
 木星タイプの対応になり損ねたガス惑星である","The giant planet Balmood of the Tian star sector is a gas giant,",TIMESTAMP: 5 / B59,The giant planet Balmood of the Tian star sector is a gas giant that failed to be classified as a Jovian planet.,この珍しくもないガス惑星は人類にとっての主要なエネルギー源である
@@ -10031,7 +10035,7 @@ String,90000,,,"太陽より大きな恒星が星の寿命を終え
 重力崩壊を起こし","When a star larger than the Sun reaches the end of its lifespan,",TIMESTAMP: 1/7B,"When a star is larger than the sun, the star at the end of its lifespan will experience a gravitational collapse.","太陽より大きな恒星が星の寿命を終え
 重力崩壊を起こし"
 String,90001,,,,it experiences a gravitational collapse.,,,
-String,90002,,,大きさが無限小必要が無限大に近づいたもの,The star is forced to grow infinitely smaller until its size is infinitesimal.,,"The star is forced to grow infinitely smaller, until its size is infinitesimal.",大きさが無限小必要が無限大に近づいたもの
+String,90002,,,大きさが無限小、質量が無限大に近づいたもの,"Its size shrinks to near-infinitesimality, and its mass grows to near-infinity.",,"The star is forced to grow infinitely smaller, until its size is infinitesimal.",大きさが無限小必要が無限大に近づいたもの
 String,90003,,,それがいわゆるブラックホールである,That is what we term a black hole.,,That is what is called a black hole.,それがいわゆるブラックホールである
 String,90004,,,一般相対性理論でその存在が予測され今ではそのいくつかが確認されている,"Their existence was predicted by the general theory of relativity,",,"Their existence was predicted by the general theory of relativity, and now, several of them have been confirmed.",一般相対性理論でその存在が予測され今ではそのいくつかが確認されている
 String,90005,,,,"and at present, several of them have been confirmed.",,,
@@ -10044,10 +10048,11 @@ String,90011,,,"えっ、どうして
 ブラックホールって見えないの？",Huh? Why do you ask?,,"Huh, that can't be right...  You're saying you can see the black hole?","えっ、どうして
 ブラックホールって見えないの？"
 String,90012,,,,Can't you see black holes?,,,
-String,90013,,,ブラックホールの周囲には事象の地平と呼ばれる球面が存在していてその内側のすべての光と粒子は特異点へと歪曲されてしまうんです,A black hole's spherical surface is surrounded by what we call an event horizon.,,The black hole's spherical surface is surrounded by a phenomenon called the event horizon.  All light particles become distorted as they draw nearer to the gravitational singularity.,ブラックホールの周囲には事象の地平と呼ばれる球面が存在していてその内側のすべての光と粒子は特異点へと歪曲されてしまうんです
-String,90014,,,,All light particles become distorted as they draw nearer to the gravitational singularity.,,,
+String,90013,,,ブラックホールの周囲には事象の地平と呼ばれる球面が存在していて、その内側のすべての光と粒子は特異点へと歪曲されてしまうんです,"Around a black hole exists a spherical surface called an event horizon,",,The black hole's spherical surface is surrounded by a phenomenon called the event horizon.  All light particles become distorted as they draw nearer to the gravitational singularity.,ブラックホールの周囲には事象の地平と呼ばれる球面が存在していてその内側のすべての光と粒子は特異点へと歪曲されてしまうんです
+String,90014,,,,and all light and particles within it will be distorted toward a singularity.,,,
 String,90015,,,オーケー‥‥,Okay...,,Okay...,オーケー‥‥
-String,90016,,,あのですねブラックホールって見えないんですよ,"Look, now...[br]
+String,90016,,,"あのですね
+ブラックホールって見えないんですよ","Look, now...[br]
 You can't actually SEE a black hole.",,Now look...you can't actually SEE a black hole.,あのですねブラックホールって見えないんですよ
 String,90017,,,"はぁっ、やっぱり
 何にもないから不思議だなって思ってたの","Oh, of course!",,"Oh, now I get it!  I thought it was strange that there wasn't anything out here.","はぁっ、やっぱり
@@ -10071,7 +10076,7 @@ String,90030,,,,,,,
 String,100000,,,暗黒星雲,The Dark Nebula.,TIMESTAMP: 79,The dark nebula.,
 String,100001,,,星雲と呼ばれてはいるがそれは決して正確ではない,"Though called a {nebula,}[br]
 that's not at all accurate.",,"Although it is called a nebula, that is hardly accurate.",
-String,100002,,,そこにただ暗い光の存在しない空間が広がっているだけだった,"Within its extent, even the dimmest of lights does not exist.",,"There, a space spreads out where even the dimmest of lights does not exist.",
+String,100002,,,そこにただ暗い、光の存在しない空間が広がっているだけだった,"Within it, there is nothing but a dark space where light does not exist.",,"There, a space spreads out where even the dimmest of lights does not exist.",
 String,100003,,,暗黒の空間は人類の想像を遥かに超えたものであり,This dark space far exceeds human imagination.,,This dark space goes far beyond human imagination.,
 String,100004,,,誰もその内側をうかがい知ることはできなかった,None can perceive what lies within it.,,No one can perceive what's inside of it.,
 String,100005,,,,,,,
@@ -10093,13 +10098,13 @@ String,100020,,,,,,,
 ,,,,"//=====================================
 // Scene 0A – arrival at flint asteroid field
 //=====================================",,,,
-String,110000,,,"いたやん!
-みなさん、私もなかなかやるでしょ","And here we are![br]
+String,110000,,,"出たやん!
+みなさん、あたしもなかなかやるでしょ","And here we are![br]
 Am I awesome or what, guys?",TIMESTAMP: 2 / 2C6,"There it is! Well guys, am I awesome or what?","いたやん!
 みなさん、私もなかなかやるでしょ"
 String,110001,,,"何言ってのよ？
 ライバルに地図までもらって置いて
-私も情けないよ本当に","What are you talking about?[br]
+「あたしはもう情けないよ」本当に","What are you talking about?[br]
 Your rival had to give you a MAP!",,"What are you talking about? You got a map of the location from your rival. It's so pathetic, I mean really...","何言ってのよ？
 ライバルに地図までもらって置いて
 私はもう情けないよ本当に"
@@ -10113,22 +10118,21 @@ String,110004,,,"えっ?
 Uh, you're the Savior of Light―",,Huh? Well...you're the Savior of Light...,"えっ?
 まあ、光の救世主だわね・・・・"
 String,110005,,,"ピンポーン!
-宇宙で一番のお嬢様ってことも
-忘れちゃダメよ",DING DING DING!,,"That's right! I'm also the top fraulein in the universe, and don't you forget it.","ピンポーン!
+宇宙で一番のお嬢様ってことも忘れちゃダメよ
+はあエルナー",DING DING DING!,,"That's right! I'm also the top fraulein in the universe, and don't you forget it.","ピンポーン!
 宇宙で一番のお嬢様ってことも
 忘れちゃダメよ"
-String,110006,,,,And don't you forget I'm the number one fraulein in the universe!,,,"はあエルナー、ちょっと、
+String,110006,,,,"And don't you forget I'm the number one fraulein in the universe! Right, Elner?",,,"はあエルナー、ちょっと、
 ユナの教育間違えたんじゃないの"
-String,110007,,,"はあエルナー、ちょっと、
-ユナの教育間違えたんじゃないの","Geez, Elner, did you mess with Yuna's training or something?","NOTE: i honestly can't tell if this is yuna's line or someone else's... it SOUNDS like her, and she talks about herself in third person often enough... but this conversation makes a lot more sense if it's one of the robots questioning this...
+String,110007,,,ちょっと、ユナの教育間違えたんじゃないの,"Geez, did you mess with Yuna's training or something?","NOTE: i honestly can't tell if this is yuna's line or someone else's... it SOUNDS like her, and she talks about herself in third person often enough... but this conversation makes a lot more sense if it's one of the robots questioning this...
 seriously, i'm wondering if they accidentally recorded this with the wrong actress and just decided to roll with it.
 it's also possible はあエルナー is actually part of Yuna's previous line and the rest is someone else's, but i just can't tell for sure.","Hey Elner, come on! There wasn't some kind of mistake in Yuna's upbringing, was there?",リアとの戦いが近いからちょっと英才教育したんですけどね
 String,110008,,,リアとの戦いが近いからちょっと英才教育したんですけどね,"With the battle with Lia so close, I've been giving her special lessons for the gifted...","With the battle with Lia so close, I suppose I've moved her up to the gifted class...","The battle with Lia is drawing close, and she has a fairly gifted education, doesn't she?",戻のほうがいいわ
 String,110009,,,元のほうがいいわ,I liked her better before.,,I think we should head back.,"まかしといて
 YEAH!
 ユナのばか"
-String,110010,,,"まかしといて
-YEAH!
+String,110010,,,"まかし[といて?]
+[YEAH!??]
 ユナのばか","Don't worry, I got this.[br]
 HURRRR! Yuna's a MOOOROOON!",,We lose. Yeah! Yuna's a MORON.,"ひどい!
 泣いちゃうだから・・・・"
@@ -10161,7 +10165,7 @@ String,120000,,,ついに来たわね,We're finally here.,"TIMESTAMP: 1 / 83
 TIMESTAMP: 2 / 11D",We're finally here.,ついに来たわね
 String,120001,,,やっぱり、イヤになってきちゃった,I think I'm getting the willies after all...,,"I knew it, I'm hating this so much...",やっぱり、イヤになってきちゃった
 String,120002,,,今更何言ってんのよ,"What, you're getting cold feet NOW?",,What are you going on about now?,今更何言ってんのよ
-String,120003,,,"でもさ、あの扉は開かなかったじゃない
+String,120003,,,"でもさ、あの扉、開かなかったじゃない
 どうするつもり？","So that door wouldn't open, right?[br]
 What are you gonna do about it?",,"But, that door didn't open, right? What are we going to do?","でもさ、あの扉は開かなかったじゃない
 とするつもり"
@@ -10175,7 +10179,7 @@ String,120005,,,"えっ？
 No fair!",,Wha―? But I have thought about it. You're awful―!,"えっ？
 あたしに考えたてるの
 すごいー！"
-String,120006,,,おいよマリナ、ユナに考えさせるなんてそんな恐ろしいこと,"Whoa, Marina, the idea of letting Yuna think for herself is kind of terrifying.",,"Now now, Marina, it's such a horrible thing to make Yuna think.",おいよマリナ、ユナに考えさせるなんてそんな恐ろしいこと
+String,120006,,,[おいよ??]マリナ、ユナに考えさせるなんて[そんな?]恐ろしいこと,"Whoa, Marina, the idea of letting Yuna think for herself is kind of terrifying.",,"Now now, Marina, it's such a horrible thing to make Yuna think.",おいよマリナ、ユナに考えさせるなんてそんな恐ろしいこと
 String,120007,,,そうそう,"Yeah, no kidding.",,"That's right, that's right!",そうそう
 String,120008,,,"プンプン
 みんなひどーい","Hmph.[br]
@@ -10208,17 +10212,17 @@ the door will surely open.",,"If you and I combine our efforts, surely the door 
 String,120019,,,解放の呪文を唱えて,Recite the Incantation of Liberation.,,Recite the incantation of liberation.,解放の呪文を唱えて
 String,120020,,,うん！,Got it.,,Got it!,うん！
 String,120021,,,今からあたしとリューディアで扉を開けるから,Me and Ryudia are going to open the door.,TIMESTAMP: 6 / 1390,Ryudia and I are going open the door.,今からあたしとリューディアで扉を開けるから
-String,120022,,,みんなも協力してい,"Everyone, join in with me.",,"Everyone, join in with me.",みんなも協力してい
+String,120022,,,みんなも協力してい,"Everyone, join in with us.",,"Everyone, join in with me.",みんなも協力してい
 String,120023,,,うん！,Okay!,,Right!,うん！
 String,120024,,,準備はいいですか,Are you ready?,,Are you ready?,準備はいいですか
-String,120025,,,まあやるじゃないよ！,Ready as I'm gonna get!,,"Yeah, let's do it!",まあやるじゃないよ！
+String,120025,,,もうやるっきゃないよ！,Ready as I'm gonna get!,,"Yeah, let's do it!",まあやるじゃないよ！
 String,120026,,,門よ　門よ　重たく冷たい暗闇の門‥‥,"Gate, gate, O grim and chill and darkened gate","NOTE: please forgive any and all mistakes which may have arisen in the process of attempting to translate this audio-only chant which is in archaic Japanese and recited by five people in unison
 
 Gate, gate, grim and cold gate of darkness",,門よ　門よ　を抱く冷たい暗闇の門‥‥
 String,120027,,,我が呼びかけが届くならその凍りついた口を開き,If mine appeal to thee unfailing reach,"If you receive my call, open your frozen mouth
 
 If mine appeal to thee unfailing reach",,我が呼びかけが届くならその凍りついた口を開き
-String,120028,,,凍てつく蝶番軋ませよ,Thy frozen maw from icy seal be loosed,"Jar your frozen hinges
+String,120028,,,凍てつく蝶番[に?]軋ませよ,Thy frozen maw from icy seal be loosed,"Jar your frozen hinges
 
 Thy frozen maw crack, and cold hinges jar
 NOTE: the third iamb is deliberately inverted to accentuate the motion of ""crack""! i am a poet!!
@@ -10264,7 +10268,7 @@ I suppose you can't hear me anymore...",TIMESTAMP: 10 / 2CB5,"Yuna, I suppose yo
 String,120049,,,宇宙はあなたにかかっているの,The universe is counting on you.,,The universe is depending on you.,宇宙はあなたにかかっているの
 String,120050,,,頑張って、私の分まで‥‥,Do all you can...in my stead.,,"Good luck, my place is here...",頑張って、私の分まで‥‥
 String,120051,,,"えっ？
-なのと？","Huh? What's going on?[br]
+何の音！？","Huh? What's that noise?[br]
 What happened?",TIMESTAMP: 11 / 316E,Huh? What's going on?,"えっ？
 なのと？"
 String,120052,,,どうちゃったの？,,,What happened?,どうちゃったの？
@@ -10345,8 +10349,8 @@ There's no bad guys around anymore.",TIMESTAMP: 2 / 3B6,Are you feeling better? 
 もう悪者はいないからさ"
 String,130004,,,迷惑かけたみたいだね,Looks like I've...made some trouble for you.,,I've obviously been a burden to you.,明白かけたみたいだね
 String,130005,,,"やだな〜
-いった？？？にしちゃって","No, no, no![br]
-Don't worry about a thing.","NOTE: the delivery of the second line is especially unclear, not at all sure about it. it's apparent from context that it's something friendly and reassuring, anyway.",No you haven't―  This isn't the time for that.,"やだな〜
+[そんなこと気にしちゃって?]","No, no, no![br]
+Don't worry about a thing.",,No you haven't―  This isn't the time for that.,"やだな〜
 そんな時に入っちゃって"
 String,130006,,,でも‥‥あたし暗黒の‥‥,But I'm...a dark...,"NOTE: it's certainly plausible this is supposed to be the start of ""i'm a fraulein of darkness""... but since other dialogue indicates she's technically not one of them, let's err on the side of caution",But...I'm a Fraulein of...,でも‥‥あたし暗黒の‥‥
 String,130007,,,いいの、いいの,"It's fine, it's fine!",,"It's okay, it's okay.",いいの、いいの
@@ -10407,7 +10411,7 @@ right?","TIMESTAMP: F / 2679
 NOTE: it's hard to tell who's saying what in this scene due to the robots having faceplates that conveniently mean they don't need lip flaps, so just for reference: gina favors continuing the fight (but has some doubts) while marina and erina oppose it",Should we keep fighting for Elner?,でもさ、エルナーはいないと私たちってバラバラだよ
 String,130036,,,でもさ、エルナーはいないと私たちってバラバラだよ,"But with Elner gone, we're just a bunch of leaves in the wind.",,"Yeah but, without Elner, we're all separated from each other.",ユナだって本当の力が出せないんだからね
 String,130037,,,ユナだって本当の力が出せないんだからね,"Even Yuna won't be able to use her true power, so...we can't win, can we?",,Yuna can't even exert her true power.,勝ってないじゃない？
-String,130038,,,勝ってないじゃない？,,,"We can't win, can we?",勝つ勝たないじゃなくて戦うかどうかよね
+String,130038,,,勝ってない[ん]じゃない？,,,"We can't win, can we?",勝つ勝たないじゃなくて戦うかどうかよね
 String,130039,,,"勝つ勝たないじゃなくて戦うかどうかよね
 こうなると","We're not talking winning or losing―[br]
 isn't this about whether we still fight now?",,"It doesn't matter if we win or lose, what matters is that we fight, right?","こうなると、何よ
@@ -10426,16 +10430,16 @@ String,130046,,,"何言ってんのよ
 暗黒門に決まってるじゃない","Oh, c'mon, now![br]
 The Dark Gate, same as before!",,"What are you saying? The Dark Gate, isn't it obvious?",ユナ、思いつきでしゃべるのは辞めたほうがいいよ
 String,130047,,,ユナ、思いつきでしゃべるのは辞めたほうがいいよ,"Yuna, you really shouldn't chime in if you're not going to think first.",TIMESTAMP: 11 / 30BE,"Yuna, you shouldn't go saying things on a whim.",言ってどうするの？
-String,130048,,,いってどうするの？,What are WE supposed to do?,,What do you think?,エルナーがいないのにあたしたちだけじゃ
+String,130048,,,行ってどうするの？,What's the point in going?,,What do you think?,エルナーがいないのにあたしたちだけじゃ
 String,130049,,,エルナーがいないのにあたしたちだけじゃ,"With Elner gone, it's just us.",,"Without Elner, there's only us.","だってここに居たって何も始まらないよ
 みんなこのまま何もしないで飽きられちゃうの"
-String,130050,,,"だってここに至って何も始まらないよ
+String,130050,,,"だってここにいたって何も始まらないよ
 みんなこのまま何もしないで諦めちゃうの",But sitting around's not going to do any good.,TIMESTAMP: 12 / 3338,"Still, staying here doesn't change anything. I'm fed up with everyone bickering and doing absolutely nothing.",なんだかこの子ってすごいね
 String,130051,,,,"If we keep on like this, we're just going to give up without doing anything.",,,"思いつきもここまで来ると説得力あるわよ
 本当に"
 String,130052,,,なんだかこの子ってすごいね,"She's just full of surprises, huh.",TIMESTAMP: 13 / 3549,"This girl is amazing, isn't she?","あたしはもうどうでもいいや
 ユナに賛成"
-String,130053,,,"思いつきもここまで来ると説得力あるわよ
+String,130053,,,"[思いつき?]もここまで来ると説得力あるわよ
 本当に","After all this time, it turns out she actually CAN talk people into something.",,To come up with a persuasive plan like this...really...,"そうだそうだ
 困ちゃったら、その後に考えればいいんだもん"
 String,130054,,,"あたしはもうどうでもいいや
@@ -10524,8 +10528,8 @@ String,150004,,,"リアさんが
 こんな程度の方だったなって","For you to be reduced to this, Lia...",,For you to be reduced to this Lia...,"リアさんが
 こんな程度の方だったなって"
 String,150005,,,普段はあれだけご立派にしていらっしゃるのに,"You have always been so exemplary, too...",,Even though you're usually so commendable...,普段あれだけご立派にしていらっしゃるのに
-String,150006,,,失礼、少し表してくださいませ,"My apologies.[br]
-Please do forgive my presumptuousness.",,"Please, excuse my little display.",失礼、少し表してくださいませ
+String,150006,,,失礼、少し笑わしてくださいませ,"I'm sorry.[br]
+Please do allow me a moment to laugh.",,"Please, excuse my little display.",失礼、少し表してくださいませ
 String,150007,,,ホ〜ッホッホッホッホッ,Oh-ho-ho-ho-ho!,,Oh-ho-ho-ho-ho!,ホ〜ッホッホッホッホッ
 String,150008,,,沙雪華、何であんたがここに来るのよ,"Sayuka, what are you doing here?",TIMESTAMP: 4 / BF3,"Sayuka, why did you come here?",沙雪華、何であんたがここに来るのよ
 String,150009,,,お嬢様は出しゃばらないものよ,A fraulein doesn't meddle in others' affairs.,,A fraulein doesn't meddle in others affairs.,お嬢様は出しゃばらないものよ
@@ -10545,12 +10549,12 @@ String,150012,,,"ふんっ
 String,150013,,,,I don't want to hear that coming from you.,,,ねっ、あの人だれ？
 String,150014,,,ねっ、あの人だれ？,"Hey, who is this?",,"Hey, who is that person?",抜きになられてもリアさんではご無理なようですわ
 String,150015,,,ムキになられてもリアさんではご無理なようですわ,"Even should you take matters seriously, it appears this is quite impossible for you, Lia.",TIMESTAMP: 7 / 14B0,"Even if you're able to surpass her, it appears it would still be impossible for you Lia.",あの方のお言葉でもありますし
-String,150016,,,あの方のお言葉でもありますし,Those words are also {hers.},,These are also {her} words.,僭越ではございますがユナさんはこの私が倒すことになりましたの
+String,150016,,,「あのお方」のお言葉でもありますし,Those words are also {hers.},,These are also {her} words.,僭越ではございますがユナさんはこの私が倒すことになりましたの
 String,150017,,,僭越ではございますがユナさんはこの私が倒すことになりましたの,"With all due respect, it has been decided that I shall be the one to defeat Yuna.",,"Because of your insolence, it's been decided that I'll be the one to defeat Yuna.","ああっ‥‥
 あの方が‥‥
 本当にそういったの"
 String,150018,,,"ああっ‥‥
-あの方が‥‥
+「あのお方」が‥‥
 本当にそういったの",{She}...really said that?,TIMESTAMP: 8 / 18AD,GASP...{She}...really said that?,"ええ、でも
 その前にやることが増えてしまった様ですわ"
 String,150019,,,"ええ、でも
@@ -10602,7 +10606,7 @@ String,160002,,,"あのね
 I'm wondering if Ryudia is really okay...",,"Well, I wonder if Ryudia is really okay...","あのね
 リューディアほんと大丈夫かなぁ"
 String,160003,,,"安心してください
-リューディアもともと光の救世主だったんです","You can relax.[br]
+リューディアはもともと光の救世主だったんです","You can relax.[br]
 Ryudia was originally the Savior of Light.",,You can relax. Ryudia was originally the Savior of Light.,"安心してください
 リューディアもともと光の救世主だったんです"
 String,160004,,,闇の束縛さえなければ彼女は1人で生きていけるんですから,"So long as she isn't bound by the darkness, she can go on living on her own.",,She can continue living on her own if she isn't bound by the darkness.,闇の束縛さいなければ彼女は1人で生きていけるんですから
@@ -10615,7 +10619,7 @@ String,160009,,,"あれ？
 リューディアの声だ"
 String,160010,,,空耳かな？,Am I hearing things?,,Am I hearing things?,それ耳かな？
 String,160011,,,ユナ、あなたの頭に直接話しかけているんです,"Yuna, I'm speaking directly into your mind.",,"Yuna, I'm speaking directly into your head.",ユナ、あなたの頭に直接話しかけているんです
-String,160012,,,リューディアもうかつては光の救世主だったんだからそれくらいはできるんです,"Ryudia was once the Savior of Light,[br]
+String,160012,,,リューディアも、かつては光の救世主だったんだからそれくらいはできるんです,"Ryudia was once the Savior of Light,[br]
 so she's capable of such things.","NOTE: literally ""she can do at least that much"", but that sounds really clunky in english","Ryudia was once the Savior of Light, so she can do that much.",リューディアもうかつては光の救世主だったんだからそれくらいはできるんです
 String,160013,,,あっ、そういえばさあ、げんきになったんだよね,"Oh! Right, so, you're all better now, huh?",,"Oh, by the way, you sound real lively, don'cha?",あっ、そういえばさあ、げんきになったんだよね
 String,160014,,,よかった,What a relief!,,Thank goodness.,よかった
@@ -10636,7 +10640,7 @@ String,160025,,,今のままではあなたを闇の力に勝つことができ�
 String,160026,,,"へ!？
 やっぱり‥‥",Oh no...I kinda figured...,TIMESTAMP: 6 / 164C,What!? I knew it...,"へ!？
 やっぱり‥‥"
-String,160027,,,何を弱気なこと言ってるんですか!？,What's with the timid remark!?,,"Hey, what's with that fainthearted remark!?",何を弱気なこと言ってるんですか!？
+String,160027,,,何よ、弱気なこと言ってるんですか!？,What's with the timid remark!?,,"Hey, what's with that fainthearted remark!?",何を弱気なこと言ってるんですか!？
 String,160028,,,ユナ、闇の力はこの空間には存在していないです,"Yuna, the power of darkness does not exist within this space.",,"Yuna, the power of darkness does not exist within this space.",ユナ、闇の力はこの空間には存在していないです
 String,160029,,,あなたは敵を見つけることさえできないでしょ,You probably won't even be able to find your enemy.,,You can't even find your enemy.,あなたは敵を見つけることさえできないでしょ
 String,160030,,,"えっ!？
@@ -10689,7 +10693,7 @@ String,160053,,,,I just feel so totally down.,,,
 String,160054,,,ユナはリューディアのミスを繰り返さない,"Yuna, you won't repeat Ryudia's mistakes.",,"Yuna, you won't repeat Ryudia's mistakes.",ユナはリューディアのミスを繰り返さない
 String,160055,,,それでいいじゃないですか,"So it'll all be fine, right?",,"And because of that, it'll be okay, alright?",それでいいじゃないですか
 String,160056,,,でもなー,But still...,,But...,でもなー
-String,160057,,,エリナ、暗黒星雲と雲の惑星の位置は教示できますか？,"Erina, can you tell us the positions of the Dark Nebula and the cloud planet?",TIMESTAMP: 11 / 3279,"Erina, can you display the positions of the dark nebula and the cloud planet?",エリナ、暗黒星雲と雲の惑星の位置は表示できますか？
+String,160057,,,エリナ、暗黒星雲と雲の惑星の位置は表示できますか？,"Erina, can you display the positions of the Dark Nebula and the cloud planet?",TIMESTAMP: 11 / 3279,"Erina, can you display the positions of the dark nebula and the cloud planet?",エリナ、暗黒星雲と雲の惑星の位置は表示できますか？
 String,160058,,,"え、えっ、ちょっと待ってよ
 もう、急に言うんだから‥‥","Wha―? Uh...Hey, gimme a sec![br]
 Sheesh, that came out of nowhere...",,"Eh? Uh...Gimme a sec. Sheesh, that came out of nowhere...","え、えっ、ちょっと待ってよ
@@ -10745,7 +10749,7 @@ String,170000,,,ユナ、感じませんか？,"Yuna, can't you feel that?",TIME
 String,170001,,,なにが？,Feel what?,,Feel what?,なにが？
 String,170002,,,この空間に立ちこめる気配よ,The sensation that permeates this place.,,The feeling that is hanging over this place.,この空間に立ちこめる気配よ
 String,170003,,,よくわかんない,"Well, I dunno...",,Well I dunno.,よくわかんない
-String,170004,,,体はさっきみたいに重くないし,My body doesn't seem to feel as heavy as it did before...,,My body doesn't seem to feel as heavy as it was a while ago.,体はさっきみたいに重くないし
+String,170004,,,体はさっきみたいに重くないし,My body doesn't feel heavy like it did earlier...,,My body doesn't seem to feel as heavy as it was a while ago.,体はさっきみたいに重くないし
 String,170005,,,あっ！, ,"TIMESTAMP: 2 / 38E
 NOTE: blanked due to being unnecessary
 Ah!",Ah!,あっ！
@@ -10756,7 +10760,7 @@ String,170008,,,"あのね、暖かいの
 それで懐かしい感じがしてねー","It's a...a warm, and...[br]
 ...a nostalgic feeling.",,"You know, it's a warm feeling that's difficult to describe.","あのね、暖かいの
 それで難しい感じがしてねー"
-String,170009,,,"マリナやジーナ会った時も
+String,170009,,,"マリナやジーナと会った時も
 こんな感じだったんだ","It was like this when I met Marina and Gina, too.",,It was like this when I met Marina and Gina.,"マリナやジーナ会った時も
 こんな感じだったんだ"
 String,170010,,,ユナ、ここにあなたの分身が眠っているんですよ,"Yuna, one of your other selves is at rest here.",,"Yuna, your other self is resting here.",ユナ、ここにあなたの分身が眠っているんですよ
@@ -10773,7 +10777,7 @@ your master―Yuna.",,"Now then, this is the Savior of Light, your master Yuna."
 String,170017,,,あっ、はじめまして、ユナです,"Oh...How do you do?[br]
 I'm Yuna!",TIMESTAMP: 7 / 1A20,"Ah, how do you do? I'm Yuna.",あっ、はじめまして、ユナです
 String,170018,,,"ちょっと抜けてるところもあるけど仲良くしてね
-へっヘっ","I can be a bit careless,[br]
+へっヘっ","I can be a bit scatterbrained sometimes,[br]
 but I hope we'll get along.",,"I can be a bit careless, but I hope we can get along. Heh-heh.","ちょっと抜けてるところもあるけど仲良くしてね
 へっヘっ"
 String,170019,,,"やだな、あたしはあなたの一部なのよ
@@ -10817,10 +10821,10 @@ String,170050,,,,,,,
 String,180000,,,ユナ、あそこの沼を見てください,"Yuna, look at that pond over there.",TIMESTAMP: 1 / 7A,ユナ、あそこの沼を見てください,"Yuna, take a look at that pond over there."
 String,180001,,,わーい、わーい、お店があるんだよきっと！,"Woo-hoo! Alright![br]
 There's gotta be a store there!","NOTE: i know it's a non sequitur, but 店 is the only remotely sensible thing I can hear in this and the following lines...",わーい、わーい、を見せるあるんでをきっと！,"Wow-, wow-, surely something is gonna appear!"
-String,180002,,,あんなところに店があると思っての？,You really think there's a shop in a place like that?,,あんなところに見せがあると思っての？,What do you think is going to show up there?
+String,180002,,,あんなところに店があると思ってんの？,You really think there's a shop in a place like that?,,あんなところに見せがあると思っての？,What do you think is going to show up there?
 String,180003,,,あるかもしれないじゃない,"There could be one, right!?",,あるかもしれないじゃない,How should I know?
 String,180004,,,ないと思うな,I don't think so.,,ないと思うな？,You don't have any idea?
-String,180005,,,そうそう、あったらどうする？,"Okay, okay, but what if there IS one?",,そうそう、だったらどうする？,"Alright, in that case what should we do?"
+String,180005,,,[そうそう??]、あったらどうする？,"Okay, okay, but what if there IS one?",,そうそう、だったらどうする？,"Alright, in that case what should we do?"
 String,180006,,,別に,Who cares.,,別に,Not a clue.
 String,180007,,,あっ、逃げだ。やっぱりお店なんだ,"Ah, you're ducking the question.[br]
 Yep, that's a store, alright.",,あっ、逃げた、やっぱりを見せなんだ,"Ah...let's run, after all, it's about to show soon."
@@ -10831,8 +10835,10 @@ String,180011,,,ジーナと会ったときみたいな気持ちだけど‥‥,
 String,180012,,,それがどういうことか？,"So, what does that mean?",,それがどういうことか？,What does that mean?
 String,180013,,,わかりませんか？,Don't you understand?,,わかりませんか,I don't know.
 String,180014,,,うーんと‥‥えっと‥‥,Umm...uhh...,,うーんと‥‥えっと‥‥,Umm...well...
-String,180015,,,急に？？するのはずるいよ！,No fair suddenly changing the subject!,"NOTE: i have no idea what the first verb is supposed to be... not only is the actress' inflection weird on this line, there's some sort of editing issue that makes it extremely quiet. if you crank the volume way up, you can hear a man's voice talking in the background at the end, so i guess they were trying to cover that up?
-anyway, the most sensible thing i can come up with is 済ませる, but i'm also pretty sure that she's saying する, not せる...so i'm pretty much just guessing this is the punchline to the store gag.",言うに澄むするの発するいいよ,I'm sure it'll all clear up once it appears.
+String,180015,,,急に[質問?]するのはずるいよ！,No fair asking questions all the sudden!,"NOTE: the volume for this line was lowered to the point of inaudibility. i ended up pulling the audio from the demo version, which has it at normal volume, to figure it out. the demo also extends this scene with several extra lines that were cut from the final:
+Gina: ユナの鈍感 (Yuna, you dunderhead.)
+Yuna: 何さ　ジーナなんて体硬いくせに (Oh, c'mon. YOU'RE the thick-skinned one here, Gina.)
+Gina: だってロボットだもん (Well, that's because I'm a robot.)",言うに澄むするの発するいいよ,I'm sure it'll all clear up once it appears.
 String,180016,,,あっ、眩しいー！,It's bright!,TIMESTAMP: 2 / 9C4,あっ、眩しいー！,"Ah, that's bright!"
 String,180017,,,ユナ、目を開けて！,"Yuna, open your eyes!",,ユナ、目を開けて！,"Yuna, open your eyes!"
 String,180018,,,あなたが見てあげないと,You need to see this.,,あなたが見てあげないと,You need to see this.
@@ -10867,7 +10873,7 @@ String,180044,,,あっ、ダメダメ、ユナはそう言い方わかんない�
 String,180045,,,ちんぷんかんぷん,All Greek to me.,,ちんぷんかんぷん,This is all Greek to me.
 String,180046,,,あっ、まったく、いつもこうなんだから,"Oh, for the love of...[br]
 Why must you always be like this?",TIMESTAMP: 9 / 2276,あっ、まったく、いつもこうなんだから,"(Sigh), For Pete's sake, why do you always have to be like this."
-String,180047,,,でもまあいや,"Come on, now, quit it!",,でもまあいや,"Come on now, quit it!"
+String,180047,,,でもまあいや,"Aw, don't worry about it.",,でもまあいや,"Come on now, quit it!"
 String,180048,,,じゃ、水の惑星に行こうか,"Well, why don't we head to the water planet?",,じゃ、水の惑星に行こうか,"Well, shall we go to the water planet?"
 String,180049,,,そうですね,Let's.,,そうですね,Agreed.
 String,180050,,,とにかく空港へ戻りますよ,"For now, we should go back to the airport.",,とにかく空港へ戻りますよ,"In any case, let's head back to the airport."
@@ -10885,7 +10891,7 @@ String,180060,,,,,,,
 ,,,,"//=====================================
 // Scene 12 – gina awakening
 //=====================================",,,,
-String,190000,,,ユナ、私はあなたをずっと待ってたら,"Yuna, I've been waiting for you for so long.",TIMESTAMP: 2 / 526,"Yuna, I've been waiting for you.",ユナ、私はあなたをずっと待ってたら
+String,190000,,,ユナ、私はあなたをずっと待ってたわ,"Yuna, I've been waiting for you for so long.",TIMESTAMP: 2 / 526,"Yuna, I've been waiting for you.",ユナ、私はあなたをずっと待ってたら
 String,190001,,,"初めまして、あたしは大地のジーナ
 よろしくね","How do you do?[br]
 I am Gina of the Earth.",TIMESTAMP: 3 / A5C,"How do you do? I am Gina of the Earth, it's a pleasure to meet you.","初めまして、あたしは大地のジーナ
@@ -10893,7 +10899,7 @@ I am Gina of the Earth.",TIMESTAMP: 3 / A5C,"How do you do? I am Gina of the Ear
 String,190002,,,,A pleasure to meet you.,,,
 String,190003,,,へえ、あなたもあたしの分身なの？,"Ooh, so you're one of my other selves too?",TIMESTAMP: 4 / D9B,"Uh, you're also one of my other selves?",えっ、あなたもあたしの分身なの？
 String,190004,,,そうよ,That's right.,,That's right.,そうよ
-String,190005,,,んん～　ねえねえ、『ギギギ』とか『ピコピコピ』とか入ったりしないの？, ,"NOTE: blanked due to not being necessary
+String,190005,,,んん～　ねえねえ、『ギギギ』とか『ピコピコピ』とか[言ってるじゃない]の？, ,"NOTE: blanked due to not being necessary
 Huh...","Huh...hey, hey, you don't go all {BEEP-BOOP-BEEP} in all caps, do you?",んん～　ねえねえ、『ギギギ』とか『ピコピコピ』とか入ったりしないの？
 String,190006,,,,"Hey hey, you don't go all {BEEP-BOOP-BEEP} and {WRR-WRR-WRR,} do you?","NOTE: okay i know i edited the ""all caps"" part into the other joke like this, and i'm now editing it out of this one, but this one doesn't actually refer to it being in katakana, so...",,
 String,190007,,,そんなこと言わないわよ‥‥,Can't say that I do...,,I can't say that I do...,そんなこと言わないわよ‥‥
@@ -10920,10 +10926,10 @@ String,230003,,,"だって‥‥あたしは闇だから‥‥
 String,230004,,,,I'll never be able to win.,,,
 String,230005,,,なら、ケンカしなきゃいいのに！,Then you shouldn't have fought her!,"NOTE: well, it's literally present tense, but it seems a little late to be saying ""you shouldn't fight""...","If that's the case, I should have been the one to fight!",なら、ケンカしなきゃいいのに！
 String,230006,,,"でもさ‥‥
-あたしを悪い子にしたの‥‥","But since...she's the one who made me...[br]
+あたしを悪い子にしたの[は?]‥‥","But since...she's the one who made me...[br]
 into a {bad girl...}",,But...I've been a bad girl...,"でもさ‥‥
 あたしを悪い子にしたの‥‥"
-String,230007,,,こいつだったから‥‥憎らしくって‥‥,I...despise her...,"NOTE: the pained gasping makes the last word hard to understand. i'm not hearing a に to make it into 憎らしい, but it's the only somewhat plausible thing i can come up with here...",I became dark...because of her...,こいつだったから‥‥暗しくて‥‥
+String,230007,,,こいつだったから‥‥悔しくって‥‥,I...couldn't stand it...,"NOTE: the pained gasping makes the last word hard to understand. i'm not hearing a に to make it into 憎らしい, but it's the only somewhat plausible thing i can come up with here...",I became dark...because of her...,こいつだったから‥‥暗しくて‥‥
 String,230008,,,"あのね‥‥あのね‥‥
 リアちゃんのブレスレット
 あたしが持ってるんだけど‥‥",Um...um....,TIMESTAMP: 2 / 766,Hey hey...so guess what...? I have your bracelets Lia...,"あのね‥‥あのね‥‥
@@ -10949,7 +10955,7 @@ String,230016,,,勝って‥‥,Beat her...,,Defeat her...,"お願いだから�
 本当のお嬢様‥‥
 いい子なんだって‥‥"
 String,230017,,,"お願いだから‥‥
-本当のお嬢様‥‥
+本当のお嬢様は‥‥
 いい子なんだって‥‥",I beg you...,,"I beg you...as a true fraulein...You're a good girl, right...?",
 String,230018,,,,A true fraulein is...a {good girl...},,,見せつけてよ‥‥
 String,230019,,,見せつけてよ‥‥,Show her...,"NOTE: picking ""show her"" over ""show me"" here, what with lia ""dying"" and all",Then show me...,お願い‥‥
@@ -10985,7 +10991,7 @@ TIMESTAMP: 9 / 1FB3",You say you'll fight...,ユナ‥‥
 String,230033,,,ユナ‥‥,,,Yuna...,"あれ？
 どうちゃったの？"
 String,230034,,,"あれ？
-どうちゃったの？","Huh?[br]
+どうしちゃったの？","Huh?[br]
 What happened?",TIMESTAMP: A / 21AA,Huh? What happened?,ユナ！！！
 String,230035,,,ユナ！！！,Yuna!,,YUNA!!!,あっ！　みんな！
 String,230036,,,あっ！　みんな！,Guys!,,Ah! Guys!,みんな、大丈夫だった？
@@ -11010,7 +11016,7 @@ String,230046,,,ユナ、合体しましょう！,"Yuna, let's fuse!",TIMESTAMP:
 String,230047,,,"えっ？
 うん、やろ！",Huh?...R-Right!,,"Huh? Yeah, LET'S DO IT!",いた光をわがものに！！！
 String,230048,,,,LET'S GO!,,,
-String,230049,,,いざ！光を我が元に！！！,"Now, O light!",NOTE: more struggling to interpret things being chanted in unison...,,
+String,230049,,,いざ！光よ！我が元に！！！,"Now, O light!",NOTE: more struggling to interpret things being chanted in unison...,,
 String,230050,,,,To me!,,,
 String,230051,,,,,,,
 String,230052,,,,,,,
@@ -11066,8 +11072,8 @@ String,230099,,,,,,,
 //=====================================",,,,
 String,250000,,,こんにちは！あたしユナ！,Hi there! I'm Yuna!,TIMESTAMP: 210,"Hi there, I’m Yuna!",こんにちは！あたしユナ！
 String,250001,,, 私立白丘台女子高校の１年生！,I'm a first-year at Shiraokadai Private High School for Girls.,,I’m a first-year at Shiraokadai private high school for girls!, 私立白丘台女子高校の１年生！
-String,250002,,,今まではなんてこともない,"Up 'til now, I was nothing special.",,"Until now, there was nothing else!",今まではなんてこともない
-String,250003,,,フツーの女子高校生だったんだけど・・・,"I was just your average high school girl, until...",,"I was a normal student at an all-girls’ high school, but then…",フツーの女子高校生だったんだけど・・・
+String,250002,,,今まではなんてことのないフツーの女子高校生だったんだけど・・・,"Up 'til now, I was just your average, run-of-the-mill high school girl, but...",,"Until now, there was nothing else!",今まではなんてこともない
+String,250003,,,,,,"I was a normal student at an all-girls’ high school, but then…",フツーの女子高校生だったんだけど・・・
 String,250004,,,第２１回ミス銀河お嬢様コンテストグランプリ！,"And now, the grand prize for the 21st[br]
 Miss Galaxy Fraulein competition!",TIMESTAMP: 589,It’s our 21st Miss Galaxy Fraulein Gran Prix!,第２１回ミス銀河お嬢様コンテストグランプリ！
 String,250005,,,５００の恒星系からミスお嬢様に選ばれたのは・・・,"Your Miss Fraulein, chosen from 500 star systems, is...","NOTE: i initially had some hopes of not using ""fraulein"" for ""ojou-sama"" too much, but ultimately gave up because, as you might have noticed, the entire game is sort of predicated on ojou-sama stereotypes. i figure we might as well start getting this gratuitous abuse of the german language in early to try to clue people in on its meaning and significance, so i've reinstated most references to it in the intro.
@@ -11078,7 +11084,7 @@ NOTE #235823576: lol disregard that, the demo has this without the drum roll and
 man, this whole cell is a testament to my own idiocy. i'll leave it here as a reminder.","Our Miss Galaxy, chosen from 500 galaxies is…",５００の恒星系からミスお嬢様に選ばれたのは・・・
 String,250006,,,地球代表の神楽坂ユナさん！,"Representing Earth...[br]
 Yuna Kagurazaka!",,"Earth representative, Yuna Kagurazaka!",地球代表の神楽坂ユナさん！
-String,250007,,,そうなのよ！友達のなっちゃんは私に内緒で応募した,"Yep, that's right!","TIMESTAMP: 921
+String,250007,,,そうなのよ！友達のなっちゃんが私に内緒で応募した,"Yep, that's right!","TIMESTAMP: 921
 NOTE: そんなのよ? そうなのよ? honestly, it's pretty much impossible to distinguish here. i'm choosing そう mostly because i think it sounds better than yuna having a fake narratorial reaction to this event.",No way! My friend Na secretly applied me for the Miss Galaxy Fraulein beauty pageant… and I won the gran prix!,そんなのよ！友達のなっちゃんは私に内緒で応募した
 String,250008,,,ミス銀河お嬢様コンテストで、私グランプリになっちゃたの！,"My friend Nacchan secretly entered me in[br]
 the Miss Galaxy Fraulein contest...","NOTE: ""nacchan"" is never mentioned again, though it's plausible to guess she's one of the mobs that shows up in yuna's class. dunno what her actual name is supposed to be or whether ""na"" by itself would make sense as a nickname for it, so i'm sticking with the full ""nacchan"" here",,ミス銀河お嬢様コンテストで、私グランプリになっちゃたの！
@@ -11095,7 +11101,7 @@ String,250017,,,ユナ・・・ユナ！,Yuna...Yuna!,TIMESTAMP: 10CA,Yuna… Yu
 String,250018,,,ん・・・あれ？ママ・・・？,What?,,Hm… Who is it? Mama…?,ん・・・誰？ママ・・・？
 String,250019,,,,Mama...?,,,
 String,250020,,,あ！やっと会えました、ユナ！,"At last we meet, Yuna!",,"Ah! At last we meet, Yuna!",あ！やっと会えました、ユナ！
-String,250021,,,何！？キャーお化けー！！,What?,TIMESTAMP: 146B,What!? Eeek! A ghost!!,何！？キャーお化けー！！
+String,250021,,,何！？ひえぇ！お化けー！！,What?,TIMESTAMP: 146B,What!? Eeek! A ghost!!,何！？キャーお化けー！！
 String,250022,,,,EEEK! A ghost!,,,
 String,250023,,,私はエルナー！あなたの分身,"I am Elner, your other self.",TIMESTAMP: 1757,I am Elner! Your other self!,私はエルナー！あなたの分身
 String,250024,,,私は、あなたのことをずーっと待っていたんです！,"I've awaited you for so, so long!",,I have been waiting all this time to finally meet you!,私は、あなたのことをずーっと待っていたんです！
@@ -11111,10 +11117,10 @@ and was sealed away until now!","NOTE: pretty sure this is correct – ""エル�
 later in the story, we also meet the previous savior of light and learn that she ""failed"" in some capacity (the nature of which is never explained) further indicating this is correct. i'm assuming the implication here is that the battle sealed elner but also weakened the darkness, hence its failure to manifest up until now",The darkness only lost by a hair!,ちょっとの差で負けちゃって
 String,250031,,,今まで封印されちゃってたんだって！,,,It was merely sealed away until now!,今まで封印されちゃったんだって！
 String,250032,,,ユナ、よく聞いてください！,"Yuna, listen carefully.",,"Yuna, listen well!",ユナ、よく聞いてください！
-String,250033,,,闇の力は、どんどん増大してきて,The power of the darkness has begun to increase rapidly.,,The power of darkness is increasing at a steady pace.,闇の力は、どんどん増大して
+String,250033,,,闇の力は、今どんどん増大してきて,The power of the darkness has begun to increase rapidly.,,The power of darkness is increasing at a steady pace.,闇の力は、どんどん増大して
 String,250034,,,この銀河系を我が物にしようとしています！,It's trying to make this galaxy into its own!,,It is trying to take this galaxy and make it its own!!!,この銀河系を我が物にしようとしています！
 String,250035,,,・・・へ？,Huh?,,...Huh?,・・・へ？
-String,250036,,,この前もお嬢様コンテストの予選通過した女の子たちが,"And the recent spate of disappearances of those girls,",TIMESTAMP: 20B8,And the girls nominated in the recent Miss Galaxy Fraulein competition that have gone missing? The darkness has taken them too!!,この前もお嬢様コンテストの予選通過した女の子たちが
+String,250036,,,この前もお嬢様コンテストの予選通過をした女の子たちが,"And the recent spate of disappearances of those girls,",TIMESTAMP: 20B8,And the girls nominated in the recent Miss Galaxy Fraulein competition that have gone missing? The darkness has taken them too!!,この前もお嬢様コンテストの予選通過した女の子たちが
 String,250037,,,たくさん行方不明になってしまいましたよね？あれもそうです！,the ones that qualified for the Fraulein Contest? That was its doing too!,,,たくさん行方不明になってしまいましたよね？あれもそうです！
 String,250038,,,でも、さらちゃったりして、どうするつもりなんだろう？,But what's the darkness planning to do after kidnapping them?,,"But, what does the darkness plan to do after kidnapping them?",でも、さらちゃったりして、どうするつもりなんだろう？
 String,250039,,,それは・・・,Well...,,Well...,それは・・・
@@ -11127,7 +11133,7 @@ String,250044,,,どうしました？,What is it?,,What's the matter?!,どうし
 String,250045,,,あの子、コンテストの時,"That girl―[br]
 I was with her at the contest!",,"That girl, she was with me at the time of the contest,",あの子、コンテストの時
 String,250046,,,一緒にでた、水野ヨーコちゃんだ！,That's Yoko Mizuno!,,Yoko Mizuno!!,一緒にいていた、水野ヨーコちゃんだ！
-String,250047,,,なんであんな格好をしているんだろう？,What's she dressed like that for?,,What is she dressed like that for?,なんであんな格好をしているんだろう？
+String,250047,,,なんであんな格好しているんだろう？,What's she dressed like that for?,,What is she dressed like that for?,なんであんな格好をしているんだろう？
 String,250048,,,あれはバトルスーツです！やっぱり闇は,"That's a battle suit![br]
 It's as I feared.",,That is her battle suit!,あれはバトルスーツです！やっぱり闇は
 String,250049,,,ユナを倒すためにお嬢様をさらって戦士に仕立ているんです！,The darkness is kidnapping frauleins and turning them into soldiers in order to kill you!,,"The darkness has kidnapped girls and sent them out to kill you, Yuna!",ユナを倒すためにお嬢様をさらって戦士にした出ているんです！
@@ -11145,7 +11151,7 @@ You need to be quiet!",TIMESTAMP: 324B,"Wait a minute, you!! You need to be quie
 String,250058,,,もう夜中だし、周りはみんな寝てるんですからねっ！！,"It's the middle of the night! The people around you are sleeping, you know!",,"It's the middle of the night, and people in the neighborhood are trying to sleep, you know!",もう夜中だし、周りはみんな寝てるんですからねっ！！
 String,250059,,,もう少し、人の迷惑考えなさいよーーーーー！！！,Be a little more considerate of others!,,"Any more of this, and you're going to disturb everyone!!",もう少し、人の迷惑考えなさいよーーーーー！！！
 String,250060,,,黙れ！黙れ！黙れーーーーーーー！！！！！,"Shut up, shut up, SHUT UP!",,Shut up! Shut up! Shut up! Shut up!!!,黙れ！黙れ！黙れ！黙れーーーーーーー！！！！！
-String,250061,,,お前さえなければ！,"If YOU just hadn't been there,[br]
+String,250061,,,お前さえなければ、,"If YOU just hadn't been there,[br]
 I would have been the winner!",,If only you weren't there!!,お前さえなければ！
 String,250062,,,あたしがグランプリになっていたのにっ！,,,I would have become Miss Galaxy!,あたしをグランプリになっていたのにっ！
 String,250063,,,絶対！ゆるさなーーーーーーーーーーーーーーいっ！！！！！！！,I'll NEVER forgive you!,,I'll never forgive you!!!,絶対！ゆるさなーーーーーーーーーーーーーーいっ！！！！！！！
@@ -11155,21 +11161,21 @@ String,250065,,,それよりご近所こんなにしちゃって！,"Anyway, wha
 String,250066,,,ちゃんと片付けなさいよっ！！！！！,Clean up this mess you're making!,,"Please, just calm down already!!",ちゃんと片付けなさいよっ！！！！！
 String,250067,,,うるさいっ！！！！！！！！！！,SHUT UP!,,Shut up!!!!!!!!!!!,うるさいっ！！！！！！！！！！
 String,250068,,,大丈夫？ヨーコちゃん・・・,"Are you alright, Yoko...?",TIMESTAMP: 3CE5,Are you alright?! Yoko...,大丈夫？ヨーコちゃん・・・
-String,250069,,,心配ないです！スーツのエネルギーが切れただけですから！,"Not to worry![br]
+String,250069,,,心配ないです！スーツのエネルギーが切れただけですから,"Not to worry![br]
 The suit's energy just ran out.",,"Don't worry, the suit's energy merely wore out!",心配ないです！スーツのエネルギーが切れただけですから！
 String,250070,,,それより、闇はまだまだやってきますよ！,"More importantly, the darkness will still be coming after you.","NOTE: literally the darkness ""will keep showing up,"" but that sounds kind of weak here","Moreover, the darkness still has a ways to go before reaching us.",それより、闇はまだまだやってきますよ！
 String,250071,,,心してかからないと！,You have to fight back vigilantly!,,Do not worry yourself with this.,心してかからないと！
-String,250072,,,あ～ん・・・どうしてこんなことになっちゃたのよ～！,How did I get myself into this!?,,Ohhhh... How did I get myself into this?!,あ～ん・・・どうしてこんなことになっちゃたのよ～！
+String,250072,,,あ～ん・・・どうしてこんなことになっちゃたんだろう・・・？,How did I get myself into this!?,,Ohhhh... How did I get myself into this?!,あ～ん・・・どうしてこんなことになっちゃたのよ～！
 ,,,,"//=====================================
 // Scene 1A – ultimate attack on final boss
 //=====================================",,,,
 String,270000,,,エルライン・アトミック・シュート！！！,EL-LINE ATOMIC SHOT!,TIMESTAMP: 1 / 155,EL-LINE ATOMIC SHOT!!!,エルラインアトミックショット！！！
 String,270001,,,"な、なぜ‥‥
 あたしが‥‥
-光軍団に…！？","H-How could I...be done in...[br]
+光ごときに…！？","H-How could I...be done in...[br]
 by the light...!?","TIMESTAMP: 2 / 538
 TIMESTAMP: 3 / 6AB
-NOTE: the echo effect makes this one pretty bad... 光軍団 feels like a stretch, but idk. it's not really going to be reflected in the translation anyway.",H-How could I...be overwhelmed...by the light...,"な、なぜ‥‥
+NOTE: sentence fragment with no verb (""why... i... by the likes of the light...!?""); we have to supply something here to get a sensible result in English",H-How could I...be overwhelmed...by the light...,"な、なぜ‥‥
 あたしが‥‥
 光もともに‥‥"
 String,270002,,,,,,,
@@ -11189,7 +11195,7 @@ String,280002,,,闇の侵略は一段落しました,We've checked the darkness'
 String,280003,,,けれども、闇を滅ぼすことはできません,"However, we cannot destroy it.",,"However, the darkness cannot be destroyed.",けれども、闇を滅ぼすことはできません
 String,280004,,,次の時が来るまで私たちは待っていなければならないのです,We must wait until the time next comes.,,We must wait for when the next time comes.,次の時が来るまで私たちは待っていなければならないのです
 String,280005,,,一緒には‥‥いられないの？,Can't we do it...together?,TIMESTAMP: 3 / 5B4,Can't we...stay together?,一緒には‥‥いられないの？
-String,280006,,,そうするとユナの周りの人たちまで狙われてしまうでしょ,Wouldn't that leave the people you're close with vulnerable?,"NOTE: the verb here seems like it should be super obvious, but somehow just isn't... われてしまう is quite distinct, but the first two syllables are weirdly pronounced. 狙われてしまう is the only thing i can find that seems to even vaguely match up with the sounds. it doesn't really seem right, but i guess i can make sense of it that way...","To do that Yuna, would be to choose our path for us, wouldn't it?",そうするとユナが曲がりの人たちまで選ばれてしまうでしょ
+String,280006,,,そうするとユナの周りの人たちまで狙われてしまうでしょ,Wouldn't that leave the people you're close with vulnerable?,,"To do that Yuna, would be to choose our path for us, wouldn't it?",そうするとユナが曲がりの人たちまで選ばれてしまうでしょ
 String,280007,,,だけど‥‥,But...,,But...,だけど‥‥
 String,280008,,,"安心して
 ユナに何かあったらすぐに飛んできますから","Don't worry, Yuna. If something happens to you, we'll be back in a flash.",TIMESTAMP: 4 / 851,"Rest assured, if something happens Yuna, we'll come flying in an instant.","安心して
@@ -11207,9 +11213,10 @@ Don't forget about us!",,Hang in there. Don't forget about us.,"がんばって�
 String,280013,,,じゃあ、ユナ‥‥お元気で,"Well then, Yuna...[br]
 Take care.",TIMESTAMP: 7 / 130F,"Well, Yuna...take care.",じゃあ、ユナ‥‥お元気で
 String,280014,,,,,,,
-String,280015,,,さようならユナ！,"Goodbye, Yuna!","TIMESTAMP: 8 / 141B
+String,280015,,,さようなら、ユナ！,"Goodbye, Yuna!","TIMESTAMP: 8 / 141B
 TIMESTAMP: 9 / 15CB",Goodbye Yuna!,さようならユナ！
-String,280016,,,みんな‥‥しちゃうなーーーーーーーーっ！！！,Guys...,TIMESTAMP: A / 1733,Guys...DON'T GOOOOOOOOO!!!,みんな‥‥しちゃうなーーーーーーーーっ！！！
+String,280016,,,みんな‥‥行っちゃやだーーーーーーーーっ！！！,Guys...,"TIMESTAMP: A / 1733
+NOTE: thanks to nemesislivezx (https://w.atwiki.jp/opedmiroor/pages/723.html) for transcribing this line correctly; i couldn't figure it out through the feedback echo",Guys...DON'T GOOOOOOOOO!!!,みんな‥‥しちゃうなーーーーーーーーっ！！！
 String,280017,,,,DON'T GO!,,,
 String,280018,,,"なに膨れてるの？
 暗いわねぇ","Why the long face?[br]
@@ -11219,11 +11226,10 @@ TIMESTAMP: C / 19FA",Why so sullen? You look depressed.,"なに膨れてるの�
 String,280019,,,いいの‥‥ほっといて,"I'm fine.[br]
 Lemme alone.",,Back off...Leave me alone.,いいの‥‥ほっといて
 String,280020,,,"ほっぺた膨らませちゃって
-だから吹くっぽくいうなり
-なんて言われるのよ",You've got your cheeks all puffed out.,,"Your cheeks are all puffed up. Therefore, I suggest you try something like {breathing out}.","ほっぺた膨らませちゃって
+だから「ぷくぷくユナりん」なんて言われるのよ",You've got your cheeks all puffed out.,,"Your cheeks are all puffed up. Therefore, I suggest you try something like {breathing out}.","ほっぺた膨らませちゃって
 だから吹くっぽくいうなり
 なんて言われるのよ"
-String,280021,,,,You ever try this nice thing we call {exhaling}?,,,
+String,280021,,,,"Next thing you know, they'll be calling you {Puffy-Wuffy Yuna.}",,,
 String,280022,,,大きなお世話‥‥,"Oh, shove off...",,Mind your own business...,大きなお世話‥‥
 String,280023,,,あっ！？,,,Ah!?,あっ！？
 String,280024,,,"ええっ！？
@@ -11232,7 +11238,7 @@ String,280024,,,"ええっ！？
 うそ！
 どうして？"
 String,280025,,,,How...!?,,,
-String,280026,,,えヘヘ、あたしもデビューちゃったの,I've made my debut too!,,Eh-heh-heh...I made my debut!,えヘヘ、あたしデビューちゃったの
+String,280026,,,えヘヘ、あたしもデビューしちゃったの,I've made my debut too!,,Eh-heh-heh...I made my debut!,えヘヘ、あたしデビューちゃったの
 String,280027,,,"本当に?
 ぜったい？",You did? For real!?,TIMESTAMP: E / 2298,Really? Is it true?,"本当に?
 ぜったい？"
@@ -11531,14 +11537,14 @@ NOTE 2: but hey look, months after this project wrapped, i found the demo versio
 String,410001,,,なんですか　それは‥‥,What are you nattering on about?,TIMESTAMP: 112,"What are you talking about!?  Right now that's unimportant.  The forces of darkness have now arrived here, meaning that it's only a question of when they're going to show up next!",なんですかそれは、
 String,410002,,,"そんなことよりも　闇の勢力が
 ここまで　のびているってことの方が
-問題なんですよ",What's important here is that the darkness' influence has reached this place.,TIMESTAMP: 18C,,"そんなことよりも闇の勢力がここまで伸びて
+問題なんですよ",What's important here is that the forces of darkness have reached this place.,TIMESTAMP: 18C,,"そんなことよりも闇の勢力がここまで伸びて
 きているっていう事の方が問題なんですよ"
 String,410003,,,,,,,
 String,410004,,,どうして？,Why?,TIMESTAMP: 2F6,So?,どうして？
 String,410005,,,"軍需産業の星だって　いってたでしょ！
 それを　利用しようとしてるのかも","We were told that this planet is home to the weapons industry, right?",TIMESTAMP: 33E ,"We were told that this planet is home to the weapons industry, right?  They could be trying to make use of that.","軍需産業の星だって言ってたでしょ
 それを利用しようとしてるのかも"
-String,410006,,,,It could be trying to make use of that.,,,
+String,410006,,,,They could be trying to make use of that.,,,
 String,410007,,,そお？,Really?,TIMESTAMP: 47B,You think?,そう？
 String,410008,,,,,,,
 String,410009,,,,,,,
@@ -11629,7 +11635,7 @@ String,430006,,,舞は　ビックリしています,,,Mai is astonished.,
 String,430007,,,なんてことぉ！,Holy CRAP!,TIMESTAMP: 603,Holy cow!,
 String,430008,,,"海底の神殿にいる昔の『光の救世主』に[br]
 会いに来ると思って[br]
-ずっと　まちぶせしてたのにぃ〜",I thought you would come to the Undersea Temple to meet the ancient {Savior of Light}!,"TIMESTAMP: 681
+ずっと　まちぶせしてたのにぃ〜",I thought you would come to the Undersea Temple to meet the ancient Savior of Light!,"TIMESTAMP: 681
 NOTE: the undersea temple is here referred to as 海底の神殿 instead of 海底神殿, which is a bit more generic. it might make sense to have it in lower case here... but i guess we should go for consistency","When I was little, I used to go to the bottom of the ocean to the temple of the {Savior of Light}, and I waited there thinking that someday I'd finally get the chance to meet you.",
 String,430009,,,,I waited SOOOO long to ambush you!,,,
 String,430010,,,"『光の救世主』っていうから[br]
@@ -11764,7 +11770,7 @@ String,470001,,,フーッ　危ない人だったわ‥‥,"Phew...[br]
 She was dangerous...",TIMESTAMP: 1 / 84,"Phew, that person was dangerous...",
 String,470002,,,"さすがは　ユナね[br]
 私が　見込んだだけあるわ","I expected no less of you, Yuna.",TIMESTAMP: 2 / 1AE,Just as I would expect of you Yuna. I knew that this would happen.,
-String,470003,,,,All just as I predicted.,,,
+String,470003,,,,I DID see promise in you.,,,
 String,470004,,,,,,,
 String,470005,,,,,,,
 String,470006,,,,,,,
@@ -11901,8 +11907,8 @@ String,540002,,,,"You're really going all out, Lia!",,,
 String,540003,,,"ホホホホホホ！！　ほら見なさい[br]
 やっぱり　あたしが銀河一の[br]
 お嬢様だったのよ！",Oh-ho-ho-ho-ho-ho!,TIMESTAMP: 1BC,"Oh-ho-ho-ho-ho-ho! Well, would you look at that? I'm the galaxy's top fraulein after all!",
-String,540004,,,,"Well, would you look at that?[br]
-I'm the galaxy's top fraulein after all!",,,
+String,540004,,,,"Now, behold![br]
+Yes, I AM the galaxy's top fraulein!",,,
 String,540005,,,,,,,
 String,540006,,,,,,,
 String,540007,,,,,,,

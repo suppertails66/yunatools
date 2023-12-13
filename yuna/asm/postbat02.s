@@ -26,14 +26,6 @@
 ; other modifications specific to this executable
 ;==============================================================================
 
-;================================
-; convert unwanted EX_DSPOFF commands
-; to EX_BGOFF
-;================================
-  
-  ; "FIRST" album scroll
-;  fixDspOffWithSprClrAndSync $4398
-
 ;==============================================================================
 ; script
 ;==============================================================================
@@ -200,69 +192,6 @@
     
     cut_waitForFrameMinSec 1 22.291
     cut_subsOff
-    
-/*    SYNC_adpcmTime 1 $007B
-;    cut_waitForFrameMinSec 0 2.733-0.683
-    cut_swapAndShowBuf
-    
-    .incbin "include/postbat0/string410001.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    SYNC_adpcmTime 2 $0112
-    
-;    cut_waitForFrameMinSec 0 5.244-0.683
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    .incbin "include/postbat0/string410002.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    SYNC_adpcmTime 3 $018C
-    
-;    cut_waitForFrameMinSec 0 7.255-0.683
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-;    .incbin "include/postbat0/string410003.bin"
-;    SCENE_prepAndSendGrpAuto
-    
-;    cut_waitForFrameMinSec 0 9.738
-;    cut_subsOff
-;    cut_swapAndShowBuf
-    
-    .incbin "include/postbat0/string410004.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    SYNC_adpcmTime 4 $02F6
-    
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    .incbin "include/postbat0/string410005.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    SYNC_adpcmTime 5 $033E
-    
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    .incbin "include/postbat0/string410006.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 0 16.490
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    .incbin "include/postbat0/string410007.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    SYNC_adpcmTime 6 $047B
-    
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    cut_waitForFrameMinSec 0 19.832
-    cut_subsOff */
     
     cut_terminator
 .ends

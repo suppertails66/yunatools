@@ -6,14 +6,26 @@
 00:3bab fontWidthTable
 00:3bfb fontLut
 00:3c9b setUpStdBanks
-00:3cb5 restoreOldBanks
-00:3cb5 restoreOldBanks@slot3
-00:3cb9 restoreOldBanks@slot4
-00:3cbd restoreOldBanks@slot5
+00:3caf setUpStdBanks@finish
+00:3cbc setUpStdBanks@done
+00:3cbd setUpStdBanks_sublevel
+00:3cce restoreOldBanks
+00:3cd7 restoreOldBanks@slot3
+00:3cdb restoreOldBanks@slot4
+00:3cdf restoreOldBanks@slot5
+00:3ce6 restoreOldBanks@done
+00:3ce7 restoreOldBanks_sublevel
+00:3ce7 restoreOldBanks_sublevel@slot3
+00:3ceb restoreOldBanks_sublevel@slot4
+00:3cef restoreOldBanks_sublevel@slot5
+00:3cf7 stdBanksSetUp
 
 [definitions]
 00000320 _sizeof_font
 00000050 _sizeof_fontWidthTable
 000000a0 _sizeof_fontLut
-0000001a _sizeof_setUpStdBanks
-0000000d _sizeof_restoreOldBanks
+00000022 _sizeof_setUpStdBanks
+00000011 _sizeof_setUpStdBanks_sublevel
+00000019 _sizeof_restoreOldBanks
+00000010 _sizeof_restoreOldBanks_sublevel
+00000001 _sizeof_stdBanksSetUp

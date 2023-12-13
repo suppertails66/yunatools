@@ -26,14 +26,6 @@
 ;==============================================================================
 
 ;================================
-; convert unwanted EX_DSPOFF commands
-; to EX_BGOFF
-;================================
-  
-  ; "FIRST" album scroll
-;  fixDspOffWithSprClrAndSync $4398
-
-;================================
 ; add sync event after cd audio
 ; successfully starts
 ;================================
@@ -47,7 +39,16 @@
 .bank 0 slot 0
 .section "cd sync 2" free
   doCdSync:
-    jsr incrementAdpcmSyncCounter
+    ; NOTE: incrementAdpcmSyncCounter ends by calling ovlScene_jumpTable_restoreOldBanks.
+    ; but we never called ovlScene_jumpTable_setUpStdBanks!
+    ; this didn't cause problems in the original release due to luck,
+    ; but fixing the recursion issues in setUpStdBanks/restoreOldBanks
+    ; caused this to start crashing the game.
+    ; since we've made the assumption that the correct banks are loaded anyway,
+    ; this is now a call to incrementAdpcmSyncCounter_sub, which does the same thing
+    ; without calling restoreOldBanks afterward.
+;    jsr incrementAdpcmSyncCounter
+    jsr incrementAdpcmSyncCounter_sub
     ; make up work
     jmp $E096
 .ends

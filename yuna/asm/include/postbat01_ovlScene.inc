@@ -11,5 +11,6 @@
 .define setUpSpritesRaw $6E53
 .define playAdpcm $6779
 .define playAdpcmMakeup1 $6842
+.define playAdpcmStreamBranchEnd $6849
 .define playAdpcmSpecial $6741
 .define playAdpcmAlt $692B

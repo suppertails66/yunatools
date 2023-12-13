@@ -536,7 +536,85 @@ int main(int argc, char* argv[]) {
     
     ifs.seek(playAdpcm_raw + (0x6BAE - 0x6BA9));
     playAdpcmMakeup1 = ifs.readu16le();
+    
+/*    ifs.seek(playAdpcm_raw + (0x6C9D - 0x6BA9));
+    int next = ifs.readu8();
+    int next2 = ifs.readu16le();
+    if ((next != 0x20) || (next2 != 0xE03F)) {
+      std::cerr << "bad" << std::endl;
+      return 1;
+    }*/
   }
+  
+/*  006C79  9C 65 29             stz $2965
+  006C7C  9C 66 29             stz $2966
+  006C7F  A0 02                ldy #$02
+  006C81  B1 29                lda ($0029),Y
+  006C83  85 FE                sta $00FE
+  006C85  C8                   iny 
+  006C86  B1 29                lda ($0029),Y
+  006C88  85 FD                sta $00FD
+  006C8A  C8                   iny 
+  006C8B  B1 29                lda ($0029),Y
+  006C8D  85 FC                sta $00FC
+  006C8F  A5 2B                lda $002B
+  006C91  85 F8                sta $00F8
+  006C93  A5 2C                lda $002C
+  006C95  85 F9                sta $00F9
+  006C97  64 FA                stz $00FA
+  006C99  A9 0E                lda #$0E
+  006C9B  85 FF                sta $00FF
+  006C9D  20 3F E0             jsr AD_CPLAY [$E03F]
+  006CA0  68                   pla 
+  006CA1  53 40                tam #$40
+  006CA3  60                   rts */
+  TStringSearchResultList playAdpcm_streamBranchEnd_raw_list
+    = TStringSearch::searchFullStream(ifs,
+        std::string(
+          "9C * * "
+          "9C * * "
+          "A0 02 "
+          "B1 * "
+          "85 FE "
+          "C8 "
+          "B1 * "
+          "85 FD "
+          "C8 "
+          "B1 * "
+          "85 FC "
+          "A5 2B "
+          "85 F8 "
+          "A5 2C "
+          "85 F9 "
+          "64 FA "
+          "A9 0E "
+          "85 FF "
+          "20 3F E0 "
+          "68 "
+          "53 40 "
+          "60"
+        )
+      );
+  int playAdpcmStreamBranchEnd_raw = -1;
+  if (playAdpcm_streamBranchEnd_raw_list.size() != 0) {
+    playAdpcmStreamBranchEnd_raw = playAdpcm_streamBranchEnd_raw_list[0].offset;
+    
+    if (playAdpcm_streamBranchEnd_raw_list.size() > 1) {
+      std::cerr << "bad" << std::endl;
+      return 1;
+    }
+    
+/*    ifs.seek(playAdpcm_raw + (0x6C9D - 0x6BA9));
+    int next = ifs.readu8();
+    int next2 = ifs.readu16le();
+    if ((next != 0x20) || (next2 != 0xE03F)) {
+      std::cerr << "bad" << std::endl;
+      return 1;
+    }*/
+  }
+//  else {
+//    std::cerr << "none" << std::endl;
+//  }
   
 /*  
   00646D  68                   pla 
@@ -691,6 +769,10 @@ int main(int argc, char* argv[]) {
   if (playAdpcmMakeup1 != -1) {
     outputDefine(
       ofs, "playAdpcmMakeup1", playAdpcmMakeup1);
+  }
+  if (playAdpcmStreamBranchEnd_raw != -1) {
+    outputDefineFromRawOffset(
+      ofs, "playAdpcmStreamBranchEnd", playAdpcmStreamBranchEnd_raw);
   }
   if (playAdpcmSpecial_raw != -1) {
     outputDefineFromRawOffset(

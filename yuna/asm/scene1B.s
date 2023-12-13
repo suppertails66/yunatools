@@ -28,103 +28,6 @@
 ;==============================================================================
 
 ;================================
-; convert unwanted EX_DSPOFF commands
-; to EX_BGOFF
-;================================
-  
-  ; "FIRST" album scroll
-;  fixDspOffWithSprClrAndSync $4398
-
-;================================
-; elner flight crop fix
-;================================
-
-;.bank 0 slot 0
-;.orga $408B
-;.section "fix 1" overwrite
-;  ; disable sprites but not bg
-;  jsr $E093
-;.ends
-
-/*.bank 0 slot 0
-.orga $4434
-.section "elner flight fix 1" overwrite
-  ; no lower sprite crop
-  nop
-  nop
-  nop
-.ends*/
-
-/*.bank 0 slot 0
-.orga $4057
-.section "elner flight fix 1" overwrite
-  ; starting line of lower-screen sprite crop
-  ; (we want this to be below the subtitle display area)
-  lda #$AF+$30
-.ends */
-
-/*;================================
-; 
-;================================
-
-.bank 0 slot 0
-.orga $47AF
-.section "fix red alert 1" overwrite
-  jsr fixRedAlert
-.ends
-
-.bank 0 slot 0
-.section "fix red alert 2" free
-  redAlertMap:
-;    .incbin "out/maps/intro.bin" FSIZE introMapSize
-    .incbin "out/maps/scene0B_patch.bin" FSIZE redAlertMapSize
-  redAlertGrp:
-;    .incbin "out/grp/intro.bin" FSIZE introGrpSize
-    .incbin "out/grp/scene0B_patch.bin" FSIZE redAlertGrpSize
-  redAlertPal:
-    .incbin "out/pal/scene0B_patch_line.pal" FSIZE redAlertPalSize
-  
-  ; row 10
-;  .define redAlertMapDst 10*64/2
-  .define redAlertMapDst $300
-  .define redAlertGrpDst $5200
-;  .define introPalDst $60
-  
-  fixRedAlert:
-    ; make up work (load resources)
-    jsr $514E
-    
-    ; load new stuff
-    ; i *think* this is safe without the irq off...?
-    ; afaik no interrupt active at this point will attempt
-    ; to write to the video registers
-    jsr EX_IRQOFF
-      ; graphics
-      st0 #$00
-      st1 #<redAlertGrpDst
-      st2 #>redAlertGrpDst
-      st0 #02
-      tia redAlertGrp,$0002,redAlertGrpSize
-      
-      ; map
-      st0 #$00
-      st1 #<redAlertMapDst
-      st2 #>redAlertMapDst
-      st0 #02
-      tia redAlertMap,$0002,redAlertMapSize
-      
-      ; palette
-      lda #$70
-      sta vce_ctaLo.w
-      lda #$00
-      sta vce_ctaHi.w
-      tia redAlertPal,vce_ctwLo,redAlertPalSize
-    jsr EX_IRQON
-    
-    rts
-.ends */
-
-;================================
 ; fix cropping of yuna corridor scene
 ;================================
 
@@ -204,29 +107,6 @@
 
 .bank 0 slot 0
 .section "script 1" free
-  ; script resources
-/*  redAlertPatchGrp:
-    .incbin "out/grp/scene0B_patch.bin" FSIZE redAlertPatchGrpSize
-    .define redAlertPatchGrpPartSize (redAlertPatchGrpSize/4)
-    .define redAlertPatchGrp_part1 redAlertPatchGrp+(redAlertPatchGrpPartSize*0)
-    .define redAlertPatchGrp_part2 redAlertPatchGrp+(redAlertPatchGrpPartSize*1)
-    .define redAlertPatchGrp_part3 redAlertPatchGrp+(redAlertPatchGrpPartSize*2)
-    .define redAlertPatchGrp_part4 redAlertPatchGrp+(redAlertPatchGrpPartSize*3)
-  redAlertPatchMap:
-    .incbin "out/maps/scene0B_patch.bin" FSIZE redAlertPatchMapSize
-;  redAlertUnpatchMap:
-;    .define redAlertUnpatchMapSize $100
-;    .rept redAlertUnpatchMapSize/2
-;      .dw $F7ED
-;    .endr */
-/*  yunaHeadTurnSprites:
-    .incbin "rsrc_raw/grp/scene02_headturn_sprites.bin" FSIZE yunaHeadTurnSpritesSize
-    .define yunaHeadTurnSpritesPartSize (yunaHeadTurnSpritesSize/4)
-    .define yunaHeadTurnSprites_part1 yunaHeadTurnSprites+(yunaHeadTurnSpritesPartSize*0)
-    .define yunaHeadTurnSprites_part2 yunaHeadTurnSprites+(yunaHeadTurnSpritesPartSize*1)
-    .define yunaHeadTurnSprites_part3 yunaHeadTurnSprites+(yunaHeadTurnSpritesPartSize*2)
-    .define yunaHeadTurnSprites_part4 yunaHeadTurnSprites+(yunaHeadTurnSpritesPartSize*3) */
-  
   subtitleScriptData:
     ;=====
     ; init
@@ -254,7 +134,7 @@
     .incbin "include/scene1B/string280000.bin"
     SCENE_prepAndSendGrpAuto
     
-    SYNC_adpcmTime 1 $01CE
+    SYNC_adpcmTime 1 $01E1
     
     ; this is now safe to turn on
     cut_setHighPrioritySprObjOffset 16
@@ -281,7 +161,7 @@
       cut_waitForFrameMinSec 0 11.551-0.150+subOffset
       cut_subsOff
     
-    SYNC_adpcmTime 2 $02AC
+    SYNC_adpcmTime 2 $02D2
     
     cut_waitForFrameMinSec 0 12.384+subOffset
     cut_subsOff
@@ -314,7 +194,7 @@
       cut_waitForFrameMinSec 0 24.423+subOffset
       cut_subsOff
     
-    SYNC_adpcmTime 3 $05B4
+    SYNC_adpcmTime 3 $05DB
     
     cut_waitForFrameMinSec 0 25.316+subOffset
     cut_subsOff
@@ -347,7 +227,7 @@
       cut_waitForFrameMinSec 0 35.498+subOffset
       cut_subsOff
     
-    SYNC_adpcmTime 4 $0851
+    SYNC_adpcmTime 4 $0877
     
     cut_waitForFrameMinSec 0 36.426+subOffset
     cut_subsOff
@@ -364,7 +244,7 @@
       cut_waitForFrameMinSec 0 41.059+subOffset
       cut_subsOff
     
-    SYNC_adpcmTime 5 $0AC1
+    SYNC_adpcmTime 5 $0AE7
     
     cut_waitForFrameMinSec 1 3.148+subOffset
     cut_subsOff
@@ -381,7 +261,7 @@
       cut_waitForFrameMinSec 1 6.351+0.450+subOffset
       cut_subsOff
     
-    SYNC_adpcmTime 6 $0FA4
+    SYNC_adpcmTime 6 $0FCA
     
     cut_waitForFrameMinSec 1 7.709+subOffset
     cut_subsOff
@@ -414,7 +294,7 @@
       cut_waitForFrameMinSec 1 19.712-0.200+subOffset
       cut_subsOff
     
-    SYNC_adpcmTime 7 $130F
+    SYNC_adpcmTime 7 $1325
     
     cut_waitForFrameMinSec 1 22.010+subOffset
     cut_subsOff
@@ -431,6 +311,7 @@
       cut_waitForFrameMinSec 1 25.987+subOffset
       cut_subsOff
     
+;    SYNC_adpcmTime 8 $1429
     SYNC_adpcmTime 9 $15CB
     
     cut_waitForFrameMinSec 1 33.311+subOffset
@@ -448,7 +329,7 @@
       cut_waitForFrameMinSec 1 35.871-0.150+subOffset
       cut_subsOff
     
-    SYNC_adpcmTime $A $1733
+    SYNC_adpcmTime $A $1758
     
     cut_waitForFrameMinSec 1 39.955+subOffset
     cut_subsOff
@@ -481,7 +362,8 @@
     cut_writeMem maxSpriteAttrTransfersPerIteration 1
     cut_writeMem maxSpriteGrpTransfersPerIteration 1
     
-    SYNC_adpcmTime $C $19FA
+;    SYNC_adpcmTime $B $195C
+    SYNC_adpcmTime $C $1A20
 
     .redefine subOffset subOffset-0.050
     
@@ -581,7 +463,7 @@
       cut_waitForFrameMinSec 2 27.670+0.100+subOffset
       cut_subsOff
     
-    SYNC_adpcmTime $E $2298
+    SYNC_adpcmTime $E $22A7
     
     cut_waitForFrameMinSec 2 28.313+subOffset
     cut_subsOff
@@ -598,7 +480,7 @@
       cut_waitForFrameMinSec 2 30.433+0.100+subOffset
       cut_subsOff
     
-    SYNC_adpcmTime $F $233B
+    SYNC_adpcmTime $F $2345
     
     cut_waitForFrameMinSec 2 30.933+subOffset
     cut_subsOff
@@ -628,7 +510,7 @@
       cut_waitForFrameMinSec 2 38.304+0.150+subOffset
       cut_subsOff
     
-    SYNC_adpcmTime $11 $2517
+    SYNC_adpcmTime $11 $2520
     
     cut_waitForFrameMinSec 2 38.935-0.150+subOffset
     cut_subsOff

@@ -24,26 +24,6 @@
 ; other modifications specific to this executable
 ;==============================================================================
 
-;================================
-; convert unwanted EX_DSPOFF commands
-; to EX_BGOFF
-;================================
-  
-  ; "FIRST" album scroll
-;  fixDspOffWithSprClrAndSync $4398
-
-;================================
-; no sprite letterboxing on lower part of scene
-;================================
-
-/*.bank 0 slot 0
-.orga $4113
-.section "sprite letterbox fix 1" overwrite
-  nop
-  nop
-  nop
-.ends */
-
 ;==============================================================================
 ; script
 ;==============================================================================
@@ -60,18 +40,19 @@
     
     cut_setHighPrioritySprObjOffset 16
     
-    cut_waitForFrame $20
+;    cut_waitForFrame $20
+    cut_waitForFrame $40
     
     ;=====
     ; narration
     ;=====
     
-    SYNC_adpcmTime 1 $0079
-    
     ; "planet loureezus"
     .incbin "include/scene6/string70000.bin"
 ;    cut_prepAndSendGrp $01DC
     SCENE_prepAndSendGrpAuto
+    
+    SYNC_adpcmTime 1 $009F
     
     cut_waitForFrameMinSec 0 2.700
     cut_swapAndShowBuf
@@ -157,7 +138,8 @@
     .incbin "include/scene6/string70009.bin"
     SCENE_prepAndSendGrpAuto
     
-    SYNC_adpcmTime 3 $091C
+;    SYNC_adpcmTime 2 $0891
+    SYNC_adpcmTime 3 $0942
     
 ;    cut_waitForFrameMinSec 0 39.514
     cut_waitForFrameMinSec 0 40.420
@@ -200,125 +182,6 @@
     
     cut_waitForFrameMinSec 0 54.155+0.300
     cut_subsOff
-    
-    ; "mariana of the"
-/*    .incbin "include/scene5/string60001.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 0 4.757-0.100
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "the climate there"
-    .incbin "include/scene5/string60002.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 0 10.946
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "and its paltry"
-    .incbin "include/scene5/string60003.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 0 13.166
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "now, it has become"
-    .incbin "include/scene5/string60004.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 0 15.874
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "though it lacks"
-    .incbin "include/scene5/string60005.bin"
-    SCENE_prepAndSendGrpAuto
-    
-      cut_waitForFrameMinSec 0 19.355
-      cut_subsOff
-    
-    cut_waitForFrameMinSec 0 20.688
-;    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "recent research"
-    .incbin "include/scene5/string60006.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 0 24.698
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "and possessed"
-    .incbin "include/scene5/string60007.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 0 30.886
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "ha"
-    .incbin "include/scene5/string60008.bin"
-    SCENE_prepAndSendGrpAuto
-    
-      cut_waitForFrameMinSec 0 33.985
-      cut_subsOff
-    
-    ;=====
-    ; ship
-    ;=====
-    
-    SYNC_adpcmTime 3 $0892
-    
-    cut_waitForFrameMinSec 0 37.221
-;    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "wooow"
-    .incbin "include/scene5/string60009.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 0 39.897
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "but the earth"
-    .incbin "include/scene5/string60010.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 0 42.149
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "i really don't see"
-    .incbin "include/scene5/string60011.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 0 45.044
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "c'mon elner"
-    .incbin "include/scene5/string60012.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 0 48.338
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "the ocean is just"
-    .incbin "include/scene5/string60013.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 0 50.607
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    cut_waitForFrameMinSec 0 53.168
-    cut_subsOff */
     
     cut_terminator
 .ends

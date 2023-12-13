@@ -24,46 +24,12 @@
 ; other modifications specific to this executable
 ;==============================================================================
 
-;================================
-; convert unwanted EX_DSPOFF commands
-; to EX_BGOFF
-;================================
-  
-  ; "FIRST" album scroll
-;  fixDspOffWithSprClrAndSync $4398
-
-;================================
-; no sprite letterboxing on lower part of scene
-;================================
-
-/*.bank 0 slot 0
-.orga $4113
-.section "sprite letterbox fix 1" overwrite
-  nop
-  nop
-  nop
-.ends */
-
 ;==============================================================================
 ; script
 ;==============================================================================
 
 .bank 0 slot 0
 .section "script 1" free
-  ; script resources
-/*  scene00PatchGrp:
-    .incbin "out/grp/scene00_patch.bin" FSIZE scene00PatchGrpSize
-    .define scene00PatchGrpPartSize (scene00PatchGrpSize/4)
-    .define scene00PatchGrp_part1 scene00PatchGrp+(scene00PatchGrpPartSize*0)
-    .define scene00PatchGrp_part2 scene00PatchGrp+(scene00PatchGrpPartSize*1)
-    .define scene00PatchGrp_part3 scene00PatchGrp+(scene00PatchGrpPartSize*2)
-    .define scene00PatchGrp_part4 scene00PatchGrp+(scene00PatchGrpPartSize*3)
-  scene00PatchMap:
-    .incbin "out/maps/scene00_patch.bin" FSIZE scene00PatchMapSize
-  scene00UnpatchMap:
-;    .define scene00UnpatchMapSize $100
-    .incbin "rsrc_raw/grp/scene00_unpatch_map.bin" FSIZE scene00UnpatchMapSize */
-  
   subtitleScriptData:
     ;=====
     ; init
@@ -74,18 +40,19 @@
     
     cut_setHighPrioritySprObjOffset 16
     
-    cut_waitForFrame $20
+;    cut_waitForFrame $20
+    cut_waitForFrame $40
     
     ;=====
     ; narration
     ;=====
     
-    SYNC_adpcmTime 1 $0079
-    
     ; "planet mariana"
     .incbin "include/scene5/string60000.bin"
 ;    cut_prepAndSendGrp $01DC
     SCENE_prepAndSendGrpAuto
+    
+    SYNC_adpcmTime 1 $009F
     
     cut_waitForFrameMinSec 0 2.692
     cut_swapAndShowBuf
@@ -160,7 +127,8 @@
     ; ship
     ;=====
     
-    SYNC_adpcmTime 3 $0892
+;    SYNC_adpcmTime 2 $0807
+    SYNC_adpcmTime 3 $08B8
     
 ;    cut_waitForFrameMinSec 0 37.221
     cut_waitForFrameMinSec 0 38.056
@@ -209,117 +177,6 @@
     
     cut_waitForFrameMinSec 0 53.168
     cut_subsOff
-    
-    ; "instead, it's"
-/*    .incbin "include/scene4/string50001.bin"
-    cut_prepAndSendGrp $01BC
-    
-    cut_waitForFrameMinSec 0 5.830
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "however, the"
-    .incbin "include/scene4/string50002.bin"
-    cut_prepAndSendGrp $01DC
-    
-    cut_waitForFrameMinSec 0 10.881
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "now, development"
-    .incbin "include/scene4/string50003.bin"
-    cut_prepAndSendGrp $01BC
-    
-    cut_waitForFrameMinSec 0 15.495
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "the human cultural"
-    .incbin "include/scene4/string50004.bin"
-    cut_prepAndSendGrp $01DC
-    
-    cut_waitForFrameMinSec 0 18.839
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "serves as a"
-    .incbin "include/scene4/string50005.bin"
-    cut_prepAndSendGrp $01BC
-    
-    cut_waitForFrameMinSec 0 22.612
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ;=====
-    ; ship
-    ;=====
-    
-    ; "it seems we've"
-    .incbin "include/scene4/string50006.bin"
-    cut_prepAndSendGrp $01DC
-    
-      cut_waitForFrameMinSec 0 25.368
-      cut_subsOff
-    
-    cut_waitForFrameMinSec 0 28.830
-    cut_swapAndShowBuf
-    
-    ; "ah, is that ri..."
-    .incbin "include/scene4/string50007.bin"
-    cut_prepAndSendGrp $01BC
-    
-    cut_waitForFrameMinSec 0 30.673
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "what's wrong"
-    .incbin "include/scene4/string50008.bin"
-    cut_prepAndSendGrp $01DC
-    
-      cut_waitForFrameMinSec 0 32.436
-      cut_subsOff
-    
-    cut_waitForFrameMinSec 0 33.842
-    cut_swapAndShowBuf
-    
-    ; "the warp was"
-    .incbin "include/scene4/string50009.bin"
-    cut_prepAndSendGrp $01BC
-    
-    cut_waitForFrameMinSec 0 36.868
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "they say that"
-    .incbin "include/scene4/string50010.bin"
-    cut_prepAndSendGrp $01DC
-    
-      cut_waitForFrameMinSec 0 39.815
-      cut_subsOff
-    
-    cut_waitForFrameMinSec 0 41.228
-    cut_swapAndShowBuf
-    
-    ; "you don't say"
-    .incbin "include/scene4/string50011.bin"
-    cut_prepAndSendGrp $01BC
-    
-    cut_waitForFrameMinSec 0 43.611
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "then again"
-    .incbin "include/scene4/string50012.bin"
-    cut_prepAndSendGrp $01DC
-    
-      cut_waitForFrameMinSec 0 46.844
-      cut_subsOff
-    
-    cut_waitForFrameMinSec 0 48.154
-    cut_swapAndShowBuf
-  
-    cut_waitForFrameMinSec 0 50.187
-    cut_subsOff */
     
     cut_terminator
 .ends

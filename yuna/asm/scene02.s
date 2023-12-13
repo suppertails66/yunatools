@@ -28,103 +28,6 @@
 ;==============================================================================
 
 ;================================
-; convert unwanted EX_DSPOFF commands
-; to EX_BGOFF
-;================================
-  
-  ; "FIRST" album scroll
-;  fixDspOffWithSprClrAndSync $4398
-
-;================================
-; elner flight crop fix
-;================================
-
-;.bank 0 slot 0
-;.orga $408B
-;.section "fix 1" overwrite
-;  ; disable sprites but not bg
-;  jsr $E093
-;.ends
-
-/*.bank 0 slot 0
-.orga $4434
-.section "elner flight fix 1" overwrite
-  ; no lower sprite crop
-  nop
-  nop
-  nop
-.ends*/
-
-/*.bank 0 slot 0
-.orga $4057
-.section "elner flight fix 1" overwrite
-  ; starting line of lower-screen sprite crop
-  ; (we want this to be below the subtitle display area)
-  lda #$AF+$30
-.ends */
-
-/*;================================
-; 
-;================================
-
-.bank 0 slot 0
-.orga $47AF
-.section "fix red alert 1" overwrite
-  jsr fixRedAlert
-.ends
-
-.bank 0 slot 0
-.section "fix red alert 2" free
-  redAlertMap:
-;    .incbin "out/maps/intro.bin" FSIZE introMapSize
-    .incbin "out/maps/scene0B_patch.bin" FSIZE redAlertMapSize
-  redAlertGrp:
-;    .incbin "out/grp/intro.bin" FSIZE introGrpSize
-    .incbin "out/grp/scene0B_patch.bin" FSIZE redAlertGrpSize
-  redAlertPal:
-    .incbin "out/pal/scene0B_patch_line.pal" FSIZE redAlertPalSize
-  
-  ; row 10
-;  .define redAlertMapDst 10*64/2
-  .define redAlertMapDst $300
-  .define redAlertGrpDst $5200
-;  .define introPalDst $60
-  
-  fixRedAlert:
-    ; make up work (load resources)
-    jsr $514E
-    
-    ; load new stuff
-    ; i *think* this is safe without the irq off...?
-    ; afaik no interrupt active at this point will attempt
-    ; to write to the video registers
-    jsr EX_IRQOFF
-      ; graphics
-      st0 #$00
-      st1 #<redAlertGrpDst
-      st2 #>redAlertGrpDst
-      st0 #02
-      tia redAlertGrp,$0002,redAlertGrpSize
-      
-      ; map
-      st0 #$00
-      st1 #<redAlertMapDst
-      st2 #>redAlertMapDst
-      st0 #02
-      tia redAlertMap,$0002,redAlertMapSize
-      
-      ; palette
-      lda #$70
-      sta vce_ctaLo.w
-      lda #$00
-      sta vce_ctaHi.w
-      tia redAlertPal,vce_ctwLo,redAlertPalSize
-    jsr EX_IRQON
-    
-    rts
-.ends */
-
-;================================
 ; fix cropping of elner flight scenes
 ;================================
 
@@ -171,10 +74,6 @@
     smb5 $44
     
     rts
-  
-;  fixElnerFlight_cropHandler:
-;    
-;    rts
 .ends
 
 .bank 0 slot 0
@@ -193,10 +92,6 @@
     
     ; make up work (idle)
     jmp $6D81
-  
-;  fixElnerFlight_cropHandler:
-;    
-;    rts
 .ends
 
 ;==============================================================================
@@ -208,20 +103,6 @@
 .bank 0 slot 0
 .section "script 1" free
   ; script resources
-/*  redAlertPatchGrp:
-    .incbin "out/grp/scene0B_patch.bin" FSIZE redAlertPatchGrpSize
-    .define redAlertPatchGrpPartSize (redAlertPatchGrpSize/4)
-    .define redAlertPatchGrp_part1 redAlertPatchGrp+(redAlertPatchGrpPartSize*0)
-    .define redAlertPatchGrp_part2 redAlertPatchGrp+(redAlertPatchGrpPartSize*1)
-    .define redAlertPatchGrp_part3 redAlertPatchGrp+(redAlertPatchGrpPartSize*2)
-    .define redAlertPatchGrp_part4 redAlertPatchGrp+(redAlertPatchGrpPartSize*3)
-  redAlertPatchMap:
-    .incbin "out/maps/scene0B_patch.bin" FSIZE redAlertPatchMapSize
-;  redAlertUnpatchMap:
-;    .define redAlertUnpatchMapSize $100
-;    .rept redAlertUnpatchMapSize/2
-;      .dw $F7ED
-;    .endr */
   yunaHeadTurnSprites:
     .incbin "rsrc_raw/grp/scene02_headturn_sprites.bin" FSIZE yunaHeadTurnSpritesSize
     .define yunaHeadTurnSpritesPartSize (yunaHeadTurnSpritesSize/4)
@@ -257,7 +138,7 @@
     cut_prepAndSendGrp $01DC
 ;    SCENE_prepAndSendGrpAuto
 
-    SYNC_adpcmTime 1 $0081
+    SYNC_adpcmTime 1 $0094
     
     cut_waitForFrameMinSec 0 2.15+0.333+subOffset
     cut_swapAndShowBuf
@@ -277,7 +158,7 @@
       cut_waitForFrameMinSec 0 4.851+subOffset
       cut_subsOff
 
-    SYNC_adpcmTime 2 $015E
+    SYNC_adpcmTime 2 $0169
     
     cut_waitForFrameMinSec 0 5.692+0.333+subOffset
 ;    cut_subsOff
@@ -290,7 +171,7 @@
       cut_waitForFrameMinSec 0 6.725+0.300+subOffset
       cut_subsOff
 
-    SYNC_adpcmTime 3 $01ED
+    SYNC_adpcmTime 3 $01FA
     
     cut_waitForFrameMinSec 0 8.491+subOffset
 ;    cut_subsOff
@@ -322,7 +203,7 @@
 ;    cut_writeMem maxSpriteGrpTransfersPerIteration 1
     
     ; wait to draw subtitles due to vram changes
-    SYNC_adpcmTime 4 $026A
+    SYNC_adpcmTime 4 $0290
     cut_waitForFrameMinSec 0 11.015+subOffset
     
     ; "ah! lia"
@@ -456,13 +337,16 @@
     
     cut_waitForFrameMinSec 0 49.166+subOffset
     cut_subsOff
+    
+;    .redefine subOffset 0.333
 
     ; wait for voice clip to sync before drawing subtitles --
     ; we need to wait for the last scene to get cleared due to
     ; lack of vram,
     ; and there's a convenient gasp at the start of the clip
     ; which doesn't need to be subtitled
-    SYNC_adpcmTime 5 $0C17
+;    SYNC_adpcmTime 5 $0C38
+    SYNC_adpcmTime 5 $0C25
     
     ; "elner!"
     .incbin "include/scene2/string30016.bin"
@@ -492,7 +376,8 @@
 ;    cut_writeMem maxSpriteAttrTransfersPerIteration 1
 ;    cut_writeMem maxSpriteGrpTransfersPerIteration 1
     
-    SYNC_adpcmTime 6 $0D68
+;    SYNC_adpcmTime 6 $0DA2
+    SYNC_adpcmTime 6 $0D8E
     
     cut_waitForFrameMinSec 0 57.863+subOffset
 ;    cut_subsOff
@@ -563,6 +448,8 @@
     ; lia speech 2
     ;=====
     
+;    .redefine subOffset 0.333-0.050
+    
     ; "the savior of light"
     .incbin "include/scene2/string30024.bin"
     SCENE_prepAndSendGrpAuto
@@ -578,7 +465,8 @@
     ; return to normal processing
     cut_writeMem skipLowPriorityObjDrawFrames $00
     
-    SYNC_adpcmTime 7 $1396
+;    SYNC_adpcmTime 7 $13D0
+    SYNC_adpcmTime 7 $13BC
     
     ; re-enable sprite forcing
     cut_writeMem subtitleSpriteForcingOn $FF
@@ -629,7 +517,8 @@
       cut_waitForFrameMinSec 1 41.458+0.200+subOffset
       cut_subsOff
     
-    SYNC_adpcmTime 8 $1875
+;    SYNC_adpcmTime 8 $189B
+    SYNC_adpcmTime 8 $1883
     
     cut_waitForFrameMinSec 1 45.424+subOffset
 ;    cut_subsOff
@@ -647,7 +536,8 @@
       cut_waitForFrameMinSec 1 46.424+subOffset
       cut_subsOff
     
-    SYNC_adpcmTime 9 $1927
+;    SYNC_adpcmTime 9 $195E
+    SYNC_adpcmTime 9 $1946
     
     cut_waitForFrameMinSec 1 47.905+subOffset
 ;    cut_subsOff
@@ -663,44 +553,6 @@
     
     cut_waitForFrameMinSec 1 54.198+subOffset
     cut_subsOff
-    
-    
-    
-    
-    
-    ; restore processing speed
-;    cut_writeMem maxScriptActionsPerIteration default_maxScriptActionsPerIteration
-;    cut_writeMem maxSpriteAttrTransfersPerIteration default_maxSpriteAttrTransfersPerIteration
-;    cut_writeMem maxSpriteGrpTransfersPerIteration default_maxSpriteGrpTransfersPerIteration
-    
-/*    SYNC_adpcmTime 2 $011D
-    
-    cut_waitForFrameMinSec 0 5.417+subOffset
-    cut_swapAndShowBuf
-    
-    ; "i just knew i"
-    .incbin "include/sceneB/string120001.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 0 7.955+subOffset
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "you're getting cold feet"
-    .incbin "include/sceneB/string120002.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 0 11.349+subOffset
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "so that door won't"
-    .incbin "include/sceneB/string120003.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 0 13.580+subOffset
-    cut_subsOff
-    cut_swapAndShowBuf */
     
     cut_terminator
 .ends

@@ -184,8 +184,6 @@
     .endr
   
   subtitleScriptData:
-;    SYNC_adpcmTime $0000
-  
     ;=====
     ; init
     ;=====
@@ -204,7 +202,7 @@
     cut_prepAndSendGrp $01BC
     
 ;    cut_waitForAdpcm 1
-    SYNC_adpcmTime 1 $021E
+    SYNC_adpcmTime 1 $0244
     
     cut_waitForFrameMinSec 0 9.629
     cut_swapAndShowBuf
@@ -226,14 +224,14 @@
     cut_swapAndShowBuf
     
     ; "i was just a"
-    .incbin "include/scene18/string250003.bin"
+/*    .incbin "include/scene18/string250003.bin"
     cut_prepAndSendGrp $01DC
     
 ;    cut_waitForFrame $0475
 ;    cut_waitForFrameMinSec 0 19.364-(8/60)
     cut_waitForFrameMinSec 0 19.364-(4/60)
     cut_subsOff
-    cut_swapAndShowBuf
+    cut_swapAndShowBuf*/
     
     cut_waitForFrameMinSec 0 21.842
     cut_subsOff
@@ -247,7 +245,7 @@
     cut_prepAndSendGrp $01DC
     
 ;    cut_waitForAdpcm 2
-    SYNC_adpcmTime 2 $059C
+    SYNC_adpcmTime 2 $05C2
     
 ;    cut_waitForFrame $05E6
     cut_waitForFrameMinSec 0 25.539
@@ -287,7 +285,7 @@
     cut_prepAndSendGrp $01DC
     
 ;    cut_waitForAdpcm 3
-    SYNC_adpcmTime 3 $0939
+    SYNC_adpcmTime 3 $095F
     
 ;    cut_waitForFrame $0946
     cut_waitForFrameMinSec 0 39.939
@@ -325,7 +323,7 @@
       cut_subsOff
     
 ;    cut_waitForAdpcm 4
-    SYNC_adpcmTime 4 $0B8A
+    SYNC_adpcmTime 4 $0BB0
     
 ;    cut_waitForFrame $0B94
     cut_waitForFrameMinSec 0 49.810
@@ -376,7 +374,7 @@
   ;    cut_waitForFrame $0EB5
     
 ;    cut_waitForAdpcm 5
-    SYNC_adpcmTime 5 $0F53
+    SYNC_adpcmTime 5 $0F72
     
 ;    cut_waitForFrame $0F53
     cut_waitForFrameMinSec 1 5.853
@@ -400,7 +398,7 @@
       cut_subsOff
     
 ;    cut_waitForAdpcm 6
-    SYNC_adpcmTime 6 $10F1
+    SYNC_adpcmTime 6 $1117
     
 ;    cut_waitForFrame $1129
     cut_waitForFrameMinSec 1 13.848
@@ -449,7 +447,7 @@
       cut_subsOff
     
 ;    cut_waitForAdpcm 7
-    SYNC_adpcmTime 7 $1486
+    SYNC_adpcmTime 7 $149E
     
 ;    cut_waitForFrame 5247
     cut_waitForFrameMinSec 1 27.880
@@ -497,7 +495,7 @@
     cut_prepAndSendGrp $01DC
     
 ;    cut_waitForAdpcm 8
-    SYNC_adpcmTime 8 $177B
+    SYNC_adpcmTime 8 $179C
     
     cut_waitForFrameMinSec 1 40.664
     cut_swapAndShowBuf
@@ -525,7 +523,7 @@
     ;=====
     
 ;    cut_waitForAdpcm 9
-    SYNC_adpcmTime 9 $193A
+    SYNC_adpcmTime 9 $1960
     
     cut_waitForFrameMinSec 1 48.193
     cut_swapAndShowBuf
@@ -622,7 +620,7 @@
     
 ;    cut_waitForAdpcm 10
 ;    SYNC_adpcmTime $20B8
-    SYNC_adpcmTime 10 $20E6
+    SYNC_adpcmTime 10 $210C
     
     cut_waitForFrameMinSec 2 20.903
 ;    cut_subsOff
@@ -667,7 +665,7 @@
       cut_subsOff
     
 ;    cut_waitForAdpcm 13
-    SYNC_adpcmTime 13 $25B3
+    SYNC_adpcmTime 13 $25D4
     
     cut_waitForFrameMinSec 2 41.337
  ;   cut_subsOff
@@ -689,7 +687,7 @@
       cut_subsOff
     
 ;    cut_waitForAdpcm 14
-    SYNC_adpcmTime 14 $2771
+    SYNC_adpcmTime 14 $2797
     
     cut_waitForFrameMinSec 2 48.783
     cut_swapAndShowBuf
@@ -771,7 +769,7 @@
       cut_subsOff
     
 ;    cut_waitForAdpcm 15
-    SYNC_adpcmTime 15 $2C82
+    SYNC_adpcmTime 15 $2CA7
     
     cut_waitForFrameMinSec 3 10.543
     cut_swapAndShowBuf
@@ -830,7 +828,7 @@
       cut_writeVram introSuitPatchMap $0300 introSuitPatchMapSize
     
 ;      cut_waitForAdpcm 16
-      SYNC_adpcmTime 16 $3050
+      SYNC_adpcmTime 16 $3073
     
       ; finally, display prepped text
       cut_waitForFrameMinSec 3 26.583
@@ -880,7 +878,7 @@
     ;=====
   
 ;    cut_waitForAdpcm 17
-    SYNC_adpcmTime 17 $329E
+    SYNC_adpcmTime 17 $32C2
     
     cut_waitForFrameMinSec 3 36.488+(5/60)
     cut_swapAndShowBuf
@@ -936,7 +934,7 @@
       cut_waitForFrameMinSec 3 55.369
       cut_subsOff
   
-    SYNC_adpcmTime 18 $37AB
+    SYNC_adpcmTime 18 $37CE
     
     cut_waitForFrameMinSec 3 58.030
     cut_subsOff
@@ -978,7 +976,7 @@
       cut_waitForFrameMinSec 4 7.127
       cut_subsOff
   
-    SYNC_adpcmTime 20 $3D47
+    SYNC_adpcmTime 20 $3D6A
     
     cut_waitForFrameMinSec 4 22.025
     cut_subsOff
@@ -1021,73 +1019,8 @@
     cut_waitForFrameMinSec 4 37.789
     cut_subsOff
     
-    
-    
- /*   .incbin "include/scene18/string250002.bin"
-    .db sceneOp_prepAndSendGrp
-      .dw $01BC
-    
-    .db sceneOp_waitForFrame
-      .dw $0100
-    .db sceneOp_subsOff
-    .db sceneOp_swapAndShowBuf
-    
-;    .db sceneOp_resetCompBuffers
-    .incbin "include/scene18/string250003.bin"
-    .db sceneOp_prepAndSendGrp
-      .dw $01DC
-    
-    .db sceneOp_waitForFrame
-      .dw $0200
-    .db sceneOp_subsOff
-    .db sceneOp_swapAndShowBuf
-    
-    .db sceneOp_waitForFrame
-      .dw $0300
-    .db sceneOp_subsOff */
-    
     cut_terminator
-  
-;  ; script resources
-;  introSuitPatchGrpPart1:
-;    .incbin "out/grp/intro_suit_patch1.bin" FSIZE introSuitPatchGrpPart1Size
-;  introSuitPatchGrpPart2:
-;    .incbin "out/grp/intro_suit_patch2.bin" FSIZE introSuitPatchGrpPart2Size
-;  introSuitPatchGrpPart3:
-;    .incbin "out/grp/intro_suit_patch3.bin" FSIZE introSuitPatchGrpPart3Size
-;  introSuitPatchGrpPart4:
-;    .incbin "out/grp/intro_suit_patch4.bin" FSIZE introSuitPatchGrpPart4Size
 .ends
-
-;==============================================================================
-; other modifications specific to this executable
-;==============================================================================
-
-;===================================
-; 
-;===================================
-
-/*.bank 0 slot 0
-.orga $5284
-.section "test 1" overwrite
-  jsr syncTest
-.ends
-
-.bank 0 slot 0
-.section "test 2" free
-  syncFrameCounter:
-    .dw $00
-  
-  syncTest:
-    ; increment frame counter
-    inc syncFrameCounter+0.w
-    bne +
-      inc syncFrameCounter+1.w
-    +:
-    
-    ; make up work
-    jmp $5139
-.ends */
 
 
 

@@ -10,5 +10,6 @@
 .define waitForSync $5807
 .define playAdpcm $6231
 .define playAdpcmMakeup1 $62F6
+.define playAdpcmStreamBranchEnd $62FD
 .define playAdpcmSpecial $61F9
 .define playAdpcmAlt $63DB

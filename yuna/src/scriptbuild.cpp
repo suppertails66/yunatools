@@ -677,6 +677,19 @@ int main(int argc, char* argv[]) {
       
       // pad to expected output size
       ofs.padToSize(0x4000, 0x00);
+      
+      // HACK: correct bad adpcm command in block 23
+      // (the sound effect that is supposed to play when the "dead" robots
+      // fly across the screen in the dark world)
+      if (i == 23) {
+        // the byte at 0x7A8 is 0x01, but should be 0x00.
+        // otherwise, AD_PLAY ends up having its mode field set to 0x40,
+        // which apparently suppresses reloading the address...
+        // despite the bios manual indicating it does nothing?
+        ofs.seek(0x7A8);
+        ofs.writeu8(0x00);
+      }
+      
       ofs.seek(0);
       scriptOfs.writeFrom(ofs, ofs.size());
 //      std::string outName = outPrefix + "out/script/script"

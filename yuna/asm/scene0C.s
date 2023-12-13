@@ -97,7 +97,7 @@
     .incbin "include/sceneC/string130000.bin"
     cut_prepAndSendGrp $01DC+16
     
-    SYNC_adpcmTime 1 $0084
+    SYNC_adpcmTime 1 $00AA
     
 ;    cut_waitForFrameMinSec 0 2.883+subOffset
     cut_waitForFrameMinSec 0 4.401+subOffset
@@ -129,7 +129,7 @@
     .incbin "include/sceneC/string130003.bin"
     cut_prepAndSendGrp $01BC+16
     
-    SYNC_adpcmTime 2 $03B6
+    SYNC_adpcmTime 2 $03DD
     
     cut_waitForFrameMinSec 0 16.509+subOffset
     cut_subsOff
@@ -246,7 +246,7 @@
     .incbin "include/sceneC/string130014.bin"
     cut_prepAndSendGrp $01BC
     
-    SYNC_adpcmTime 3 $0D4F
+    SYNC_adpcmTime 3 $0D70
     
     cut_waitForFrameMinSec 0 57.323+subOffset
     cut_swapAndShowBuf
@@ -270,7 +270,7 @@
       cut_waitForFrameMinSec 1 2.179+subOffset
       cut_subsOff
     
-    SYNC_adpcmTime 4 $0F4D
+    SYNC_adpcmTime 4 $0F63
     
     cut_waitForFrameMinSec 1 5.668+subOffset
 ;    cut_subsOff
@@ -293,15 +293,14 @@
     
     ; wait until the earthquake scene gets going to send new stuff
 ;    cut_waitForFrameMinSec 1 21.000+subOffset
-    ; this is the adpcm trigger for the earthquake sound effect,
-    ; whose timestamp i didn't write down since it wasn't a voice clip...
-    SYNC_adpcmTime 5 $0
+    ; this is the adpcm trigger for the earthquake sound effect
+    SYNC_adpcmTime 5 $12D7
     
     ; "hey! what should we do"
     .incbin "include/sceneC/string130018.bin"
     cut_prepAndSendGrp $01BC
     
-    SYNC_adpcmTime 6 $13B5
+    SYNC_adpcmTime 6 $13D0
     
     cut_waitForFrameMinSec 1 24.600+subOffset
     cut_swapAndShowBuf
@@ -325,7 +324,7 @@
     .redefine subOffset -0.100
     
     ; some wordless vocalizations whose timestamp i didn't write down
-    SYNC_adpcmTime 9 $0
+    SYNC_adpcmTime 9 $17D3
     
     ; "thank goodness"
     .incbin "include/sceneC/string130020.bin"
@@ -334,7 +333,7 @@
     ; only the pan up the robots near the end uses sprites beyond $1BC.
     SCENE_prepAndSendGrpAuto
     
-    SYNC_adpcmTime $A $18AE
+    SYNC_adpcmTime $A $18CD
     
     cut_waitForFrameMinSec 1 45.924+subOffset
     cut_swapAndShowBuf
@@ -363,7 +362,7 @@
       cut_waitForFrameMinSec 1 52.175+subOffset
       cut_subsOff
     
-    SYNC_adpcmTime $B $1A4F
+    SYNC_adpcmTime $B $1A60
     
     cut_waitForFrameMinSec 1 54.607+subOffset
     cut_swapAndShowBuf
@@ -375,7 +374,7 @@
       cut_waitForFrameMinSec 1 55.415+0.300+subOffset
       cut_subsOff
     
-    SYNC_adpcmTime $C $1C41
+    SYNC_adpcmTime $C $1C67
     
     .redefine subOffset -0.200
     
@@ -422,7 +421,7 @@
     .incbin "include/sceneC/string130029.bin"
     SCENE_prepAndSendGrpAuto
     
-    SYNC_adpcmTime $D $1F2D
+    SYNC_adpcmTime $D $1F38
     
     cut_waitForFrameMinSec 2 13.359+subOffset
     cut_subsOff
@@ -435,7 +434,7 @@
       cut_waitForFrameMinSec 2 14.366+0.300+subOffset
       cut_subsOff
     
-    SYNC_adpcmTime $E $202B
+    SYNC_adpcmTime $E $2052
     
     cut_waitForFrameMinSec 2 18.055+subOffset
 ;    cut_subsOff
@@ -482,7 +481,7 @@
       cut_waitForFrameMinSec 2 43.975+0.300+subOffset
       cut_subsOff
     
-    SYNC_adpcmTime $F $2679
+    SYNC_adpcmTime $F $26A0
     
     cut_waitForFrameMinSec 2 44.952+subOffset
     cut_swapAndShowBuf
@@ -534,7 +533,7 @@
       cut_waitForFrameMinSec 3 4.492+subOffset
       cut_subsOff
     
-    SYNC_adpcmTime $10 $2B3C
+    SYNC_adpcmTime $10 $2B63
     
     cut_waitForFrameMinSec 3 5.967+subOffset
     cut_swapAndShowBuf
@@ -596,7 +595,7 @@
       cut_waitForFrameMinSec 3 26.768+0.300+subOffset
       cut_subsOff
     
-    SYNC_adpcmTime $11 $30BE
+    SYNC_adpcmTime $11 $30E5
     
     cut_waitForFrameMinSec 3 28.787+subOffset
     cut_swapAndShowBuf
@@ -624,7 +623,7 @@
       cut_waitForFrameMinSec 3 37.794+0.300+subOffset
       cut_subsOff
     
-    SYNC_adpcmTime $12 $3338
+    SYNC_adpcmTime $12 $335C
     
     cut_waitForFrameMinSec 3 39.320+subOffset
     cut_swapAndShowBuf
@@ -648,7 +647,7 @@
       cut_waitForFrameMinSec 3 46.562+0.300+subOffset
       cut_subsOff
     
-    SYNC_adpcmTime $13 $3549
+    SYNC_adpcmTime $13 $3570
     
     cut_waitForFrameMinSec 3 48.925+subOffset
     cut_swapAndShowBuf
@@ -696,7 +695,7 @@
       cut_waitForFrameMinSec 4 7.752+0.300+subOffset
       cut_subsOff
     
-    SYNC_adpcmTime $14 $3B1C
+    SYNC_adpcmTime $14 $3B2D
     
     cut_waitForFrameMinSec 4 12.702+subOffset
     cut_swapAndShowBuf
@@ -712,7 +711,7 @@
     .incbin "include/sceneC/string130058.bin"
     cut_prepAndSendGrp $01DC
     
-    SYNC_adpcmTime $15 $3C95
+    SYNC_adpcmTime $15 $3CBC
     
     cut_waitForFrameMinSec 4 19.371+subOffset
     cut_swapAndShowBuf
@@ -740,26 +739,13 @@
       cut_waitForFrameMinSec 4 32.870+subOffset
       cut_subsOff
     
-    SYNC_adpcmTime $16 $3FF8
+    SYNC_adpcmTime $16 $4002
     
     cut_waitForFrameMinSec 4 33.358+subOffset
     cut_swapAndShowBuf
     
     cut_waitForFrameMinSec 4 34.358+subOffset
     cut_subsOff
-    
-    ; clear "sprites on" flag, which was previously forced on
-    ; by the subtitles, to allow animation of elner flying in
-    ; to be correctly cropped
-;    cut_andOr $20F3 $BF $00
-    
-    ; re-enable sprite forcing
-;    cut_writeMem subtitleSpriteForcingOn $FF
-    
-    ; game needs almost all of vram for the laser sequence,
-    ; so idle here until it's done...
-    
-;    cut_waitForFrameMinSec 0 20.000+subOffset
     
     cut_terminator
 .ends

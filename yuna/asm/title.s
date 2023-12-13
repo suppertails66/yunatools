@@ -209,6 +209,28 @@
   nop
 .ends
 
+;================================
+; cd sync
+;================================
+
+.bank 0 slot 0
+.orga $4111
+.section "cd sync 1" overwrite
+  jsr doCdSync
+  nop
+.ends
+
+.bank 0 slot 0
+.section "cd sync 2" free
+  doCdSync:
+    jsr incrementSyncVarCounter
+    
+    ; make up work
+    stz $0B.b
+    stz $05.b
+    rts
+.ends
+
 ;==============================================================================
 ; script
 ;==============================================================================
@@ -238,7 +260,9 @@
     
 ;    cut_setHighPrioritySprObjOffset 16
     
-    SYNC_setTime 8
+    SYNC_varTime 1 $41+$8
+    
+;    SYNC_setTime 8
     cut_setPalette $08
   
     ;=====

@@ -115,8 +115,8 @@
 .orga $41A4
 .section "force scene 2" overwrite
   ; scene num
-  lda #$04
-.ends */
+  lda #$19
+.ends*/
 
 ;===================================
 ; DEBUG: post-battle scene forcer
@@ -150,8 +150,8 @@
 .orga $41A4
 .section "force postbat 2" overwrite
   ; scene num
-  lda #$0C
-.ends */
+  lda #$00
+.ends*/
 
 
 

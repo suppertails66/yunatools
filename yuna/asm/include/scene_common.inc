@@ -277,6 +277,21 @@
 ; scene op macros
 ;===================================
 
+; FIXME: i'm pretty sure the pce cpu is not clocked
+; at exactly 60 frames per second, but is this correct?
+;.define framesPerSecond 59.9400599401
+;.define framesPerSecond 60
+;.define framesPerSecond 60.2585034014
+; if you're wondering what the hell this number is:
+; i empirically determined while working on the previous game that i had to
+; speed up my reference recordings from 41000 hz to 44290 hz to get them to sync
+; with the actual game. so this is (41000/44290) * 60.
+; somehow, apparently, it works(?)
+; too fast?
+;.define framesPerSecond 59.7426055543
+;.define framesPerSecond 59.7426055543+0.08
+.define framesPerSecond 60
+
 .macro cut_resetCompBuffers
   .db sceneOp_resetCompBuffers
 .endm
@@ -303,13 +318,13 @@
 .macro cut_waitForFrameMinSec ARGS min sec
   ; FIXME: i'm pretty sure the pce cpu is not clocked
   ; at exactly 60 frames per second, so this timing drifts?
-  cut_waitForFrame ((min*60)+sec)*60
+  cut_waitForFrame ((min*60)+sec)*framesPerSecond
 ;  .db sceneOp_waitForFrame
-;    .dw ((min*60)+sec)*60
+;    .dw ((min*60)+sec)*framesPerSecond
 .endm
 
 .macro cut_queueSubsOffMinSec ARGS min sec
-  cut_queueSubsOff ((min*60)+sec)*60
+  cut_queueSubsOff ((min*60)+sec)*framesPerSecond
 .endm
 
 .macro cut_prepAndSendGrp ARGS tileIndex

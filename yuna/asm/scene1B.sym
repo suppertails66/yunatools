@@ -4,19 +4,26 @@
 [labels]
 00:78f6 clearAndSendSubtitleExclusionOverwrite
 00:78fc clearOnlySubtitleExclusionOverwrite
-00:94eb spriteClearExcludeSubtitles
-00:94ed spriteClearExcludeSubtitles@done
-00:94f0 spriteClearAndSendExcludeSubtitles
-00:9502 doSpecialSpriteClear
-00:9507 doSpecialSpriteClear@doStandardClear
-00:950e triggerNonSubtitleSpriteClear
-00:9533 lowPrioritySpriteObjGenerationOffset
-00:9534 highPrioritySpriteObjGenerationOffset
-00:9535 setUpHighPrioritySpriteGen
-00:953f setUpHighPrioritySpriteGen@vramWriteAddrLoCmd
-00:94bc incrementAdpcmSyncCounter
-00:94d0 incrementAdpcmSyncCounter_sub
-00:9550 incrementAdpcmSyncCounter_altAdpcm
+00:94cb spriteClearExcludeSubtitles
+00:94cd spriteClearExcludeSubtitles@done
+00:94d0 spriteClearAndSendExcludeSubtitles
+00:94e2 doSpecialSpriteClear
+00:94e7 doSpecialSpriteClear@doStandardClear
+00:94ee triggerNonSubtitleSpriteClear
+00:9534 lowPrioritySpriteObjGenerationOffset
+00:9535 highPrioritySpriteObjGenerationOffset
+00:9536 setUpHighPrioritySpriteGen
+00:9540 setUpHighPrioritySpriteGen@vramWriteAddrLoCmd
+00:676d setUpHighPrioritySpriteGen@done
+00:676d adpcmPlayExtraParamCmd
+00:9551 doAdpcmSyncDirectLoad
+00:9513 incrementAdpcmSyncCounter
+00:9519 incrementAdpcmSyncCounter_sub
+00:9567 doAdpcmSyncStreamed
+00:691f doAdpcmSyncStreamed@done
+00:691f adpcmPlayAltExtraParamCmd
+00:955c doAdpcmSyncAlt
+00:9571 incrementAdpcmSyncCounter_altAdpcm
 00:7a60 syncFrameCounter
 00:7a62 globalSyncFrameCounter
 00:7a64 adpcmSyncCounter
@@ -160,7 +167,7 @@
 00:9012 queuedSubsOffTime
 00:9014 queuedSubsOffIsOn
 00:9015 subtitleBaseY
-00:950f fixYunaCorridor
+00:94ef fixYunaCorridor
 00:9016 subtitleScriptData
 
 [definitions]
@@ -173,9 +180,14 @@
 00000001 _sizeof_lowPrioritySpriteObjGenerationOffset
 00000001 _sizeof_highPrioritySpriteObjGenerationOffset
 0000001b _sizeof_setUpHighPrioritySpriteGen
-00000014 _sizeof_incrementAdpcmSyncCounter
+00000002 _sizeof_adpcmPlayExtraParamCmd
+0000000b _sizeof_doAdpcmSyncDirectLoad
+00000006 _sizeof_incrementAdpcmSyncCounter
 0000001b _sizeof_incrementAdpcmSyncCounter_sub
-00000014 _sizeof_incrementAdpcmSyncCounter_altAdpcm
+0000000a _sizeof_doAdpcmSyncStreamed
+00000002 _sizeof_adpcmPlayAltExtraParamCmd
+0000000b _sizeof_doAdpcmSyncAlt
+00000006 _sizeof_incrementAdpcmSyncCounter_altAdpcm
 00000002 _sizeof_syncFrameCounter
 00000002 _sizeof_globalSyncFrameCounter
 00000001 _sizeof_adpcmSyncCounter
@@ -264,4 +276,4 @@
 00000001 _sizeof_queuedSubsOffIsOn
 00000001 _sizeof_subtitleBaseY
 00000024 _sizeof_fixYunaCorridor
-000004a6 _sizeof_subtitleScriptData
+000004b5 _sizeof_subtitleScriptData

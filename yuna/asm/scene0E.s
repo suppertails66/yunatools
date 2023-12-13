@@ -28,42 +28,6 @@
 ; other modifications specific to this executable
 ;==============================================================================
 
-;================================
-; convert unwanted EX_DSPOFF commands
-; to EX_BGOFF
-;================================
-  
-  ; "FIRST" album scroll
-;  fixDspOffWithSprClrAndSync $4398
-
-;================================
-; elner flight crop fix
-;================================
-
-;.bank 0 slot 0
-;.orga $408B
-;.section "fix 1" overwrite
-;  ; disable sprites but not bg
-;  jsr $E093
-;.ends
-
-/*.bank 0 slot 0
-.orga $4434
-.section "elner flight fix 1" overwrite
-  ; no lower sprite crop
-  nop
-  nop
-  nop
-.ends*/
-
-/*.bank 0 slot 0
-.orga $4428
-.section "elner flight fix 1" overwrite
-  ; starting line of lower-screen sprite crop
-  ; (we want this to be below the subtitle display area)
-  lda #$AF+$30
-.ends */
-
 ;==============================================================================
 ; script
 ;==============================================================================
@@ -93,7 +57,7 @@
     .incbin "include/sceneE/string150000.bin"
     cut_prepAndSendGrp $01DC
     
-    SYNC_adpcmTime 1 $00BC
+    SYNC_adpcmTime 1 $00BD
     
     cut_waitForFrameMinSec 0 3.150-0.100+subOffset
     cut_swapAndShowBuf
@@ -114,7 +78,8 @@
     .incbin "include/sceneE/string150002.bin"
     cut_prepAndSendGrp $01BC
     
-    SYNC_adpcmTime 3 $04EC
+;    SYNC_adpcmTime 2 $01CA
+    SYNC_adpcmTime 3 $0512
     
     cut_waitForFrameMinSec 0 21.717+subOffset
     cut_swapAndShowBuf
@@ -174,7 +139,7 @@
       cut_waitForFrameMinSec 0 48.062+subOffset+0.400
       cut_subsOff
     
-    SYNC_adpcmTime 4 $0BF3
+    SYNC_adpcmTime 4 $0C13
     
     cut_waitForFrameMinSec 0 51.586+subOffset
     cut_swapAndShowBuf
@@ -198,7 +163,7 @@
       cut_waitForFrameMinSec 0 58.139+subOffset+0.400
       cut_subsOff
     
-    SYNC_adpcmTime 5 $0E30
+    SYNC_adpcmTime 5 $0E56
     
     cut_waitForFrameMinSec 1 1.216+subOffset
     cut_swapAndShowBuf
@@ -222,7 +187,7 @@
       cut_waitForFrameMinSec 1 14.284+subOffset+0.400
       cut_subsOff
     
-    SYNC_adpcmTime 6 $11D9
+    SYNC_adpcmTime 6 $11F9
     
     cut_waitForFrameMinSec 1 16.741+subOffset
     cut_swapAndShowBuf
@@ -254,7 +219,7 @@
       cut_waitForFrameMinSec 1 23.418+subOffset+0.400
       cut_subsOff
     
-    SYNC_adpcmTime 7 $14B0
+    SYNC_adpcmTime 7 $14D6
     
     cut_waitForFrameMinSec 1 28.971+subOffset
     cut_swapAndShowBuf
@@ -289,7 +254,7 @@
       cut_waitForFrameMinSec 1 45.239-0.100+subOffset
       cut_subsOff
     
-    SYNC_adpcmTime 8 $18AD
+    SYNC_adpcmTime 8 $18CD
     
     cut_waitForFrameMinSec 1 47.564+subOffset
     cut_swapAndShowBuf
@@ -305,7 +270,7 @@
       cut_waitForFrameMinSec 1 52.516-0.100+subOffset
       cut_subsOff
     
-    SYNC_adpcmTime 9 $1A5F
+    SYNC_adpcmTime 9 $1A85
     
     cut_waitForFrameMinSec 1 53.212+subOffset
 ;    cut_subsOff

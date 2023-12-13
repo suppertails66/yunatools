@@ -10,12 +10,12 @@
 00:90cf doSpecialSpriteClear
 00:90d4 doSpecialSpriteClear@doStandardClear
 00:90db triggerNonSubtitleSpriteClear
-00:90dc lowPrioritySpriteObjGenerationOffset
-00:90dd highPrioritySpriteObjGenerationOffset
-00:90de setUpHighPrioritySpriteGen
-00:90e8 setUpHighPrioritySpriteGen@vramWriteAddrLoCmd
-00:90f9 incrementAdpcmSyncCounter
-00:9116 doSetUpSpritesRawFix
+00:90fa lowPrioritySpriteObjGenerationOffset
+00:90fb highPrioritySpriteObjGenerationOffset
+00:90fc setUpHighPrioritySpriteGen
+00:9106 setUpHighPrioritySpriteGen@vramWriteAddrLoCmd
+00:90dc incrementAdpcmSyncCounter
+00:9117 doSetUpSpritesRawFix
 00:77d1 syncFrameCounter
 00:77d3 globalSyncFrameCounter
 00:77d5 adpcmSyncCounter
@@ -171,7 +171,7 @@
 00000001 _sizeof_lowPrioritySpriteObjGenerationOffset
 00000001 _sizeof_highPrioritySpriteObjGenerationOffset
 0000001b _sizeof_setUpHighPrioritySpriteGen
-0000001d _sizeof_incrementAdpcmSyncCounter
+0000001e _sizeof_incrementAdpcmSyncCounter
 00000015 _sizeof_doSetUpSpritesRawFix
 00000002 _sizeof_syncFrameCounter
 00000002 _sizeof_globalSyncFrameCounter

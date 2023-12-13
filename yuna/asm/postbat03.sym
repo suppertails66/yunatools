@@ -10,12 +10,12 @@
 00:8f7d doSpecialSpriteClear
 00:8f82 doSpecialSpriteClear@doStandardClear
 00:8f89 triggerNonSubtitleSpriteClear
-00:8f8a lowPrioritySpriteObjGenerationOffset
-00:8f8b highPrioritySpriteObjGenerationOffset
-00:8f8c setUpHighPrioritySpriteGen
-00:8f96 setUpHighPrioritySpriteGen@vramWriteAddrLoCmd
-00:8fa7 incrementAdpcmSyncCounter
-00:8fc4 doSetUpSpritesRawFix
+00:8fa8 lowPrioritySpriteObjGenerationOffset
+00:8fa9 highPrioritySpriteObjGenerationOffset
+00:8faa setUpHighPrioritySpriteGen
+00:8fb4 setUpHighPrioritySpriteGen@vramWriteAddrLoCmd
+00:8f8a incrementAdpcmSyncCounter
+00:8fc5 doSetUpSpritesRawFix
 00:79b0 syncFrameCounter
 00:79b2 globalSyncFrameCounter
 00:79b4 adpcmSyncCounter
@@ -159,7 +159,7 @@
 00:8f62 queuedSubsOffTime
 00:8f64 queuedSubsOffIsOn
 00:8f65 subtitleBaseY
-00:8fd9 subtitleScriptData
+00:8fda subtitleScriptData
 
 [definitions]
 00000006 _sizeof_clearAndSendSubtitleExclusionOverwrite
@@ -171,7 +171,7 @@
 00000001 _sizeof_lowPrioritySpriteObjGenerationOffset
 00000001 _sizeof_highPrioritySpriteObjGenerationOffset
 0000001b _sizeof_setUpHighPrioritySpriteGen
-0000001d _sizeof_incrementAdpcmSyncCounter
+0000001e _sizeof_incrementAdpcmSyncCounter
 00000015 _sizeof_doSetUpSpritesRawFix
 00000002 _sizeof_syncFrameCounter
 00000002 _sizeof_globalSyncFrameCounter

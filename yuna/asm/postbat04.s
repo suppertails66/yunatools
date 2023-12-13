@@ -26,14 +26,6 @@
 ; other modifications specific to this executable
 ;==============================================================================
 
-;================================
-; convert unwanted EX_DSPOFF commands
-; to EX_BGOFF
-;================================
-  
-  ; "FIRST" album scroll
-;  fixDspOffWithSprClrAndSync $4398
-
 ;==============================================================================
 ; script
 ;==============================================================================
@@ -80,52 +72,6 @@
     
     cut_waitForFrameMinSec 0 12.966+0.15
     cut_subsOff
-    
-/*    .incbin "include/postbat1/string420003.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    SYNC_adpcmTime 2 $01EC
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    .incbin "include/postbat1/string420004.bin"
-    SCENE_prepAndSendGrpAuto
-    
-      cut_waitForFrameMinSec 0 11.692-0.683
-      cut_subsOff
-    
-    cut_waitForFrameMinSec 0 15.918-0.683
-    cut_swapAndShowBuf
-    
-    .incbin "include/postbat1/string420005.bin"
-    SCENE_prepAndSendGrpAuto
-    
-      cut_waitForFrameMinSec 0 17.210-0.683
-      cut_subsOff
-    
-    cut_waitForFrameMinSec 0 19.157-0.683
-    cut_swapAndShowBuf
-    
-    .incbin "include/postbat1/string420006.bin"
-    SCENE_prepAndSendGrpAuto
-    
-      cut_waitForFrameMinSec 0 21.103
-      cut_subsOff
-    
-    cut_waitForFrameMinSec 0 23.448
-    cut_swapAndShowBuf
-    
-    .incbin "include/postbat1/string420007.bin"
-    SCENE_prepAndSendGrpAuto
-    
-      cut_waitForFrameMinSec 0 27.411
-      cut_subsOff
-    
-    cut_waitForFrameMinSec 0 30.755
-    cut_swapAndShowBuf
-    
-    cut_waitForFrameMinSec 0 31.784
-    cut_subsOff */
     
     cut_terminator
 .ends

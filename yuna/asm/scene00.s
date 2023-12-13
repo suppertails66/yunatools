@@ -136,7 +136,7 @@
     cut_prepAndSendGrp $01DC
     
 ;    cut_waitForAdpcm 1
-    SYNC_adpcmTime 2 $01DA
+    SYNC_adpcmTime 2 $0200
     
 ;    cut_waitForFrameMinSec 0 9.629
     cut_waitForFrameMinSec 0 8.512
@@ -205,7 +205,8 @@
 ;      cut_waitForFrame $3028
       cut_writeVram scene00PatchMap $0700 scene00PatchMapSize
     
-    SYNC_adpcmTime 5 $0960+4
+;    SYNC_adpcmTime 5 $0960+4
+    SYNC_adpcmTime 5 $0986
     
     cut_waitForFrameMinSec 0 42.648
     cut_swapAndShowBuf
@@ -261,7 +262,7 @@
     .incbin "include/scene0/string10010.bin"
     cut_prepAndSendGrp $01DC
     
-    SYNC_adpcmTime 6 $0F93
+    SYNC_adpcmTime 6 $0FB9
     
     cut_waitForFrameMinSec 1 7.124-0.100
     cut_swapAndShowBuf
@@ -303,36 +304,9 @@
     ; done
     ;=====
     
-    cut_waitForFrameMinSec 1 19.898+0.350
+;    cut_waitForFrameMinSec 1 19.898+0.350
+    cut_waitForFrameMinSec 1 19.898+0.150
     cut_subsOff
-    
-;    cut_setHighPrioritySprObjOffset 0
-    
-    ; "hi there!"
-/*    .incbin "include/scene18/string250000.bin"
-    cut_prepAndSendGrp $01BC
-    
-;    cut_waitForAdpcm 1
-    SYNC_adpcmTime 1 $021E
-    
-    cut_waitForFrameMinSec 0 9.629
-    cut_swapAndShowBuf
-    
-    ; "i'm a first-year"
-    .incbin "include/scene18/string250001.bin"
-    cut_prepAndSendGrp $01DC
-    
-    cut_waitForFrameMinSec 0 12.677
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "up 'til now"
-    .incbin "include/scene18/string250002.bin"
-    cut_prepAndSendGrp $01BC
-    
-    cut_waitForFrameMinSec 0 16.529+(1/60)
-    cut_subsOff
-    cut_swapAndShowBuf */
     
     cut_terminator
 .ends

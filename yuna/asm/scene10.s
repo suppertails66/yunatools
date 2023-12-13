@@ -25,202 +25,8 @@
 ;==============================================================================
 
 ;================================
-; convert unwanted EX_DSPOFF commands
-; to EX_BGOFF
-;================================
-  
-  ; "FIRST" album scroll
-;  fixDspOffWithSprClrAndSync $4398
-
-;================================
-; no sprite letterboxing on lower part of scene
-;================================
-
-/*.bank 0 slot 0
-.orga $4113
-.section "sprite letterbox fix 1" overwrite
-  nop
-  nop
-  nop
-.ends */
-
-;================================
-; add conditional disabling of low-priority sprite generation
-; below cutoff threshold
-;================================
-
-/*.bank 0 slot 0
-.orga $40B2
-.section "sprite letterbox fix 1" overwrite
-  nop
-  nop
-  nop
-.ends*/
-
-; FIXME: +0x40
-/*.define spriteYCutoffLine $D0+$40
-
-
-.bank 0 slot 0
-.orga $480F
-.section "fuck 1" overwrite
-  loc_480F:
-    lda ($0034),Y
-.ends
-
-.bank 0 slot 0
-.orga $482F
-.section "fuck 2" overwrite
-  loc_482F:
-    dec $003B
-.ends
-
-.bank 0 slot 0
-.orga $4835
-.section "fuck 3" overwrite
-  loc_4835:
-    st1 #$00
-.ends
-
-
-.bank 0 slot 0
-.orga $47ED
-.section "sprite display cutoff low-priority 1" SIZE $22 overwrite
-;  jmp doLowPrioritySpriteCutoffCheck
-  tma #$10
-  pha
-    lda #$82
-    tam #$10
-    jsr doLowPrioritySpriteCutoffCheck
-    tax
-  pla
-  tam #$10
-  txa
-  spriteCutoffStatusCodeOp:
-  ; 0 = normal
-  ; 1 = skipped
-  ; 2 = terminated
-  cmp #$00
-  beq loc_480F
-  cmp #$01
-  beq loc_482F
-  ; otherwise, assume terminated
-  bne loc_4835
-;  cmp #$02
-;  beq $4835
-  
-.ends
-
-; NOTE: cannot go in free space
-; (bank is not guaranteed due to read operation).
-; extra space has been allocated for this purpose
-.bank 0 slot 0
-.orga $807E
-.section "sprite display cutoff low-priority 2" SIZE $80 overwrite
-  doLowPrioritySpriteCutoffCheck:
-    lda ($34),Y
-      ; add y-offset
-    clc 
-    adc $38
-    sta spriteYTemp+0.w
-    iny 
-      ; byte 1
-    lda ($34),Y
-    adc $39
-    sta spriteYTemp+1.w
-    iny 
-  
-    lda spriteCutoffFlag.w
-    beq @display
-    
-    ; check if targeting a position greater than allowed
-    lda spriteYTemp+1.w
-    cmp #$00
-    bne @doNotDisplay
-    
-    lda spriteYTemp+0.w
-    cmp #<spriteYCutoffLine
-    bcs @doNotDisplay
-    
-    @display:
-      ; make up work
-      lda spriteYTemp+0.w
-      sta $02.w
-      lda spriteYTemp+1.w
-      sta $03.w
-;        jmp $47FE
-
-      ; make up x-work
-      lda ($0034),Y
-      ; add x-offset
-      clc 
-      adc $36
-      sta $0002.w
-      iny 
-      ; byte 3
-      lda ($34),Y
-      adc $37
-      sta $0003.w
-      iny
-
-      ; return code = 0 (display)
-      lda #$00
-      rts
-    
-    @doNotDisplay:
-      ; skip remaining bytes in data
-      iny
-      iny
-      ; check for terminator (pattern num == 0xFF)
-      lda ($34),Y
-      cmp #$FF
-      beq @terminated
-        iny
-        iny
-        iny
-        iny
-;          jmp $482F
-        ; return code = 1 (skipped)
-        lda #$01
-        rts
-      @terminated:
-      
-      ; ???
-      sta $02.w
-      sta $03.w
-      sta $02.w
-      sta $03.w
-;        jmp $4835
-      ; return code = 2 (terminated)
-      lda #$02
-      rts
-    
-  spriteYTemp:
-    .dw 0
-  
-  spriteCutoffFlag:
-    .db $00
-.ends */
-
-;================================
 ; elner flight crop fix
 ;================================
-
-;.bank 0 slot 0
-;.orga $408B
-;.section "fix 1" overwrite
-;  ; disable sprites but not bg
-;  jsr $E093
-;.ends
-
-/*.bank 0 slot 0
-.orga $4434
-.section "elner flight fix 1" overwrite
-  ; no lower sprite crop
-  nop
-  nop
-  nop
-.ends*/
 
 .bank 0 slot 0
 .orga $4428
@@ -319,7 +125,7 @@
 ;    SCENE_prepAndSendGrpAuto
     cut_prepAndSendGrp $01BC
     
-    SYNC_adpcmTime 1 $007D
+    SYNC_adpcmTime 1 $00A3
     
     cut_waitForFrameMinSec 0 2.766
     cut_swapAndShowBuf
@@ -389,7 +195,7 @@
       cut_waitForFrameMinSec 0 13.589
       cut_subsOff */
     
-    SYNC_adpcmTime 2 $038E
+    SYNC_adpcmTime 2 $03B4
     
 ;    cut_writeVram panGrp_part1 $5E00+((panGrpPartSize*0)/2) panGrpPartSize
 ;    cut_writeVram panGrp_part2 $5E00+((panGrpPartSize*1)/2) panGrpPartSize
@@ -465,7 +271,7 @@
 ;    SCENE_prepAndSendGrpAuto
     cut_prepAndSendGrp $01DC
     
-    SYNC_adpcmTime 4 $12EE
+    SYNC_adpcmTime 4 $12FD
     
 ;    cut_waitForFrameMinSec 1 21.051
     cut_waitForFrameMinSec 1 22.253-0.100
@@ -479,7 +285,7 @@
       cut_waitForFrameMinSec 1 23.444-0.200
       cut_subsOff
     
-    SYNC_adpcmTime 5 $1592
+    SYNC_adpcmTime 5 $159D
     
     cut_waitForFrameMinSec 1 32.267
     cut_swapAndShowBuf
@@ -506,7 +312,7 @@
     ; to be correctly cropped
     cut_andOr $20F3 $BF $00
     
-    SYNC_adpcmTime 6 $170A
+    SYNC_adpcmTime 6 $1730
     
     cut_waitForFrameMinSec 1 39.026-0.100
     cut_swapAndShowBuf
@@ -558,7 +364,7 @@
     .incbin "include/scene10/string170017.bin"
     cut_prepAndSendGrp $01DE
     
-    SYNC_adpcmTime 7 $1A20
+    SYNC_adpcmTime 7 $1A44
     
     cut_waitForFrameMinSec 1 52.173-0.100
     cut_swapAndShowBuf
@@ -582,7 +388,7 @@
       cut_waitForFrameMinSec 1 58.511
       cut_subsOff
     
-    SYNC_adpcmTime 8 $1CAB
+    SYNC_adpcmTime 8 $1CD1
     
     cut_waitForFrameMinSec 2 3.050
     cut_swapAndShowBuf
@@ -629,7 +435,7 @@
       cut_waitForFrameMinSec 2 20.964
       cut_subsOff
     
-    SYNC_adpcmTime 9 $2111
+    SYNC_adpcmTime 9 $212D
     
     cut_waitForFrameMinSec 2 21.652-0.200
     cut_swapAndShowBuf
@@ -646,499 +452,6 @@
 ;    cut_waitForFrameMinSec 2 27.346
     cut_waitForFrameMinSec 2 27.168
     cut_subsOff
-    
-/*    ; "yuna, don't you feel that"
-    .incbin "include/scene10/string170000.bin"
-;    SCENE_prepAndSendGrpAuto
-    cut_prepAndSendGrp $01DC
-    
-;    SYNC_adpcmTime 1 $007A
-    
-;    cut_waitForFrameMinSec 0 2.716-0.066
-    cut_swapAndShowBuf
-    
-    ; "yaaay"
-    .incbin "include/scene11/string180001.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 0 5.558-0.066
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "you really think"
-    .incbin "include/scene11/string180002.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 0 8.444
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "there could be one"
-    .incbin "include/scene11/string180003.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 0 10.610
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "i don't think so"
-    .incbin "include/scene11/string180004.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 0 12.242
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "okay okay"
-    .incbin "include/scene11/string180005.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 0 13.268
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "who cares"
-    .incbin "include/scene11/string180006.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 0 15.245
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "ah, you're ducking"
-    .incbin "include/scene11/string180007.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 0 15.985
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "yuna, don't you"
-    .incbin "include/scene11/string180008.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 0 18.500
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "huh?"
-    .incbin "include/scene11/string180009.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 0 21.148
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "i do"
-    .incbin "include/scene11/string180010.bin"
-    SCENE_prepAndSendGrpAuto
-    
-;      cut_waitForFrameMinSec 0 22.148
-;      cut_subsOff
-    
-    cut_waitForFrameMinSec 0 22.945
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "it feels like"
-    .incbin "include/scene11/string180011.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 0 24.321
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "so, what does that"
-    .incbin "include/scene11/string180012.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 0 27.050
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "...you get it, right"
-    .incbin "include/scene11/string180013.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 0 28.796
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; NOTE: there's some emulator issue here that causes the sound
-    ; to screw up and go out of sync, so I'm pretty much just guessing
-    ; at the timing on these lines
-    
-    ; "umm...uhh..."
-    .incbin "include/scene11/string180014.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 0 30.391
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "no fair suddenly changing"
-    .incbin "include/scene11/string180015.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 0 34.681
-;    cut_waitForFrameMinSec 0 34.681-2.500
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ;=====
-    ; flash
-    ;=====
-    
-    ; "ah! it's bright"
-    .incbin "include/scene11/string180016.bin"
-    SCENE_prepAndSendGrpAuto
-    
-      cut_waitForFrameMinSec 0 37.646
-;      cut_waitForFrameMinSec 0 37.646-2.500
-      cut_subsOff
-    
-    SYNC_adpcmTime 2 $09C4
-    
-    cut_waitForFrameMinSec 0 42.296
-;    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "yuna, open your eyes"
-    .incbin "include/scene11/string180017.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 0 44.121
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "you need to see this"
-    .incbin "include/scene11/string180018.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 0 46.002
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "but it's so bright"
-    .incbin "include/scene11/string180019.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 0 47.092
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ;=====
-    ; 
-    ;=====
-    
-    ; "huh?"
-    .incbin "include/scene11/string180020.bin"
-    SCENE_prepAndSendGrpAuto
-    
-      cut_waitForFrameMinSec 0 48.658
-      cut_subsOff
-    
-    SYNC_adpcmTime 3 $0CB9
-    
-    cut_waitForFrameMinSec 0 54.453
-;    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ;=====
-    ; marina introduction
-    ;=====
-    
-    ; "how do you do"
-    .incbin "include/scene11/string180021.bin"
-    SCENE_prepAndSendGrpAuto
-    
-;      cut_waitForFrameMinSec 0 55.212
-      cut_waitForFrameMinSec 0 55.453
-      cut_subsOff
-    
-    SYNC_adpcmTime 5 $11F3
-    
-    cut_waitForFrameMinSec 1 17.230
-;    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "it's been a while"
-    .incbin "include/scene11/string180022.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 1 18.791
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "you're yuna"
-    .incbin "include/scene11/string180023.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 1 21.896
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "i'm marina"
-    .incbin "include/scene11/string180024.bin"
-    SCENE_prepAndSendGrpAuto
-    
-      cut_waitForFrameMinSec 1 24.064
-      cut_subsOff
-    
-    cut_waitForFrameMinSec 1 25.473
-;    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "it's nice to meet you"
-    .incbin "include/scene11/string180025.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 1 26.933
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ;=====
-    ; yuna introduction
-    ;=====
-    
-    ; "oh, thank you"
-    .incbin "include/scene11/string180026.bin"
-    SCENE_prepAndSendGrpAuto
-    
-      cut_waitForFrameMinSec 1 27.663
-      cut_subsOff
-    
-    SYNC_adpcmTime 6 $14ED
-    
-    cut_waitForFrameMinSec 1 29.932
-;    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "i, uh..."
-    .incbin "include/scene11/string180027.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 1 34.801
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "wait, what do i"
-    .incbin "include/scene11/string180028.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 1 36.755
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "umm..."
-    .incbin "include/scene11/string180029.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 1 39.473
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "you're very pink"
-    .incbin "include/scene11/string180030.bin"
-    SCENE_prepAndSendGrpAuto
-    
-;      cut_waitForFrameMinSec 1 40.551
-;      cut_subsOff
-    
-    cut_waitForFrameMinSec 1 42.135
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ;=====
-    ; 
-    ;=====
-    
-    ; "ignore her, marina"
-    .incbin "include/scene11/string180031.bin"
-    SCENE_prepAndSendGrpAuto
-    
-      cut_waitForFrameMinSec 1 43.067
-      cut_subsOff
-    
-    SYNC_adpcmTime 7 $183E
-    
-    cut_waitForFrameMinSec 1 44.061
-;    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "c'mon, you're embarrassing"
-    .incbin "include/scene11/string180033.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 1 47.284
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "somehow, i feel like"
-    .incbin "include/scene11/string180034.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 1 49.575
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "marina, we want"
-    .incbin "include/scene11/string180035.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 1 52.001
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "i'll do anything i can"
-    .incbin "include/scene11/string180036.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 1 55.157
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "deep in the darkest"
-    .incbin "include/scene11/string180037.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 1 56.982
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "i'm certain that she'll"
-    .incbin "include/scene11/string180038.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 2 2.721
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "gotcha"
-    .incbin "include/scene11/string180039.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 2 6.219
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "umm..."
-    .incbin "include/scene11/string180040.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 2 10.392
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "i don't know if i follow"
-    .incbin "include/scene11/string180041.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 2 11.622
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ;=====
-    ; 
-    ;=====
-    
-    ; "what's 'amazing'"
-    .incbin "include/scene11/string180042.bin"
-    SCENE_prepAndSendGrpAuto
-    
-      cut_waitForFrameMinSec 2 14.002
-      cut_subsOff
-    
-    SYNC_adpcmTime 8 $1FCA
-    
-    cut_waitForFrameMinSec 2 16.209
-;    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "in other words"
-    .incbin "include/scene11/string180043.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 2 19.848
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "oh, no no no"
-    .incbin "include/scene11/string180044.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 2 22.325
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "this is all"
-    .incbin "include/scene11/string180045.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 2 25.655
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ;=====
-    ; 
-    ;=====
-    
-    ; "for pete's sake"
-    .incbin "include/scene11/string180046.bin"
-    SCENE_prepAndSendGrpAuto
-    
-      cut_waitForFrameMinSec 2 26.862
-      cut_subsOff
-    
-    SYNC_adpcmTime 9 $2276
-    
-    cut_waitForFrameMinSec 2 27.598
-;    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "come on, now"
-    .incbin "include/scene11/string180047.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 2 30.259
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "well, shall we"
-    .incbin "include/scene11/string180048.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 2 31.865
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "agreed"
-    .incbin "include/scene11/string180049.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 2 34.291
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "in any case"
-    .incbin "include/scene11/string180050.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 2 35.437
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "right!"
-    .incbin "include/scene11/string180051.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 2 37.194
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-;    cut_waitForFrameMinSec 2 37.885
-    cut_waitForFrameMinSec 2 38.194
-    cut_subsOff */
     
     cut_terminator
 .ends

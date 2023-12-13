@@ -43,8 +43,10 @@ for file in base/postbat*.bin; do
 done;
 
 #./gensceneovl "base/subintro_2.bin" "subintro" -fill 0xFF
+echo "subintro"
 ./gensceneovl "base/subintro_2.bin" "subintro" --nobackground
 
+echo "title"
 ./gensceneovl "base/title_202.bin" "title"
 
 #./gensceneovl "base/postbat00_B4DA.bin" "postbat00"
@@ -53,9 +55,13 @@ done;
 
 make genbattleovl
 
+echo "battle0"
 ./genbattleovl "base/battle0_B1BA.bin" "battle0" --nobackground
+echo "battle2"
 ./genbattleovl "base/battle2_B1E2.bin" "battle2"
+echo "battle3"
 ./genbattleovl "base/battle3_B1F6.bin" "battle3"
+echo "battle4"
 ./genbattleovl "base/battle4_B20A.bin" "battle4"
 
 

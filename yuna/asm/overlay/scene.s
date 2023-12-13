@@ -196,20 +196,61 @@
 ; so we must account for that possibility
 .ifdef playAdpcm
 
-  .bank 0 slot 0
+/*  .bank 0 slot 0
   .orga playAdpcm+($6BA9-$6BA9)
   .section "adpcm sync 2" SIZE 9 overwrite
     jsr ovlScene_jumpTable_setUpStdBanks
     jsr incrementAdpcmSyncCounter
     jmp playAdpcm+($6BB7-$6BA9)
+  .ends*/
+  
+  .bank 0 slot 0
+  .orga playAdpcm+($6BA9-$6BA9)
+  .section "adpcm sync 1" SIZE 14 overwrite
+    stz adpcmPlayExtraParamCmd+1.w
+    lda $FA.b
+    beq @done
+      lda #$40
+      sta adpcmPlayExtraParamCmd+1.w
+    @done:
+    adpcmPlayExtraParamCmd:
+    ; this code doesn't actually matter.
+    ; we need to store one byte for later use, and due to the
+    ; wacky banking used for the subtitle playback, it can't go
+    ; in the free area or it might not be available when we need it.
+    ; so i've slightly rewritten this bit of the function to reduce
+    ; the size by 2 bytes, using those extra 2 bytes for this dummy command
+    ; that can be used to safely store the needed value.
+    lda #$00
+  .ends
+
+  .bank 0 slot 0
+  .orga playAdpcmMakeup1+($6C71-$6C72)
+  .section "adpcm sync 2" SIZE 7 overwrite
+    jsr ovlScene_jumpTable_setUpStdBanks
+    jsr doAdpcmSyncDirectLoad
+    rts
   .ends
 
   .bank 0 slot 0
   .section "adpcm sync 3" free
+    doAdpcmSyncDirectLoad:
+      ; make up work
+      lda adpcmPlayExtraParamCmd+1.w
+      sta $FE.b
+      ; AD_PLAY
+      jsr $E03C
+      
+      ; increment sync counter
+      jmp incrementAdpcmSyncCounter
+  .ends
+
+  .bank 0 slot 0
+  .section "adpcm sync 4" free
     incrementAdpcmSyncCounter:
       jsr incrementAdpcmSyncCounter_sub
       
-      ; make up work
+/*      ; make up work
       lda $00FA
       bne +
       ; if
@@ -221,7 +262,7 @@
         lda #$40
 ;        sta playAdpcm+($6C72-$6BA9).w
         sta playAdpcmMakeup1.w
-      ++:
+      ++:*/
 ;      rts
       jmp ovlScene_jumpTable_restoreOldBanks
     
@@ -248,8 +289,29 @@
       rts
   .ends
 
+  .bank 0 slot 0
+  .orga playAdpcmStreamBranchEnd+($6C99-$6C79)
+  .section "adpcm sync 5" SIZE 7 overwrite
+    jsr ovlScene_jumpTable_setUpStdBanks
+    jsr doAdpcmSyncStreamed
+    nop
+  .ends
+
+  .bank 0 slot 0
+  .section "adpcm sync 6" free
+    doAdpcmSyncStreamed:
+      ; make up work
+      lda #$0E
+      sta $FF.b
+      ; AD_CPLAY
+      jsr $E03F
+      
+      ; increment sync counter
+      jmp incrementAdpcmSyncCounter
+  .ends
+
   .ifdef incAdpcmCounterOnPlayAdpcmAlt
-    .bank 0 slot 0
+/*    .bank 0 slot 0
     .orga playAdpcmAlt+($6C63-$6C63)
     .section "adpcm sync alt 1" SIZE 9 overwrite
       jsr ovlScene_jumpTable_setUpStdBanks
@@ -273,6 +335,66 @@
           lda #$40
           sta playAdpcmAlt+($6C84-$6C63).w
         ++:
+        jmp ovlScene_jumpTable_restoreOldBanks
+    .ends*/
+    
+    .bank 0 slot 0
+    .orga playAdpcmAlt+($6C63-$6C63)
+    .section "adpcm sync alt 1" SIZE 14 overwrite
+      stz adpcmPlayAltExtraParamCmd+1.w
+      lda $FA.b
+      beq @done
+        lda #$40
+        sta adpcmPlayAltExtraParamCmd+1.w
+      @done:
+      adpcmPlayAltExtraParamCmd:
+      ; this code doesn't actually matter.
+      ; we need to store one byte for later use, and due to the
+      ; wacky banking used for the subtitle playback, it can't go
+      ; in the free area or it might not be available when we need it.
+      ; so i've slightly rewritten this bit of the function to reduce
+      ; the size by 2 bytes, using those extra 2 bytes for this dummy command
+      ; that can be used to safely store the needed value.
+      lda #$00
+    .ends
+
+    .bank 0 slot 0
+    .orga playAdpcmAlt+($6C83-$6C63)
+    .section "adpcm sync alt 2" SIZE 7 overwrite
+      jsr ovlScene_jumpTable_setUpStdBanks
+      jsr doAdpcmSyncAlt
+      rts
+    .ends
+
+    .bank 0 slot 0
+    .section "adpcm sync alt 3" free
+      doAdpcmSyncAlt:
+        ; make up work
+        lda adpcmPlayAltExtraParamCmd+1.w
+        sta $FE.b
+        ; AD_PLAY
+        jsr $E03C
+        
+        ; increment sync counter
+        jmp incrementAdpcmSyncCounter_altAdpcm
+    .ends
+    
+    .bank 0 slot 0
+    .section "adpcm sync alt 4" free
+      incrementAdpcmSyncCounter_altAdpcm:
+        jsr incrementAdpcmSyncCounter_sub
+        
+/*        ; make up work
+        lda $00FA
+        bne +
+        ; if
+          stz playAdpcmAlt+($6C84-$6C63).w
+          bra ++
+        ; else
+        +:
+          lda #$40
+          sta playAdpcmAlt+($6C84-$6C63).w
+        ++:*/
         jmp ovlScene_jumpTable_restoreOldBanks
     .ends
   .endif
@@ -298,6 +420,10 @@
     .bank 0 slot 0
     .section "adpcm sync 3" free
       incrementAdpcmSyncCounter:
+        ; make up work
+        ; AD_PLAY
+        jsr $E03C
+        
         ; TODO: would a $F5 reset/set work better here than CPU interrupt disable?
         sei
           nop
@@ -322,7 +448,9 @@
 ;        sta $FF
 ;        stz $FE
 ;        jmp ovlScene_jumpTable_restoreOldBanks
-        jmp $E03C
+
+;        jmp $E03C
+        rts
     .ends
 
   .endif

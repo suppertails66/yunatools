@@ -9,4 +9,5 @@
 .define spriteTableClearMakeup2 $26E4
 .define waitForSync $5AAA
 .define setUpSpritesRaw $75AC
+.define playAdpcmStreamBranchEnd $6A02
 .define playAdpcmSpecial $68FA

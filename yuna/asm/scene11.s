@@ -24,46 +24,12 @@
 ; other modifications specific to this executable
 ;==============================================================================
 
-;================================
-; convert unwanted EX_DSPOFF commands
-; to EX_BGOFF
-;================================
-  
-  ; "FIRST" album scroll
-;  fixDspOffWithSprClrAndSync $4398
-
-;================================
-; no sprite letterboxing on lower part of scene
-;================================
-
-/*.bank 0 slot 0
-.orga $4113
-.section "sprite letterbox fix 1" overwrite
-  nop
-  nop
-  nop
-.ends */
-
 ;==============================================================================
 ; script
 ;==============================================================================
 
 .bank 0 slot 0
 .section "script 1" free
-  ; script resources
-/*  scene00PatchGrp:
-    .incbin "out/grp/scene00_patch.bin" FSIZE scene00PatchGrpSize
-    .define scene00PatchGrpPartSize (scene00PatchGrpSize/4)
-    .define scene00PatchGrp_part1 scene00PatchGrp+(scene00PatchGrpPartSize*0)
-    .define scene00PatchGrp_part2 scene00PatchGrp+(scene00PatchGrpPartSize*1)
-    .define scene00PatchGrp_part3 scene00PatchGrp+(scene00PatchGrpPartSize*2)
-    .define scene00PatchGrp_part4 scene00PatchGrp+(scene00PatchGrpPartSize*3)
-  scene00PatchMap:
-    .incbin "out/maps/scene00_patch.bin" FSIZE scene00PatchMapSize
-  scene00UnpatchMap:
-;    .define scene00UnpatchMapSize $100
-    .incbin "rsrc_raw/grp/scene00_unpatch_map.bin" FSIZE scene00UnpatchMapSize */
-  
   subtitleScriptData:
     ;=====
     ; init
@@ -84,7 +50,7 @@
     .incbin "include/scene11/string180000.bin"
     SCENE_prepAndSendGrpAuto
     
-    SYNC_adpcmTime 1 $007A
+    SYNC_adpcmTime 1 $00A0
     
     cut_waitForFrameMinSec 0 2.716-0.066
     cut_swapAndShowBuf
@@ -229,7 +195,7 @@
 ;      cut_waitForFrameMinSec 0 37.646-2.500
       cut_subsOff
     
-    SYNC_adpcmTime 2 $09C4
+    SYNC_adpcmTime 2 $09EA
     
 ;    cut_waitForFrameMinSec 0 42.296
     cut_waitForFrameMinSec 0 43.284
@@ -271,7 +237,7 @@
       cut_waitForFrameMinSec 0 48.658+0.300
       cut_subsOff
     
-    SYNC_adpcmTime 3 $0CB9
+    SYNC_adpcmTime 3 $0CC4
     
     cut_waitForFrameMinSec 0 54.453
 ;    cut_subsOff
@@ -294,7 +260,7 @@
       cut_waitForFrameMinSec 0 55.453
       cut_subsOff
     
-    SYNC_adpcmTime 5 $11F3
+    SYNC_adpcmTime 5 $1219
     
     cut_waitForFrameMinSec 1 17.230
 ;    cut_subsOff
@@ -346,7 +312,7 @@
       cut_waitForFrameMinSec 1 27.663+0.300
       cut_subsOff
     
-    SYNC_adpcmTime 6 $14ED
+    SYNC_adpcmTime 6 $1513
     
     cut_waitForFrameMinSec 1 29.932
 ;    cut_subsOff
@@ -398,7 +364,7 @@
       cut_waitForFrameMinSec 1 43.067+0.300
       cut_subsOff
     
-    SYNC_adpcmTime 7 $183E
+    SYNC_adpcmTime 7 $1864
     
     cut_waitForFrameMinSec 1 44.061
 ;    cut_subsOff
@@ -495,7 +461,7 @@
       cut_waitForFrameMinSec 2 14.002+0.300
       cut_subsOff
     
-    SYNC_adpcmTime 8 $1FCA
+    SYNC_adpcmTime 8 $1FF0
     
     cut_waitForFrameMinSec 2 16.209
 ;    cut_subsOff
@@ -536,7 +502,7 @@
       cut_waitForFrameMinSec 2 26.862
       cut_subsOff
     
-    SYNC_adpcmTime 9 $2276
+    SYNC_adpcmTime 9 $229C
     
     cut_waitForFrameMinSec 2 27.598
 ;    cut_subsOff
@@ -585,101 +551,6 @@
 ;    cut_waitForFrameMinSec 2 37.885
     cut_waitForFrameMinSec 2 38.194
     cut_subsOff
-    
-    ; "a pleasure to meet you"
-/*    .incbin "include/scene12/string190002.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 0 47.396
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ;=====
-    ; 
-    ;=====
-    
-    ; "hm? so you're one of"
-    .incbin "include/scene12/string190003.bin"
-    SCENE_prepAndSendGrpAuto
-    
-      cut_waitForFrameMinSec 0 48.576
-      cut_subsOff
-    
-    SYNC_adpcmTime 4 $0D9B
-    
-    cut_waitForFrameMinSec 0 58.008
-    cut_swapAndShowBuf
-    
-    ; "that's right"
-    .incbin "include/scene12/string190004.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 1 1.817
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "huh..."
-    .incbin "include/scene12/string190005.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 1 2.656
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "hey hey, you don't"
-    .incbin "include/scene12/string190006.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 1 3.580
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "i can't say that i"
-    .incbin "include/scene12/string190007.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 1 6.679
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "at any rate, yuna"
-    .incbin "include/scene12/string190008.bin"
-    SCENE_prepAndSendGrpAuto
-    
-      cut_waitForFrameMinSec 1 8.354
-      cut_subsOff
-    
-    SYNC_adpcmTime 5 $1051
-    
-    cut_waitForFrameMinSec 1 9.869
-    cut_swapAndShowBuf
-    
-    ; "another one of your"
-    .incbin "include/scene12/string190009.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 1 12.933
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "come on, let's"
-    .incbin "include/scene12/string190010.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 1 17.261
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    ; "right"
-    .incbin "include/scene12/string190011.bin"
-    SCENE_prepAndSendGrpAuto
-    
-    cut_waitForFrameMinSec 1 19.391
-    cut_subsOff
-    cut_swapAndShowBuf
-    
-    cut_waitForFrameMinSec 1 20.391
-    cut_subsOff */
     
     cut_terminator
 .ends
